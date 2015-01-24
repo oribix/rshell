@@ -1,7 +1,10 @@
 #include <iostream>
 #include <cstdio>
+#include <cstdlib>
 #include <unistd.h>
 #include <errno.h>
+#include <string.h>
+
 #define  BUFFER_SIZE 1000
 
 using namespace std;
@@ -79,8 +82,24 @@ void printPrompt(char* login)
 //executes the commands
 void execute(char* input)
 {
-	cout << input << endl;
+	char* token;
 	
+	token = strtok(input, " ");
 	
+	if(string(token) == "exit")
+	{
+		cout << "exiting" << endl; 
+		exit(0);
+	}
+	
+	//while(token != NULL)
+	{
+		cout << token << endl;
+	
+		token = strtok(input, " ");
+	}
 	return;
 }
+
+
+
