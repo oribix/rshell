@@ -100,22 +100,24 @@ void execute(char* input)
 	}
 	else if(pid == 0) //child process
 	{
-		cout << "Child working" << endl;
+		//cout << "Child working" << endl;
 		
 		vector<char*> argv;
-		argv[0] = strtok (input, " ");
+		argv.push_back(strtok (input, " "));
 		
 		//if nothing was inputted, kill child
-		if (argv[0] == NULL ) 
+		if (argv.size() == 0 ) 
 		{
 			cout << "no commmand detected" << endl;
 			exit(0);
 		}
 		
+		//cout << "before loop" << endl;
+		
 		//initialize argv	
-		for (int i = 1 ; argv[i] != NULL ; i++)
+		while(argv.back() != NULL)
 		{
-			argv[i] = strtok(NULL, " ");
+			argv.push_back(strtok(NULL, " "));
 		}
 		
 		if(-1 == execvp(argv[0], argv.data())) perror("exec");
@@ -129,7 +131,7 @@ void execute(char* input)
 			perror("wait");
 			exit(1);
 		}
-		cout << "done waiting" << endl;
+		//cout << "done waiting" << endl;
 	}
 
 	/*
