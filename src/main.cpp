@@ -1,9 +1,12 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
+#include <vector>
 #include <unistd.h>
 #include <errno.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 #define  BUFFER_SIZE 1000
 
@@ -82,22 +85,65 @@ void printPrompt(char* login)
 //executes the commands
 void execute(char* input)
 {
-	char* token;
-	
-	token = strtok(input, " ");
-	
-	if(string(token) == "exit")
+	if(string(input) == "exit")
 	{
 		cout << "exiting" << endl; 
 		exit(0);
 	}
 	
+	int pid = fork();
+
+	if(pid == -1)
+	{
+		perror("fork");
+		exit(1);
+	}
+	else if(pid == 0) //child process
+	{
+		cout << "Child working" << endl;
+		
+		vector<char*> argv;
+		argv[0] = strtok (input, " ");
+		
+		//if nothing was inputted, kill child
+		if (argv[0] == NULL ) 
+		{
+			cout << "no commmand detected" << endl;
+			exit(0);
+		}
+		
+		//initialize argv	
+		for (int i = 1 ; argv[i] != NULL ; i++)
+		{
+			argv[i] = strtok(NULL, " ");
+		}
+		
+		if(-1 == execvp(argv[0], argv.data())) perror("exec");
+		
+		exit(0);
+	}
+	else //parent
+	{
+		if (-1 == wait(0))
+		{
+			perror("wait");
+			exit(1);
+		}
+		cout << "done waiting" << endl;
+	}
+
+	/*
+	char* token;
+	
+	token = strtok(input, " ");
+		
 	while(token != NULL)
 	{
 		cout << token << endl;
 	
 		token = strtok(NULL, " ");
 	}
+	*/
 	return;
 }
 
