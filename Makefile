@@ -1,11 +1,17 @@
 
-CFLAGS = -ansi -Wall -Werror -pedantic
+VPATH = ./src/main.cpp
 
-all: src/main.cpp
-	g++ main.cpp -o bin/rshell $(CFLAGS)
+CXXFLAGS = -ansi -Wall -Werror -pedantic
 
-rshell: src/main.cpp
-	g++ main.cpp -o bin/rshell $(CFLAGS)
+OUTPUTPATH = ./bin/rshell
+
+all: 
+	mkdir -p ./bin
+	g++ $(CXXFLAGS) $(VPATH) -o $(OUTPUTPATH)
+
+rshell: 
+	mkdir -p ./bin
+	g++ $(CXXFLAGS) $(VPATH) -o $(OUTPUTPATH)
 
 clean:
-	rm -f bin/rshell
+	rm -rf bin
