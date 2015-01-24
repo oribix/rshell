@@ -92,11 +92,11 @@ void execute(char* input)
 		exit(0);
 	}
 	
-	//while(token != NULL)
+	while(token != NULL)
 	{
 		cout << token << endl;
 	
-		token = strtok(input, " ");
+		token = strtok(NULL, " ");
 	}
 	return;
 }
