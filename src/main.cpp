@@ -2,21 +2,21 @@
 #include <cstdio>
 #include <unistd.h>
 #include <errno.h>
+#define  BUFFER_SIZE 1000
 
 using namespace std;
+
+
 
 void printPrompt(char* login, char* hostname);
 void printPrompt(char* login);
 
-char* getCommand();
-
-void execute(char* command);
+void execute(char* input);
 
 int main()
 {
 	//getting login
-	char* login = new char[100];
-	login = getlogin();
+	char* login = getlogin();
 	
 	//getting hostname
 	char* hostname = new char[100];
@@ -40,24 +40,13 @@ int main()
 	}
 	
 	//getting input
-	string input_temp;
-	cin >> input_temp;
-	
-	//declare the array and initialize
-	char *input = new char[input_temp.length()+1];
-	for(int i = 0 ; i <= input_temp.length(); i++) input[i] = '\0';
-	//input = input_temp.c_str();	
-
-	//cout << input << endl;
+	char input[BUFFER_SIZE];
+	cin.getline(input, BUFFER_SIZE);
 	
 	//exectuting commands
 	execute(input);
 	
-	delete[] input;
-	
 	//remember to fix the deletions
-	//delete[] login;
-	//delete[] hostname;
 
 	return 0;
 }
@@ -88,8 +77,10 @@ void printPrompt(char* login)
 }
 
 //executes the commands
-void execute(char* command)
+void execute(char* input)
 {
+	cout << input << endl;
+	
 	
 	return;
 }
