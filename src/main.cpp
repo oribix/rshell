@@ -35,23 +35,25 @@ int main()
 			<< errno << endl;
 	} 
 	
-	//outputting prompt
-	if (hostnamecheck != -1)
+	while (true)
 	{
-		printPrompt(login, hostname);
+		//outputting prompt
+		if (hostnamecheck != -1)
+		{
+			printPrompt(login, hostname);
+		}
+		else
+		{
+			printPrompt(login);
+		}
+		
+		//getting input
+		char input[BUFFER_SIZE];
+		cin.getline(input, BUFFER_SIZE);
+	
+		//exectuting commands
+		execute(input);
 	}
-	else
-	{
-		printPrompt(login);
-	}
-	
-	//getting input
-	char input[BUFFER_SIZE];
-	cin.getline(input, BUFFER_SIZE);
-	
-	//exectuting commands
-	execute(input);
-	
 	//remember to fix the deletions
 
 	return 0;
@@ -87,7 +89,7 @@ void execute(char* input)
 {
 	if(string(input) == "exit")
 	{
-		cout << "exiting" << endl; 
+		cout << "exiting rshell" << endl; 
 		exit(0);
 	}
 	
@@ -103,7 +105,7 @@ void execute(char* input)
 		//cout << "Child working" << endl;
 		
 		vector<char*> argv;
-		argv.push_back(strtok (input, " "));
+		argv.push_back(strtok (input, " 	"));
 		
 		//if nothing was inputted, kill child
 		if (argv.size() == 0 ) 
@@ -117,7 +119,25 @@ void execute(char* input)
 		//initialize argv	
 		while(argv.back() != NULL)
 		{
-			argv.push_back(strtok(NULL, " "));
+			bool comment_found = false;
+			
+			for (int i = 0 ; argv.back()[i] != '\0' ; i++)
+			{
+				if (argv.back()[i] == '#')
+				{
+					argv.back()[i] = '\0';
+					comment_found = true;
+				}
+			}
+			
+			if(comment_found)
+			{
+				argv.push_back(NULL);
+			}
+			else
+			{
+				argv.push_back(strtok(NULL, " "));
+			}
 		}
 		
 		if(-1 == execvp(argv[0], argv.data())) perror("exec");
