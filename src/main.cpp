@@ -31,7 +31,7 @@ int main()
 	//checking hostname
 	if(hostnamecheck == -1) 
 	{
-		cout << "error while getting host name: error number " 
+		cerr << "error while getting host name: error number " 
 			<< errno << endl;
 	} 
 	
@@ -89,7 +89,7 @@ void execute(char* input)
 {
 	if(string(input) == "exit")
 	{
-		cout << "exiting rshell" << endl; 
+		//cout << "exiting rshell" << endl; 
 		exit(0);
 	}
 	
@@ -102,7 +102,6 @@ void execute(char* input)
 	}
 	else if(pid == 0) //child process
 	{
-		//cout << "Child working" << endl;
 		
 		vector<char*> argv;
 		argv.push_back(strtok (input, " 	"));
@@ -114,28 +113,39 @@ void execute(char* input)
 			exit(0);
 		}
 		
-		//cout << "before loop" << endl;
-		
 		//initialize argv	
 		while(argv.back() != NULL)
 		{
 			bool comment_found = false;
 			
-			for (int i = 0 ; argv.back()[i] != '\0' ; i++)
+			//if the token starts with '#', replace the token with NULL
+			if(argv.back()[0] == '#')
 			{
-				if (argv.back()[i] == '#')
+				argv.pop_back();
+				argv.push_back(NULL);
+				comment_found = true;
+			}
+			else //look for any '#'s and replace it with a '\0' 
+			{
+				//checking for '#'
+				for (int i = 0 ; argv.back()[i] != '\0' ; i++)
 				{
-					argv.back()[i] = '\0';
-					comment_found = true;
+					if (argv.back()[i] == '#')
+					{
+						argv.back()[i] = '\0';
+						comment_found = true;
+					}
 				}
 			}
 			
-			if(comment_found)
+			if(comment_found && argv.back() != NULL)
 			{
+				//cerr << "pushing a null" << endl;
 				argv.push_back(NULL);
 			}
-			else
+			else if (!comment_found)
 			{
+				//cerr << "pushing another token" << endl;
 				argv.push_back(strtok(NULL, " "));
 			}
 		}
@@ -154,18 +164,6 @@ void execute(char* input)
 		//cout << "done waiting" << endl;
 	}
 
-	/*
-	char* token;
-	
-	token = strtok(input, " ");
-		
-	while(token != NULL)
-	{
-		cout << token << endl;
-	
-		token = strtok(NULL, " ");
-	}
-	*/
 	return;
 }
 
