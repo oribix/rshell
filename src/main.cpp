@@ -57,6 +57,10 @@ int main()
 
 		truncate_comment(input);
 		
+		//vector<char*> semisplice;
+		//semic_splice.push_back(strtok(input, ";"));
+		
+		
 		//exectuting commands
 		execute(input);
 	}
@@ -120,13 +124,6 @@ void execute(char* input)
 		
 		vector<char*> argv;
 		argv.push_back(strtok (input, " 	"));
-		
-		//if nothing was inputted, kill child
-		if (argv.size() == 0 ) 
-		{
-			cout << "no commmand detected" << endl;
-			exit(0);
-		}
 		
 		//initialize argv	
 		while(argv.back() != NULL)
