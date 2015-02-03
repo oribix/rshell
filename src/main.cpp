@@ -25,8 +25,8 @@ int main()
 	char* login = getlogin();
 	
 	//getting hostname
-	char* hostname[100];
-	int hostnamecheck = gethostname(*hostname, 100);
+	char hostname[100];
+	int hostnamecheck = gethostname(hostname, 100);
 	
 	//checking hostname
 	if(hostnamecheck == -1) 
@@ -40,7 +40,7 @@ int main()
 		//outputting prompt
 		if (hostnamecheck != -1)
 		{
-			printPrompt(login, *hostname);
+			printPrompt(login, hostname);
 		}
 		else
 		{
@@ -57,7 +57,7 @@ int main()
 
 		truncate_comment(input);
 		
-		//vector<char*> semisplice;
+		vector<char*> semisplice;
 		//semic_splice.push_back(strtok(input, ";"));
 		
 		
@@ -98,7 +98,13 @@ void truncate_comment(char* input)
 {
 	for(int i = 0 ; input[i] != '\0' ; i++)
 	{
-		if(input[i] == '#') input[i] = '\0';
+		bool found_comment = false;
+		if(input[i] == '#')
+		{
+			input[i] = '\0';
+			found_comment = true;
+		}
+		else if (found_comment) input[i] = '\0';
 	}
 	return;
 }
