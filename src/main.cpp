@@ -18,7 +18,7 @@ using namespace std;
 void printPrompt(char* login, char* hostname);
 void printPrompt(char* login);
 void truncate_comment(char* input);
-void execute(char* input);
+int execute(char* input);
 
 int main()
 {
@@ -105,12 +105,12 @@ void truncate_comment(char* input)
 }
 
 //executes the commands
-void execute(char* input)
+int execute(char* input)
 {
 	if(string(input) == "exit") exit(0);
-	
+	int status;
 	int pid = fork();
-
+	
 	if(pid == -1)
 	{
 		perror("fork");
@@ -126,18 +126,18 @@ void execute(char* input)
 		
 		if(-1 == execvp(argv[0], argv.data())) perror("exec");
 		
-		exit(0);
+		exit(-1);
 	}
 	else //parent
 	{
-		if (-1 == wait(0))//wait until child is done
+		if (-1 == wait(&status))//wait until child is done
 		{
 			perror("wait");
 			exit(1);
 		}
 	}
 
-	return;
+	return status;
 }
 
 
