@@ -1,3 +1,4 @@
+#include <queue>
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -57,12 +58,18 @@ int main()
 
 		truncate_comment(input);
 		
-		vector<char*> semisplice;
-		//semic_splice.push_back(strtok(input, ";"));
+		queue<char*> semic_splice;
+		for(semic_splice.push(strtok(input, ";"))
+			; semic_splice.back() != NULL
+			; semic_splice.push(strtok(NULL, ";")));
 		
 		
 		//exectuting commands
-		execute(input);
+		while (semic_splice.front() != NULL)
+		{
+			execute(semic_splice.front());
+			semic_splice.pop();
+		}
 	}
 	//remember to fix the deletions
 
