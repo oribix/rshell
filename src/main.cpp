@@ -39,14 +39,8 @@ int main()
 	while (true)
 	{
 		//outputting prompt
-		if (hostnamecheck != -1)
-		{
-			printPrompt(login, hostname);
-		}
-		else
-		{
-			printPrompt(login);
-		}
+		if (hostnamecheck != -1) printPrompt(login, hostname);
+		else printPrompt(login);
 		
 		//getting input
 		char input[BUFFER_SIZE];
@@ -58,6 +52,7 @@ int main()
 
 		truncate_comment(input);
 		
+		//splices the string into pieces at the semicolons(;)
 		queue<char*> semic_splice;
 		for(semic_splice.push(strtok(input, ";"))
 			; semic_splice.back() != NULL
@@ -71,7 +66,6 @@ int main()
 			semic_splice.pop();
 		}
 	}
-	//remember to fix the deletions
 
 	return 0;
 }
@@ -79,10 +73,7 @@ int main()
 //prints the prompt
 void printPrompt(char* login, char* hostname)
 {	
-	if(login != NULL)
-	{
-		cout << login << flush;
-	}
+	if(login != NULL) cout << login << flush;
 
 	cout << "@" << hostname << "$ " << flush;
 	
@@ -91,10 +82,7 @@ void printPrompt(char* login, char* hostname)
 
 void printPrompt(char* login)
 {
-	if(login != NULL)
-	{
-		cout << login << flush;
-	}
+	if(login != NULL) cout << login << flush;
 	
 	cout << "$ " << flush;
 	
@@ -119,11 +107,7 @@ void truncate_comment(char* input)
 //executes the commands
 void execute(char* input)
 {
-	if(string(input) == "exit")
-	{
-		//cout << "exiting rshell" << endl; 
-		exit(0);
-	}
+	if(string(input) == "exit") exit(0);
 	
 	int pid = fork();
 
@@ -134,15 +118,11 @@ void execute(char* input)
 	}
 	else if(pid == 0) //child process
 	{
-		
+		//initializing argv
 		vector<char*> argv;
-		argv.push_back(strtok (input, " 	"));
-		
-		//initialize argv	
-		while(argv.back() != NULL)
-		{
-			argv.push_back(strtok(NULL, " "));
-		}
+		for (argv.push_back(strtok (input, " 	"))
+			; argv.back() != NULL
+			; argv.push_back(strtok(NULL, " ")));
 		
 		if(-1 == execvp(argv[0], argv.data())) perror("exec");
 		
@@ -150,12 +130,11 @@ void execute(char* input)
 	}
 	else //parent
 	{
-		if (-1 == wait(0))
+		if (-1 == wait(0))//wait until child is done
 		{
 			perror("wait");
 			exit(1);
 		}
-		//cout << "done waiting" << endl;
 	}
 
 	return;
