@@ -16,7 +16,7 @@ using namespace std;
 
 void printPrompt(char* login, char* hostname);
 void printPrompt(char* login);
-
+void truncate_comment(char* input);
 void execute(char* input);
 
 int main()
@@ -25,8 +25,8 @@ int main()
 	char* login = getlogin();
 	
 	//getting hostname
-	char* hostname = new char[100];
-	int hostnamecheck = gethostname(hostname, 100);
+	char* hostname[100];
+	int hostnamecheck = gethostname(*hostname, 100);
 	
 	//checking hostname
 	if(hostnamecheck == -1) 
@@ -40,7 +40,7 @@ int main()
 		//outputting prompt
 		if (hostnamecheck != -1)
 		{
-			printPrompt(login, hostname);
+			printPrompt(login, *hostname);
 		}
 		else
 		{
@@ -50,7 +50,13 @@ int main()
 		//getting input
 		char input[BUFFER_SIZE];
 		cin.getline(input, BUFFER_SIZE);
-	
+		
+		//enable just in case we need original input
+		//char inputbackup[BUFFERSIZE];
+		//strcpy(inputbackup, input);
+
+		truncate_comment(input);
+		
 		//exectuting commands
 		execute(input);
 	}
@@ -80,6 +86,12 @@ void printPrompt(char* login)
 	}
 	
 	cout << "$ " << flush;
+	
+	return;
+}
+
+void truncate_comment(char* input)
+{
 	
 	return;
 }
