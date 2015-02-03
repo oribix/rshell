@@ -92,7 +92,10 @@ void printPrompt(char* login)
 
 void truncate_comment(char* input)
 {
-	
+	for(int i = 0 ; input[i] != '\0' ; i++)
+	{
+		if(input[i] == '#') input[i] = '\0';
+	}
 	return;
 }
 
@@ -128,38 +131,7 @@ void execute(char* input)
 		//initialize argv	
 		while(argv.back() != NULL)
 		{
-			bool comment_found = false;
-			
-			//if the token starts with '#', replace the token with NULL
-			if(argv.back()[0] == '#')
-			{
-				argv.pop_back();
-				argv.push_back(NULL);
-				comment_found = true;
-			}
-			else //look for any '#'s and replace it with a '\0' 
-			{
-				//checking for '#'
-				for (int i = 0 ; argv.back()[i] != '\0' ; i++)
-				{
-					if (argv.back()[i] == '#')
-					{
-						argv.back()[i] = '\0';
-						comment_found = true;
-					}
-				}
-			}
-			
-			if(comment_found && argv.back() != NULL)
-			{
-				//cerr << "pushing a null" << endl;
-				argv.push_back(NULL);
-			}
-			else if (!comment_found)
-			{
-				//cerr << "pushing another token" << endl;
-				argv.push_back(strtok(NULL, " "));
-			}
+			argv.push_back(strtok(NULL, " "));
 		}
 		
 		if(-1 == execvp(argv[0], argv.data())) perror("exec");
