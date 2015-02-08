@@ -107,7 +107,15 @@ void truncate_comment(char* input)
 //executes the commands
 int execute(char* input)
 {
-	if(string(input) == "exit") exit(0);
+	//initializing argv
+	vector<char*> argv;
+	for (argv.push_back(strtok (input, " 	"))
+		; argv.back() != NULL
+		; argv.push_back(strtok(NULL, " ")));
+	
+	//allows the shell to exit
+	if(argv.size() == 2 && string(argv[0]) == "exit") exit(0);
+
 	int status;
 	int pid = fork();
 	
@@ -117,13 +125,7 @@ int execute(char* input)
 		exit(1);
 	}
 	else if(pid == 0) //child process
-	{
-		//initializing argv
-		vector<char*> argv;
-		for (argv.push_back(strtok (input, " 	"))
-			; argv.back() != NULL
-			; argv.push_back(strtok(NULL, " ")));
-		
+	{		
 		if(-1 == execvp(argv[0], argv.data())) perror("exec");
 		
 		exit(-1);
