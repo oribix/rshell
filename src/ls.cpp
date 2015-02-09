@@ -1,3 +1,4 @@
+#include <string>
 #include <sstream>
 #include <math.h>
 #include <grp.h>
@@ -19,7 +20,9 @@
 
 using namespace std;
 
-void printcontents(char* dirName, bool flaga, bool flagl);
+list<string> printcontents(const char* dirName, bool flaga, bool flagl);
+
+void recursionprint(const char* dirName, bool flaga, bool flagl);
 
 int main(int argc, char *argv[])
 {
@@ -28,7 +31,7 @@ int main(int argc, char *argv[])
 	
 	bool flaga = false;
 	bool flagl = false;
-	//bool flagR = false;
+	bool flagR = false;
 	bool pathfound = false;
 
 	//parsing parameters
@@ -47,7 +50,7 @@ int main(int argc, char *argv[])
 				//check -all -long -recursive
 				if (string(argv[i]) == "--all") flaga = true;
 				if (string(argv[i]) == "--long") flagl = true;
-				//if (string(argv[i]) == "--recursive") flagR = true;
+				if (string(argv[i]) == "--recursive") flagR = true;
 				if(string(argv[i]) != "--all"
 					&& string(argv[i]) != "--long"
 					&& string(argv[i]) != "--recursive")
@@ -62,7 +65,7 @@ int main(int argc, char *argv[])
 				for(int j = 1 ; argv[i][j] != '\0' ; j++) {
 					if (argv[i][j] == 'a') flaga = true;
 					if (argv[i][j] == 'l') flagl = true;
-					//if (argv[i][j] == 'R') flagR = true;
+					if (argv[i][j] == 'R') flagR = true;
 					if(argv[i][j] != 'a'
 						&& argv[i][j] != 'l'
 						&& argv[i][j] != 'R')
@@ -86,11 +89,18 @@ int main(int argc, char *argv[])
 		}
 	}//end parsing parameters
 	
-	printcontents(dirName, flaga, flagl);
-	
+	if(flagR) {
+		recursionprint(dirName, flaga, flagl);
+	}
+	else {
+		printcontents(dirName, flaga, flagl);
+	}
+	return 0;
 }
 
-void printcontents(char* dirName, bool flaga, bool flagl) {
+list<string> printcontents(const char* dirName, bool flaga, bool flagl) {
+	list<string> directorylist;
+	
 	DIR *dirp = opendir(dirName);
 	if(dirp == NULL) {
 		perror("opendir");
@@ -154,14 +164,16 @@ void printcontents(char* dirName, bool flaga, bool flagl) {
 	
 	//print the columns
 	while (filenames.size() != 0) {
+		struct stat s;
+		string file = string(dirName) + filenames.front();
+		if( -1 == stat(file.c_str(), &s)) {
+			perror("stat");
+			exit(EXIT_FAILURE);
+		}
+		
 		if(flagl) {
 			//cerr << "files: " << filenames.front() << endl;
-			struct stat s;
-			string file = string(dirName) + filenames.front();
-			if( -1 == stat(file.c_str(), &s)) {
-				perror("stat");
-				exit(EXIT_FAILURE);
-			}
+			
 			
 			//takes up 10 spaces
 			if(s.st_mode & S_IFDIR) cout << "d";
@@ -206,6 +218,9 @@ void printcontents(char* dirName, bool flaga, bool flagl) {
 		if(flagl) cout << endl;
 		else cout << " " << flush;
 		
+		if(s.st_mode & S_IFDIR && filenames.front() != ".." && filenames.front() != ".")
+			directorylist.push_back(filenames.front());
+		
 		filenames.pop_front();
 	} 
 	if (!flagl) cout << endl;
@@ -214,4 +229,29 @@ void printcontents(char* dirName, bool flaga, bool flagl) {
 		perror("closedir");
 		exit(EXIT_FAILURE);
 	}
+	return directorylist;
+}
+
+void recursionprint( const char* dirName, bool flaga, bool flagl) {
+	cout << dirName << ": " << endl;
+	
+	list<string> directorylist = printcontents(dirName, flaga, flagl);
+	
+	cout << endl;
+	
+	if(directorylist.empty()) return;
+	else {
+		while (!directorylist.empty()) {
+			string nextdirectory;
+			if(string(dirName).at(string(dirName).size() - 1) == '/')
+				nextdirectory = string(dirName) + directorylist.front() + "/";
+			else {
+				nextdirectory = string(dirName) + "/" + directorylist.front() + "/";
+			}
+			recursionprint(nextdirectory.c_str(), flaga, flagl);
+			directorylist.pop_front();
+		}
+	}
+	
+	return;
 }

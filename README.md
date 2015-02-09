@@ -7,8 +7,10 @@ Currently, the shell is able to execute commands with flags. It also outputs the
 
 The Shell can handle comments by typing '#' before your comment. It can also handle multiple shell commands by using the connector ';'. The '|' and '&' connectors are in the works.
 
-Although it is not in the exec.script file, the shell does handle empty inputs. When it recieves an empty input, it will simply go to the next line and output another prompt.
+Entering an empty prompt will simply output another prompt.
 
-LS has now been added to the shell. LS supports the -a -all -l -long flags. -R is in the works. -l has strange formatting because the columns were not coded to be adaptable.
+LS has now been added to the shell. LS supports the -a --all -l --long -R and --recursive flags.  
 
-LS can also handle multiple flags such as "-l -l -l -l -a -a -a -all -all -long". It can also handle combined flags such as "-llallaaaalalll". 
+LS can also handle multiple flags such as "-l -l -l -l -a -a -a -all --all --long -R --recursive". It can also handle combined flags such as "-llallaRaaRalRRaRllRl".
+
+LS can also have a path parameter passed in. Passing in a path will print the contents of that path. You can combine a path parameter with flags as well (ex. ls bin/ -alR). This does not limit its ability to take in multiple flags and/or complex flags.

@@ -1,136 +1,3929 @@
-Script started on Mon 09 Feb 2015 12:03:50 AM PST
+Script started on Mon 09 Feb 2015 09:59:23 AM PST
 ~
-mmore019@hammer $ CS100
-bash: CS100: command not found
-~
-mmore019@hammer $ pwd
-/home/csmajs/mmore019
-~
-mmore019@hammer $ cd [K[K[Kls
-[0m[01;32maddons.sqlite[0m*           [01;32mcookies.sqlite-shm[0m*     [01;34mhealthreport[0m/             [01;34mMusic[0m/               [01;32msecmod.db[0m*              [01;34mVideos[0m/
-[01;32mblocklist.xml[0m*           [01;34mDesktop[0m/                [01;32mhealthreport.sqlite[0m*      [01;32mpermissions.sqlite[0m*  [01;32msessionstore.bak[0m*       [01;34mwebapps[0m/
-[01;34mbookmarkbackups[0m/         [01;34mDocuments[0m/              [01;32mhealthreport.sqlite-shm[0m*  [01;34mPictures[0m/            [01;32msessionstore.js[0m*        [01;32mwebappsstore.sqlite[0m*
-[01;34mCache[0m/                   [01;34mDownloads[0m/              [01;34mindexedDB[0m/                [01;32mplaces.sqlite[0m*       [01;32msignons.sqlite[0m*         [01;32mwebappsstore.sqlite-shm[0m*
-[01;32m_CACHE_CLEAN_[0m*           [01;32mdownloads.sqlite[0m*       [01;34mjetpack[0m/                  [01;32mplaces.sqlite-shm[0m*   [01;34mstartupCache[0m/           [01;34mWINDOWS[0m/
-[01;32mcert8.db[0m*                [01;34mextensions[0m/             [01;32mkey3.db[0m*                  [01;32mpluginreg.dat[0m*       [01;34mTemplates[0m/
-[01;32mchromeappsstore.sqlite[0m*  [01;32mextensions.ini[0m*         [01;32mlocalstore.rdf[0m*           [01;32mprefs.js[0m*            [01;32mtextadventure.cpp[0m*
-[01;32mcompatibility.ini[0m*       [01;32mextensions.sqlite[0m*      main.cpp                  [01;34mPublic[0m/              [01;34mthumbnails[0m/
-[01;32mcontent-prefs.sqlite[0m*    [01;32mFirefox_wallpaper.png[0m*  [01;32mmarionette.log[0m*           [01;34msafebrowsing[0m/        [01;32mtimes.json[0m*
-[01;32mcookies.sqlite[0m*          [01;32mformhistory.sqlite[0m*     [01;32mmimeTypes.rdf[0m*            [01;32msearch.json[0m*         [01;32murlclassifierkey3.txt[0m*
-[m~
-mmore019@hammer $ cd DOc[K[Kocuments/CS100/R[Krshell/
+mmore019@hammer $ cd Documents/CS100/rshell/
 ~/Documents/CS100/rshell
-mmore019@hammer $ git [K[K[K[Kmake
+mmore019@hammer $ am[K[Kmake
 mkdir -p ./bin
 g++ -ansi -Wall -Werror -pedantic ./src/main.cpp -o ./bin/rshell
 g++ -ansi -Wall -Werror -pedantic ./src/ls.cpp -o ./bin/ls 
 ~/Documents/CS100/rshell
-mmore019@hammer $ r[Kbin/rshell
+mmore019@hammer $ rs[K[Krshell[K[K[K[K[K[Kbin.[K/rshell[K[K[K[K[K[K[K[K[K[Kbin/rshell
 mmore019@hammer.cs.ucr.edu$ bin/ls
-LICENSE Makefile README.md bin ls.script src tests 
-mmore019@hammer.cs.ucr.edu$ ^[[A    bin/ls -a
-. .. .git LICENSE Makefile README.md bin ls.script src tests 
-mmore019@hammer.cs.ucr.edu$ bin/ls -all
-drwx------    5886533 mmore019   csmajs        4096 Feb  9 00:00 .
-drwxrwxrwx   24177722 mmore019   csmajs        4096 Feb  2 11:16 ..
-drwx------    5886534 mmore019   csmajs        4096 Feb  8 23:59 .git
--rw-------    3189095 mmore019   csmajs       18027 Jan 18 20:17 LICENSE
--rw-------   10120033 mmore019   csmajs         397 Feb  8 13:56 Makefile
--rw-------   13681248 mmore019   csmajs        1097 Feb  8 23:58 README.md
-drwx------    4185700 mmore019   csmajs        4096 Feb  9 00:01 bin
--rw-------   13681249 mmore019   csmajs           0 Feb  9 00:00 ls.script
-drwx------    3189097 mmore019   csmajs        4096 Feb  8 23:41 src
-drwx------    6314032 mmore019   csmajs        4096 Feb  1 18:54 tests
-mmore019@hammer.cs.ucr.edu$ bin/ls --all #note: this is not the same as -all
-. .. .git LICENSE Makefile README.md bin ls.script src tests 
-mmore019@hammer.cs.ucr.edu$ bin/ls -lllalalalalalalllalallallla
-drwx------    5886533 mmore019   csmajs        4096 Feb  9 00:00 .
-drwxrwxrwx   24177722 mmore019   csmajs        4096 Feb  2 11:16 ..
-drwx------    5886534 mmore019   csmajs        4096 Feb  8 23:59 .git
--rw-------    3189095 mmore019   csmajs       18027 Jan 18 20:17 LICENSE
--rw-------   10120033 mmore019   csmajs         397 Feb  8 13:56 Makefile
--rw-------   13681248 mmore019   csmajs        1097 Feb  8 23:58 README.md
-drwx------    4185700 mmore019   csmajs        4096 Feb  9 00:01 bin
--rw-------   13681249 mmore019   csmajs           0 Feb  9 00:00 ls.script
-drwx------    3189097 mmore019   csmajs        4096 Feb  8 23:41 src
-drwx------    6314032 mmore019   csmajs        4096 Feb  1 18:54 tests
-mmore019@hammer.cs.ucr.edu$ bin/ls -l -l -l -l -l -l 
--rw-------    3189095 mmore019   csmajs       18027 Jan 18 20:17 LICENSE
--rw-------   10120033 mmore019   csmajs         397 Feb  8 13:56 Makefile
--rw-------   13681248 mmore019   csmajs        1097 Feb  8 23:58 README.md
-drwx------    4185700 mmore019   csmajs        4096 Feb  9 00:01 bin
--rw-------   13681249 mmore019   csmajs           0 Feb  9 00:00 ls.script
-drwx------    3189097 mmore019   csmajs        4096 Feb  8 23:41 src
-drwx------    6314032 mmore019   csmajs        4096 Feb  1 18:54 tests
-mmore019@hammer.cs.ucr.edu$ bin/ls -   - - - -
-error: '-' has no parameters
-mmore019@hammer.cs.ucr.edu$ bin/ls --long
--rw-------    3189095 mmore019   csmajs       18027 Jan 18 20:17 LICENSE
--rw-------   10120033 mmore019   csmajs         397 Feb  8 13:56 Makefile
--rw-------   13681248 mmore019   csmajs        1097 Feb  8 23:58 README.md
-drwx------    4185700 mmore019   csmajs        4096 Feb  9 00:01 bin
--rw-------   13681249 mmore019   csmajs           0 Feb  9 00:00 ls.script
-drwx------    3189097 mmore019   csmajs        4096 Feb  8 23:41 src
-drwx------    6314032 mmore019   csmajs        4096 Feb  1 18:54 tests
-mmore019@hammer.cs.ucr.edu$ bon  in/ls -l -a
-drwx------    5886533 mmore019   csmajs        4096 Feb  9 00:00 .
-drwxrwxrwx   24177722 mmore019   csmajs        4096 Feb  2 11:16 ..
-drwx------    5886534 mmore019   csmajs        4096 Feb  8 23:59 .git
--rw-------    3189095 mmore019   csmajs       18027 Jan 18 20:17 LICENSE
--rw-------   10120033 mmore019   csmajs         397 Feb  8 13:56 Makefile
--rw-------   13681248 mmore019   csmajs        1097 Feb  8 23:58 README.md
-drwx------    4185700 mmore019   csmajs        4096 Feb  9 00:01 bin
--rw-------   13681249 mmore019   csmajs           0 Feb  9 00:00 ls.script
-drwx------    3189097 mmore019   csmajs        4096 Feb  8 23:41 src
-drwx------    6314032 mmore019   csmajs        4096 Feb  1 18:54 tests
-mmore019@hammer.cs.ucr.edu$ bin/ls -------------
-error: Unreconized flag: -------------
-mmore019@hammer.cs.ucr.edu$ bin/ls bin/ls   ## testing wh         i     #ia  can specify a folder to ls in
-opendir: Not a directory
-mmore019@hammer.cs.ucr.edu$ ^[[A    bin/ls src/
+LICENSE Makefile README.md bin src tests 
+mmore019@hammer.cs.ucr.edu$ bin  /ls -a
+. .. .git LICENSE Makefile README.md bin src tests 
+mmore019@hammer.cs.ucr.edu$ bin/ls -l
+-rw------- 1 mmore019 csmajs 18027 Jan 18 20:17 LICENSE
+-rw------- 1 mmore019 csmajs   397 Feb  9 00:22 Makefile
+-rw------- 1 mmore019 csmajs  1183 Feb  9 09:52 README.md
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:56 bin
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:43 src
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:55 tests
+mmore019@hammer.cs.ucr.edu$ bin/ls -r R
+./: 
+LICENSE Makefile README.md bin src tests 
+
+./bin/: 
+ls rshell 
+
+./src/: 
 ls.cpp main.cpp 
-mmore019@hammer.cs.ucr.edu$ bin   # #the bin/ls bin/ls command tests the error checking by passing a fake folder
-mmore019@hammer.cs.ucr.edu$ bin/ls bin bin bin -a
-error: too many path parameters
-mmore019@hammer.cs.ucr.edu$ #that tests what happens if many paths are inputted
-mmore019@hammer.cs.ucr.edu$ bin/ls ../.. #going up folders
-CS100 CS61 Thumbs.db assignment 6 honors.odt honors assignment 2.odt motivation of cs student.odt x or i.odt 
-mmore019@hammer.cs.ucr.edu$ $ #notice that is t is only partially in apl  lpha order. This s is because the names are sorted strictly and weakly
-mmore019@hammer.cs.ucr.edu$ #the folders and files that have a   start with capital letters go first, then lower case
-mmore019@hammer.cs.ucr.edu$ ls -    bin/ls -id
-error: Unreconized flag: -id
-mmore019@hammer.cs.ucr.edu$ #that tests if it will take unrecognized fp kags     flags
-mmore019@hammer.cs.ucr.edu$ # bin/ls -a -l -R u
-error: Unreconized flag: -u
-mmore019@hammer.cs.ucr.edu$ #notice that it points out the unrecognized flag
-mmore019@hammer.cs.ucr.edu$ bin/ls -alu
-error: Unreconized flag: -alu
-mmore019@hammer.cs.ucr.edu$ #it will print out the entire unrecognized flag
-mmore019@hammer.cs.ucr.edu$ # bin/ls -l -l -a -djskdfjskhf
-error: Unreconized flag: -djskdfjskhf
-mmore019@hammer.cs.ucr.edu$ bin/ls exit
-opendir: No such file or directory
-mmore019@hammer.cs.ucr.edu$ bin/ls ; bin/ls
-LICENSE Makefile README.md bin ls.script src tests 
-LICENSE Makefile README.md bin ls.script src tests 
-mmore019@hammer.cs.ucr.edu$ #tesing some functions with the ls                         rshell functions with the ls command to see if it creates conflict
-mmore019@hammer.cs.ucr.edu$ bin.ls   /ls ./.. #tesing a strange directory
+
+./tests/: 
+exec.script ls-old.script ls.script 
+
+mmore019@hammer.cs.ucr.edu$ bin/ls --all
+. .. .git LICENSE Makefile README.md bin src tests 
+mmore019@hammer.cs.ucr.edu$ bin/ls --long
+-rw------- 1 mmore019 csmajs 18027 Jan 18 20:17 LICENSE
+-rw------- 1 mmore019 csmajs   397 Feb  9 00:22 Makefile
+-rw------- 1 mmore019 csmajs  1183 Feb  9 09:52 README.md
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:56 bin
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:43 src
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:55 tests
+mmore019@hammer.cs.ucr.edu$ bin/ls --recursive
+./: 
+LICENSE Makefile README.md bin src tests 
+
+./bin/: 
+ls rshell 
+
+./src/: 
+ls.cpp main.cpp 
+
+./tests/: 
+exec.script ls-old.script ls.script 
+
+mmore019@hammer.cs.ucr.edu$ #this shows the function                     at showed the functionality                           e next commands wei  ill show the          do some stress s tests
+mmore019@hammer.cs.ucr.edu$ #multiple flags
+mmore019@hammer.cs.ucr.edu$ bin. /ls -l -a -R
+./: 
+drwx------  6 mmore019 csmajs  4096 Feb  9 09:56 .
+drwxrwxrwx 11 mmore019 csmajs  4096 Feb  2 11:16 ..
+drwx------  8 mmore019 csmajs  4096 Feb  9 09:43 .git
+-rw-------  1 mmore019 csmajs 18027 Jan 18 20:17 LICENSE
+-rw-------  1 mmore019 csmajs   397 Feb  9 00:22 Makefile
+-rw-------  1 mmore019 csmajs  1183 Feb  9 09:52 README.md
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:56 bin
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:43 src
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:55 tests
+
+./.git/: 
+drwx------   8 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------   6 mmore019 csmajs 4096 Feb  9 09:56 ..
+-rw-------   1 mmore019 csmajs   34 Feb  9 07:56 COMMIT_EDITMSG
+-rw-------   1 mmore019 csmajs  210 Jan 18 21:15 FETCH_HEAD
+-rw-------   1 mmore019 csmajs   19 Feb  9 05:18 HEAD
+-rw-------   1 mmore019 csmajs   41 Feb  9 00:22 ORIG_HEAD
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 branches
+-rw-------   1 mmore019 csmajs  224 Jan 23 11:32 config
+-rw-------   1 mmore019 csmajs   73 Jan 18 20:17 description
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 hooks
+-rw-------   1 mmore019 csmajs  568 Feb  9 09:43 index
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 info
+drwx------   3 mmore019 csmajs 4096 Jan 18 20:17 logs
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 objects
+-rw-------   1 mmore019 csmajs    0 Jan 18 20:37 packed-refs
+drwx------   5 mmore019 csmajs 4096 Jan 18 20:17 refs
+
+./.git/branches/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/hooks/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rwx------ 1 mmore019 csmajs  452 Jan 18 20:17 applypatch-msg.sample
+-rwx------ 1 mmore019 csmajs  896 Jan 18 20:17 commit-msg.sample
+-rwx------ 1 mmore019 csmajs  160 Jan 18 20:17 post-commit.sample
+-rwx------ 1 mmore019 csmajs  548 Jan 18 20:17 post-receive.sample
+-rwx------ 1 mmore019 csmajs  189 Jan 18 20:17 post-update.sample
+-rwx------ 1 mmore019 csmajs  398 Jan 18 20:17 pre-applypatch.sample
+-rwx------ 1 mmore019 csmajs 1578 Jan 18 20:17 pre-commit.sample
+-rwx------ 1 mmore019 csmajs 4951 Jan 18 20:17 pre-rebase.sample
+-rwx------ 1 mmore019 csmajs 1239 Jan 18 20:17 prepare-commit-msg.sample
+-rwx------ 1 mmore019 csmajs 3611 Jan 18 20:17 update.sample
+
+./.git/info/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rw------- 1 mmore019 csmajs  240 Jan 18 20:17 exclude
+
+./.git/logs/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rw------- 1 mmore019 csmajs 9976 Feb  9 07:56 HEAD
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 refs
+
+./.git/logs/refs/: 
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  8 13:23 heads
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 remotes
+
+./.git/logs/refs/heads/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  8 13:23 .
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 ..
+-rw------- 1 mmore019 csmajs 3820 Feb  8 13:16 exec
+-rw------- 1 mmore019 csmajs 2900 Feb  9 07:56 ls
+-rw------- 1 mmore019 csmajs 1332 Feb  9 00:22 master
+
+./.git/logs/refs/remotes/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 .
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  8 17:53 origin
+
+./.git/logs/refs/remotes/origin/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  8 17:53 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 ..
+-rw------- 1 mmore019 csmajs 1889 Feb  8 13:17 exec
+-rw------- 1 mmore019 csmajs  628 Feb  9 07:57 ls
+-rw------- 1 mmore019 csmajs  790 Feb  9 00:23 master
+
+./.git/objects/: 
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------   8 mmore019 csmajs 4096 Feb  9 09:43 ..
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 00
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 01
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 03
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:47 05
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 06
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:12 08
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 0b
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:02 11
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:52 14
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 1a
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 1b
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 1c
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 1e
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 21
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 22
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 24
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 25
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 2a
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 2c
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 2d
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:56 2f
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 31
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:55 32
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 33
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:20 35
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 36
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 37
+drwx------   2 mmore019 csmajs 4096 Jan 23 15:56 39
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 3a
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 41
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 42
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 46
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 49
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 4c
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 4d
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 4f
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 53
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 55
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 58
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 59
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:50 5c
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 5d
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 62
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:14 64
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:34 65
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 67
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 68
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 6d
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 70
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 72
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:20 76
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 78
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 7a
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 7b
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 7d
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 7e
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 7f
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 83
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 84
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:58 85
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:04 88
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 8a
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:09 90
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 91
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 92
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:09 95
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 98
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 9b
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 9c
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 9d
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 a1
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:09 a2
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 a4
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 a5
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 a8
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 ab
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 ad
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 af
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 b2
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 b3
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:38 b4
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:49 b5
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 b9
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 bf
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 c3
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 c9
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:51 cf
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 d0
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 d1
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 d4
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 d5
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 d6
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 dc
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 dd
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 de
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 e0
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 e6
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 e7
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 e8
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:16 e9
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 eb
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 ec
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:10 ee
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 f3
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 f4
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 f6
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 f7
+drwx------   2 mmore019 csmajs 4096 Feb  9 09:43 fa
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 fc
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 fe
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 info
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 pack
+
+./.git/objects/00/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  2 00:45 e2acd848de3d1bba6248d986c475f67ec7491b
+
+./.git/objects/01/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 17:45 18c2e1ddf1df4072ba105f5859d0c4736ad3e4
+-r--------   1 mmore019 csmajs   53 Feb  3 02:41 8197637acfec4e973fce06399ca1bfa389f23c
+
+./.git/objects/03/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1009 Feb  3 01:49 cdb9432df3a9841c6c6b6b134d175425bb066b
+
+./.git/objects/05/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:47 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1810 Feb  9 05:47 92296158c5b54f88a52e01d8494b110d243ac9
+
+./.git/objects/06/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 14:48 4c314cf5daca6966b2695bbc71cf808f36eb28
+
+./.git/objects/08/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:12 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  243 Jan 23 12:03 682bf826cef10041896140f7a54e5aedecaf99
+-r--------   1 mmore019 csmajs  968 Feb  3 01:12 bcf4efa3d907f5a3f1a24fc06e6d3804e04cf6
+
+./.git/objects/0b/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  190 Jan 23 17:22 186af795e7d96311bedfa4591f4ba50852bea4
+
+./.git/objects/11/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:02 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  890 Jan 23 21:02 9fa63196d52fdb9c6d22c01182b0677ec5d007
+
+./.git/objects/14/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1174 Feb  8 19:52 4d74a0fbc94ffb2dfce9ad9c3bf46c44539693
+
+./.git/objects/1a/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 21:44 b4672f8caa13ca6e44bef06583a822b20a4ea7
+
+./.git/objects/1b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 23:51 6dc0c0b9d034c518f181586a3e8fba392895eb
+
+./.git/objects/1c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 12:03 d1533fddcc32396ed3d5a100a91b729bc7016a
+
+./.git/objects/1e/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  170 Feb  8 23:51 63df9f1b4cdc6b6419362c5ee720ffd5fd1cd9
+
+./.git/objects/21/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  9 05:48 a1a447ec2be60fbec4530f7f51bd5eca68f400
+
+./.git/objects/22/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 15:56 08ffb70139be35a24f948afb8dba20a6842d68
+-r--------   1 mmore019 csmajs  516 Jan 23 17:21 659af5908886be84bd0aca291f9d05366b521b
+-r--------   1 mmore019 csmajs  176 Feb  8 23:59 9b199e892b6f1858268f9b8db5f64ae2ee38b9
+
+./.git/objects/24/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  178 Feb  3 02:10 d27f06e19ec81eaaddb14d7b519bc221ecbcf7
+
+./.git/objects/25/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  206 Feb  8 14:05 3791d9d2426a38b2c569a8ed34b11e4b6d9e64
+
+./.git/objects/2a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 23:51 c2f9fb2565c396312b870f3d6e99b4b156bb59
+
+./.git/objects/2c/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 14:05 80f9a59e4bc9c96da55b6695f098385afc4ee3
+
+./.git/objects/2d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 12:03 479d8c0102e46370746562cf60a8c5ab74109d
+
+./.git/objects/2f/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  495 Jan 23 23:56 092f26e27d6e158ba296d08dfe8ce3f66e5da8
+
+./.git/objects/31/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:44 265fb3da9d339a0a318f523e182b8869d4e9ed
+
+./.git/objects/32/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1946 Feb  9 07:55 a18e4d11794a282204973ccaedd77fb3a4a2ad
+
+./.git/objects/33/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  183 Feb  8 21:52 a0098be6d96ebc63fb757c215a055bbe60624e
+-r--------   1 mmore019 csmajs  609 Jan 23 15:52 d4753030e6fc661fa8bbb02adbd66a731eae5d
+
+./.git/objects/35/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:20 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1000 Feb  3 00:20 67f2bbcea2f1675c7d146bc6b980682c6219ee
+
+./.git/objects/36/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  9 00:21 93d4d967dcf903ec0bb2e4e0a8c515c1af29fa
+
+./.git/objects/37/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 22:00 934625aa4276bbfa31798b7039f744c9522ea3
+-r--------   1 mmore019 csmajs   80 Feb  9 07:56 b82c62ebed7600ae81d57e9860f276196fcd56
+
+./.git/objects/39/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 15:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  166 Jan 23 15:56 76540bd3f5ddff46f69b50582576d977721b71
+
+./.git/objects/3a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   52 Feb  3 01:49 733b3299928e6ad5c1fc8a89a1542015c7b16a
+
+./.git/objects/41/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 13:16 f26ae7e35fa31c2d08275a3544ad16897586f2
+
+./.git/objects/42/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   82 Feb  9 00:21 26e2ff9abce9faad78a57f9e60f318e4d72c47
+
+./.git/objects/46/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 17:45 0eeab3b30bcf2790cf522319dec35c145db40d
+
+./.git/objects/49/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 21:52 9e1ae9b4172419815c6e083559937271ea99ed
+-r--------   1 mmore019 csmajs  123 Jan 18 20:17 de7bf0bfa8d61ae4fb0649c77deebfe277e85b
+
+./.git/objects/4c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 17:22 e48a991051fc8ae038a6e28c2d2ca6b41f4bac
+
+./.git/objects/4d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 18 20:23 b969f4822d744036205bf6a80105847b49f000
+
+./.git/objects/4f/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 18:11 b23204a031f4835360e01c6d99b0bb9b9d63b7
+
+./.git/objects/53/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  173 Jan 23 18:26 d42dce1ba2e4ad915a0c935eebe12c591d853a
+-r--------   1 mmore019 csmajs  176 Feb  8 21:52 eafb11598ebf2031b27140da9da575b5b7c10b
+
+./.git/objects/55/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  2 00:45 d89e076009ddb21731e753711cdfa313f2542e
+
+./.git/objects/58/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 18:15 ffa5630a982e91201abc54c77b743f40bbcfce
+
+./.git/objects/59/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  164 Jan 23 21:44 1bcae1df9dd4814f54899bc95d4b8d435d02f3
+
+./.git/objects/5c/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:50 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1700 Feb  8 23:50 667714f0dcae23ee8a78c84fe1ebdb205e778f
+-r--------   1 mmore019 csmajs 1045 Jan 23 23:34 86014e9f33c2efb984e57c87204a3411c17040
+
+./.git/objects/5d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  169 Jan 23 21:44 e898df2a4076660460efcce493be0d1731418e
+
+./.git/objects/62/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Jan 23 23:57 266c3b1ae46899726c3cd64c8162115d0faa01
+-r--------   1 mmore019 csmajs  344 Feb  8 14:05 858c60b079fa3159a95ea976a808f69a227ada
+-r--------   1 mmore019 csmajs   85 Jan 18 20:17 be0fa762547b9889a6f4f0c66acbe78e1335ee
+
+./.git/objects/64/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:14 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1051 Feb  3 11:14 ada82513b2a2b09036562dd1f0080ab64ae672
+
+./.git/objects/65/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:34 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 4198 Jan 23 23:34 e8cfb48fb13a47bc22da3216f92e747f27133a
+
+./.git/objects/67/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  2 23:19 14dd2032ac585942f7c4f47c5105b4df33bf00
+
+./.git/objects/68/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 16:51 8999693c26078635b6d2de3e780561463e4d82
+
+./.git/objects/6d/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 00:21 324dc28f423b3bd388411ed2b2dc5609a0ed88
+-r--------   1 mmore019 csmajs  148 Jan 23 21:04 fb705c27d01886d7d1beaae9a42124ebc9e14d
+
+./.git/objects/70/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 18:15 efe01cc15be0b1775bffc889ee008778d920b4
+
+./.git/objects/72/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  251 Feb  3 01:13 d3387b8b4ad12e706a765f57ec675ca885e966
+
+./.git/objects/76/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:20 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 2495 Feb  9 00:20 6d0d146903a98d864e4db9761b5ba7c904eec1
+-r--------   1 mmore019 csmajs   53 Jan 23 18:26 c61dbf3cf63616a8c5a62119f0edbdded7ac0b
+
+./.git/objects/78/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 18 20:44 df1a853e03ae87c1dc056bcb0315a775a034e3
+
+./.git/objects/7a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 02:10 47b3b0242152fe9ee65ebd6e1f92bce5c1da80
+
+./.git/objects/7b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 14:05 39f8c1afc2ae15aa36b3c8107bd1e5003f5167
+
+./.git/objects/7d/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  184 Feb  9 07:56 9fcd7af43387b5eb3e62dfaeedf08e962df069
+
+./.git/objects/7e/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  192 Feb  8 13:16 c65a13f8c114bc9c1e5ca63309f9dc6ee84413
+
+./.git/objects/7f/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   56 Jan 23 23:57 4c727aec803eefa8a376f122d79309986b546e
+
+./.git/objects/83/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 01:13 20281b30862f5c9c637945c0c3a4bb6abd8d78
+-r--------   1 mmore019 csmajs  148 Jan 23 15:56 3b63b9e9e36cb31e284b49fb5bfcbe1c430fac
+
+./.git/objects/84/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  207 Feb  3 00:21 83387018b1f590b2a06115527fd85bc1daf1ff
+
+./.git/objects/85/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:58 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 19:55 487186f8876133deb46db11c33f846393f769b
+-r--------   1 mmore019 csmajs  580 Feb  8 23:58 57cad14402f92f10fd08f7230b249c7cd4a381
+
+./.git/objects/88/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:04 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 21:04 cb8e138a724ad4578062ddf6dce115d4a9cbfa
+
+./.git/objects/8a/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  225 Jan 23 21:04 05fac22b250a088195c3dda18c8d1ca2f884ba
+-r--------   1 mmore019 csmajs  175 Jan 23 22:00 971606569f4f830830bb53f5bd3a1c9facdd59
+
+./.git/objects/90/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1623 Feb  8 23:09 0d711266ce5be3b7d0f3d0a47c20639c8e34ce
+
+./.git/objects/91/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 22:00 365d053a18b73d9fe9fa027c82bcf669aecd12
+
+./.git/objects/92/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 16:51 193c5592059330a82d5974b9a7a833efcb4ad7
+
+./.git/objects/95/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1064 Feb  3 02:09 33d25b7a3cbf17dabf07942b72a9842d1e8ca2
+
+./.git/objects/98/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  8 13:16 27ebc0838789dfc528be7036f514ecc5c98866
+-r--------   1 mmore019 csmajs  177 Jan 18 20:44 8b1afbb86fcd7e25af9b4e81397c62d65b2ee5
+-r--------   1 mmore019 csmajs 1082 Feb  8 13:15 96e137073e583507ef12a4eb23c2be501d78db
+-r--------   1 mmore019 csmajs   80 Feb  8 17:11 eca58243bbd94d6a4bc7b62ffa9961015093ac
+
+./.git/objects/9b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  200 Feb  8 14:05 14d4aefe7822dd0a6e23feb7af53313d726a8a
+
+./.git/objects/9c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  216 Jan 23 23:57 a690a5af3390683f68d70180b5badf803db702
+
+./.git/objects/9d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:23 7e32cbc772e91217d43591e46aa70e244278aa
+-r--------   1 mmore019 csmajs  601 Jan 23 18:26 f283ee9ad21359cd56b467fab17557f7978c14
+
+./.git/objects/a1/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 01:49 3c82c3862cff8b0f8c09e38e1da4894d809476
+
+./.git/objects/a2/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  185 Feb  8 17:11 6dbc7e0c2623de30e55e4f57113e9a96a3cd62
+-r--------   1 mmore019 csmajs  958 Feb  8 18:09 b90d508dcb4389cf4ef2399c1b12c54081d966
+
+./.git/objects/a4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  595 Jan 23 18:13 4e5c505b38ffe1fc665f668cf6e93e38bb758e
+-r--------   1 mmore019 csmajs  242 Jan 23 12:03 c3a4c4fa5169c65cff768cebad1480f69a6852
+-r--------   1 mmore019 csmajs  849 Feb  8 17:45 edd1a593e0dd58ee262a97415d9c0ec324625e
+
+./.git/objects/a5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  171 Feb  8 14:48 7c7c3c181013122bc81e721eb2d8ef7be3e8d5
+
+./.git/objects/a8/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   84 Jan 18 20:44 cf9eb5bf04819a47bec08460de7d65f6fed0c8
+
+./.git/objects/ab/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 11:17 305d814444d9b395f8edcba4ffebd6ba8dc850
+-r--------   1 mmore019 csmajs  177 Feb  8 17:11 bf2e5e45dd68b8fef62ac92807d197d3c6c916
+
+./.git/objects/ad/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  122 Jan 23 12:03 47435ecec5070422a3d1f3940aa5bc322c8f7e
+-r--------   1 mmore019 csmajs  268 Feb  8 19:55 ecb2c0be240ccfd29f01b4d4e1d9bf8cca10e7
+
+./.git/objects/af/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  191 Feb  3 01:49 67d79b95f6e3240995da8444eef03fe4ffa06f
+
+./.git/objects/b2/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 17:22 992d3b48bd4de1cec0072412ac2c08c92dd1de
+
+./.git/objects/b3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  2 23:19 0c6eb997289085d4d99ac0dfdb68493b752730
+
+./.git/objects/b4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:38 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1041 Feb  3 02:38 441329dd28b272e9aa475724aaa6bcd95d3d6c
+
+./.git/objects/b5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  722 Feb  8 16:49 34e6500699c413766805fab1c7e47804b67332
+
+./.git/objects/b9/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   52 Jan 23 23:57 8da6c3aa6704b6b673022edde60553fae66c0e
+
+./.git/objects/bf/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  183 Jan 18 20:23 091f0218472d43c424824cb01f3a4cd7f8042e
+
+./.git/objects/c3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 02:41 7948117b64cd68d00bde5a9bcf7aad3bcda5a2
+
+./.git/objects/c9/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  284 Feb  3 02:41 42b7129946a9e6728ea9eaf0e9b15e86d707e6
+
+./.git/objects/cf/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1402 Feb  8 21:51 c6c427c8df49a2237e08adfdab6f944154d6df
+
+./.git/objects/d0/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 18:26 b2b0708a850c571a91949448792c0b7489d27b
+
+./.git/objects/d1/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 19:55 2f88a177c033fbce76fe779581cb7ffda9a909
+
+./.git/objects/d4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 01:13 980a386ad0f6f7c0082530b5285cdaa1453e1f
+-r--------   1 mmore019 csmajs  177 Feb  9 07:56 a0b64a485e10c85301a71f776f66c9c6b68da9
+
+./.git/objects/d5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  242 Feb  9 05:48 9f1600760515f615e78d51d814e682d97b299b
+
+./.git/objects/d6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 02:10 0a652bc635449712d79bbade1720a9e164f1b1
+-r--------   1 mmore019 csmajs 7710 Jan 18 20:17 a93266f748d606b884f9434ff662fe80b9dc21
+
+./.git/objects/dc/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1127 Feb  2 00:45 3b53acebbf23745f30d37fb0feb82d253cf5b4
+
+./.git/objects/dd/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 17:45 a6e4d966b2900346663a56aecf072010d0340a
+
+./.git/objects/de/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 18:11 0795b62e33bb52745eab141f545604b78d69be
+-r--------   1 mmore019 csmajs  170 Feb  2 00:45 b66e33366ebc123388a181825db5004efb0590
+
+./.git/objects/e0/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  193 Feb  3 11:17 ced24b2d2f38d9edef7d0440ecb982e1e1fd07
+
+./.git/objects/e6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  410 Feb  8 14:48 0bad25e37262d19d59f341d88ddc031b16955c
+-r--------   1 mmore019 csmajs   15 Jan 18 20:22 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+./.git/objects/e7/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  244 Feb  2 23:19 68462e2e26430383bc8bae1e19ce1ca4e7b051
+
+./.git/objects/e8/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  181 Feb  9 00:21 98b831ff2f688c6236ebdf4d5869d047c6a39d
+
+./.git/objects/e9/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1208 Feb  2 23:16 967ffd9047b82fb6be2e260e6d47fc07a554be
+
+./.git/objects/eb/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 14:48 d29d8d5273da52f94dce73c2991e6f05e29c56
+
+./.git/objects/ec/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 00:21 928fe7de4e7c49fb4b739e75097fe2d534444f
+
+./.git/objects/ee/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  764 Feb  8 17:10 90046d5781d78066dce739bb0a9b055479123f
+
+./.git/objects/f3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  192 Feb  8 16:51 0c8558ee7956846d0b5509859840e51fb2188d
+-r--------   1 mmore019 csmajs  177 Feb  9 05:48 467a1b09b2571a2b4aa021b2cbfdf4e095ad42
+
+./.git/objects/f4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 11:17 c25d7a69849106bd686ccced8b154e7c5a3bad
+
+./.git/objects/f6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  167 Feb  8 23:59 d4f5266dbccbe9ed15cbc9d4c0917563f81ab2
+
+./.git/objects/f7/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:17 e5c2a255d09c65554637871b69c55c28ebb77f
+
+./.git/objects/fa/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 2183 Feb  9 09:43 f91c5a55db3e6be215214a222fc25298920de2
+
+./.git/objects/fc/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  189 Jan 23 18:15 79237f672dd7d845338043ce9c2d17444e24a5
+
+./.git/objects/fe/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  206 Feb  8 18:11 7179aad43ee91e625342db12fa2d925aaad827
+-r--------   1 mmore019 csmajs  910 Jan 23 21:59 92c556df527354595372f8d9384512b0b9491b
+
+./.git/objects/info/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/objects/pack/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/refs/: 
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:56 heads
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 remotes
+drwx------ 2 mmore019 csmajs 4096 Feb  9 00:23 tags
+
+./.git/refs/heads/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:16 exec
+-rw------- 1 mmore019 csmajs   41 Feb  9 07:56 ls
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:22 master
+
+./.git/refs/remotes/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:57 origin
+
+./.git/refs/remotes/origin/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:57 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:17 exec
+-rw------- 1 mmore019 csmajs   41 Feb  9 07:57 ls
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:23 master
+
+./.git/refs/tags/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 00:23 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Jan 23 23:59 hw0
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:20 hw0-2
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:23 hw1
+
+./bin/: 
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:56 .
+drwx------ 6 mmore019 csmajs  4096 Feb  9 09:56 ..
+-rwx------ 1 mmore019 csmajs 36845 Feb  9 09:56 ls
+-rwx------ 1 mmore019 csmajs 43866 Feb  9 09:56 rshell
+
+./src/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------ 6 mmore019 csmajs 4096 Feb  9 09:56 ..
+-rw------- 1 mmore019 csmajs 6616 Feb  9 09:43 ls.cpp
+-rw------- 1 mmore019 csmajs 2540 Feb  8 13:18 main.cpp
+
+./tests/: 
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:55 .
+drwx------ 6 mmore019 csmajs  4096 Feb  9 09:56 ..
+-rw------- 1 mmore019 csmajs 12162 Feb  1 18:54 exec.script
+-rw------- 1 mmore019 csmajs 10093 Feb  9 00:22 ls-old.script
+-rw------- 1 mmore019 csmajs 32768 Feb  9 09:59 ls.script
+
+mmore019@hammer.cs.ucr.edu$ #sorry for the length of that
+mmore019@hammer.cs.ucr.edu$ I could add           #  I could add -r r R to t every case but to keep the file short,       hort, i will limit this
+mmore019@hammer.cs.ucr.edu$ # bin/ls -l -a -l -a -l -l -a -a
+drwx------  6 mmore019 csmajs  4096 Feb  9 09:56 .
+drwxrwxrwx 11 mmore019 csmajs  4096 Feb  2 11:16 ..
+drwx------  8 mmore019 csmajs  4096 Feb  9 09:43 .git
+-rw-------  1 mmore019 csmajs 18027 Jan 18 20:17 LICENSE
+-rw-------  1 mmore019 csmajs   397 Feb  9 00:22 Makefile
+-rw-------  1 mmore019 csmajs  1183 Feb  9 09:52 README.md
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:56 bin
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:43 src
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:55 tests
+mmore019@hammer.cs.ucr.edu$ bin/ls -l A all   -all --long #if you want to                I would have              i You will have to                I can also do --rec        add --recursive, but I i wont to keep this short                                                            --recursive
+./: 
+drwx------  6 mmore019 csmajs  4096 Feb  9 09:56 .
+drwxrwxrwx 11 mmore019 csmajs  4096 Feb  2 11:16 ..
+drwx------  8 mmore019 csmajs  4096 Feb  9 09:43 .git
+-rw-------  1 mmore019 csmajs 18027 Jan 18 20:17 LICENSE
+-rw-------  1 mmore019 csmajs   397 Feb  9 00:22 Makefile
+-rw-------  1 mmore019 csmajs  1183 Feb  9 09:52 README.md
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:56 bin
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:43 src
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:55 tests
+
+./.git/: 
+drwx------   8 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------   6 mmore019 csmajs 4096 Feb  9 09:56 ..
+-rw-------   1 mmore019 csmajs   34 Feb  9 07:56 COMMIT_EDITMSG
+-rw-------   1 mmore019 csmajs  210 Jan 18 21:15 FETCH_HEAD
+-rw-------   1 mmore019 csmajs   19 Feb  9 05:18 HEAD
+-rw-------   1 mmore019 csmajs   41 Feb  9 00:22 ORIG_HEAD
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 branches
+-rw-------   1 mmore019 csmajs  224 Jan 23 11:32 config
+-rw-------   1 mmore019 csmajs   73 Jan 18 20:17 description
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 hooks
+-rw-------   1 mmore019 csmajs  568 Feb  9 09:43 index
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 info
+drwx------   3 mmore019 csmajs 4096 Jan 18 20:17 logs
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 objects
+-rw-------   1 mmore019 csmajs    0 Jan 18 20:37 packed-refs
+drwx------   5 mmore019 csmajs 4096 Jan 18 20:17 refs
+
+./.git/branches/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/hooks/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rwx------ 1 mmore019 csmajs  452 Jan 18 20:17 applypatch-msg.sample
+-rwx------ 1 mmore019 csmajs  896 Jan 18 20:17 commit-msg.sample
+-rwx------ 1 mmore019 csmajs  160 Jan 18 20:17 post-commit.sample
+-rwx------ 1 mmore019 csmajs  548 Jan 18 20:17 post-receive.sample
+-rwx------ 1 mmore019 csmajs  189 Jan 18 20:17 post-update.sample
+-rwx------ 1 mmore019 csmajs  398 Jan 18 20:17 pre-applypatch.sample
+-rwx------ 1 mmore019 csmajs 1578 Jan 18 20:17 pre-commit.sample
+-rwx------ 1 mmore019 csmajs 4951 Jan 18 20:17 pre-rebase.sample
+-rwx------ 1 mmore019 csmajs 1239 Jan 18 20:17 prepare-commit-msg.sample
+-rwx------ 1 mmore019 csmajs 3611 Jan 18 20:17 update.sample
+
+./.git/info/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rw------- 1 mmore019 csmajs  240 Jan 18 20:17 exclude
+
+./.git/logs/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rw------- 1 mmore019 csmajs 9976 Feb  9 07:56 HEAD
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 refs
+
+./.git/logs/refs/: 
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  8 13:23 heads
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 remotes
+
+./.git/logs/refs/heads/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  8 13:23 .
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 ..
+-rw------- 1 mmore019 csmajs 3820 Feb  8 13:16 exec
+-rw------- 1 mmore019 csmajs 2900 Feb  9 07:56 ls
+-rw------- 1 mmore019 csmajs 1332 Feb  9 00:22 master
+
+./.git/logs/refs/remotes/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 .
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  8 17:53 origin
+
+./.git/logs/refs/remotes/origin/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  8 17:53 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 ..
+-rw------- 1 mmore019 csmajs 1889 Feb  8 13:17 exec
+-rw------- 1 mmore019 csmajs  628 Feb  9 07:57 ls
+-rw------- 1 mmore019 csmajs  790 Feb  9 00:23 master
+
+./.git/objects/: 
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------   8 mmore019 csmajs 4096 Feb  9 09:43 ..
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 00
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 01
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 03
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:47 05
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 06
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:12 08
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 0b
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:02 11
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:52 14
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 1a
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 1b
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 1c
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 1e
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 21
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 22
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 24
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 25
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 2a
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 2c
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 2d
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:56 2f
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 31
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:55 32
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 33
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:20 35
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 36
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 37
+drwx------   2 mmore019 csmajs 4096 Jan 23 15:56 39
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 3a
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 41
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 42
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 46
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 49
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 4c
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 4d
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 4f
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 53
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 55
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 58
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 59
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:50 5c
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 5d
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 62
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:14 64
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:34 65
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 67
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 68
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 6d
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 70
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 72
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:20 76
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 78
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 7a
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 7b
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 7d
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 7e
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 7f
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 83
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 84
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:58 85
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:04 88
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 8a
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:09 90
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 91
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 92
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:09 95
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 98
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 9b
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 9c
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 9d
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 a1
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:09 a2
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 a4
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 a5
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 a8
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 ab
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 ad
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 af
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 b2
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 b3
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:38 b4
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:49 b5
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 b9
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 bf
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 c3
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 c9
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:51 cf
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 d0
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 d1
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 d4
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 d5
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 d6
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 dc
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 dd
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 de
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 e0
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 e6
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 e7
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 e8
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:16 e9
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 eb
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 ec
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:10 ee
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 f3
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 f4
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 f6
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 f7
+drwx------   2 mmore019 csmajs 4096 Feb  9 09:43 fa
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 fc
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 fe
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 info
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 pack
+
+./.git/objects/00/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  2 00:45 e2acd848de3d1bba6248d986c475f67ec7491b
+
+./.git/objects/01/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 17:45 18c2e1ddf1df4072ba105f5859d0c4736ad3e4
+-r--------   1 mmore019 csmajs   53 Feb  3 02:41 8197637acfec4e973fce06399ca1bfa389f23c
+
+./.git/objects/03/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1009 Feb  3 01:49 cdb9432df3a9841c6c6b6b134d175425bb066b
+
+./.git/objects/05/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:47 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1810 Feb  9 05:47 92296158c5b54f88a52e01d8494b110d243ac9
+
+./.git/objects/06/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 14:48 4c314cf5daca6966b2695bbc71cf808f36eb28
+
+./.git/objects/08/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:12 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  243 Jan 23 12:03 682bf826cef10041896140f7a54e5aedecaf99
+-r--------   1 mmore019 csmajs  968 Feb  3 01:12 bcf4efa3d907f5a3f1a24fc06e6d3804e04cf6
+
+./.git/objects/0b/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  190 Jan 23 17:22 186af795e7d96311bedfa4591f4ba50852bea4
+
+./.git/objects/11/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:02 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  890 Jan 23 21:02 9fa63196d52fdb9c6d22c01182b0677ec5d007
+
+./.git/objects/14/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1174 Feb  8 19:52 4d74a0fbc94ffb2dfce9ad9c3bf46c44539693
+
+./.git/objects/1a/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 21:44 b4672f8caa13ca6e44bef06583a822b20a4ea7
+
+./.git/objects/1b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 23:51 6dc0c0b9d034c518f181586a3e8fba392895eb
+
+./.git/objects/1c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 12:03 d1533fddcc32396ed3d5a100a91b729bc7016a
+
+./.git/objects/1e/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  170 Feb  8 23:51 63df9f1b4cdc6b6419362c5ee720ffd5fd1cd9
+
+./.git/objects/21/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  9 05:48 a1a447ec2be60fbec4530f7f51bd5eca68f400
+
+./.git/objects/22/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 15:56 08ffb70139be35a24f948afb8dba20a6842d68
+-r--------   1 mmore019 csmajs  516 Jan 23 17:21 659af5908886be84bd0aca291f9d05366b521b
+-r--------   1 mmore019 csmajs  176 Feb  8 23:59 9b199e892b6f1858268f9b8db5f64ae2ee38b9
+
+./.git/objects/24/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  178 Feb  3 02:10 d27f06e19ec81eaaddb14d7b519bc221ecbcf7
+
+./.git/objects/25/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  206 Feb  8 14:05 3791d9d2426a38b2c569a8ed34b11e4b6d9e64
+
+./.git/objects/2a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 23:51 c2f9fb2565c396312b870f3d6e99b4b156bb59
+
+./.git/objects/2c/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 14:05 80f9a59e4bc9c96da55b6695f098385afc4ee3
+
+./.git/objects/2d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 12:03 479d8c0102e46370746562cf60a8c5ab74109d
+
+./.git/objects/2f/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  495 Jan 23 23:56 092f26e27d6e158ba296d08dfe8ce3f66e5da8
+
+./.git/objects/31/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:44 265fb3da9d339a0a318f523e182b8869d4e9ed
+
+./.git/objects/32/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1946 Feb  9 07:55 a18e4d11794a282204973ccaedd77fb3a4a2ad
+
+./.git/objects/33/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  183 Feb  8 21:52 a0098be6d96ebc63fb757c215a055bbe60624e
+-r--------   1 mmore019 csmajs  609 Jan 23 15:52 d4753030e6fc661fa8bbb02adbd66a731eae5d
+
+./.git/objects/35/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:20 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1000 Feb  3 00:20 67f2bbcea2f1675c7d146bc6b980682c6219ee
+
+./.git/objects/36/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  9 00:21 93d4d967dcf903ec0bb2e4e0a8c515c1af29fa
+
+./.git/objects/37/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 22:00 934625aa4276bbfa31798b7039f744c9522ea3
+-r--------   1 mmore019 csmajs   80 Feb  9 07:56 b82c62ebed7600ae81d57e9860f276196fcd56
+
+./.git/objects/39/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 15:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  166 Jan 23 15:56 76540bd3f5ddff46f69b50582576d977721b71
+
+./.git/objects/3a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   52 Feb  3 01:49 733b3299928e6ad5c1fc8a89a1542015c7b16a
+
+./.git/objects/41/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 13:16 f26ae7e35fa31c2d08275a3544ad16897586f2
+
+./.git/objects/42/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   82 Feb  9 00:21 26e2ff9abce9faad78a57f9e60f318e4d72c47
+
+./.git/objects/46/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 17:45 0eeab3b30bcf2790cf522319dec35c145db40d
+
+./.git/objects/49/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 21:52 9e1ae9b4172419815c6e083559937271ea99ed
+-r--------   1 mmore019 csmajs  123 Jan 18 20:17 de7bf0bfa8d61ae4fb0649c77deebfe277e85b
+
+./.git/objects/4c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 17:22 e48a991051fc8ae038a6e28c2d2ca6b41f4bac
+
+./.git/objects/4d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 18 20:23 b969f4822d744036205bf6a80105847b49f000
+
+./.git/objects/4f/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 18:11 b23204a031f4835360e01c6d99b0bb9b9d63b7
+
+./.git/objects/53/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  173 Jan 23 18:26 d42dce1ba2e4ad915a0c935eebe12c591d853a
+-r--------   1 mmore019 csmajs  176 Feb  8 21:52 eafb11598ebf2031b27140da9da575b5b7c10b
+
+./.git/objects/55/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  2 00:45 d89e076009ddb21731e753711cdfa313f2542e
+
+./.git/objects/58/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 18:15 ffa5630a982e91201abc54c77b743f40bbcfce
+
+./.git/objects/59/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  164 Jan 23 21:44 1bcae1df9dd4814f54899bc95d4b8d435d02f3
+
+./.git/objects/5c/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:50 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1700 Feb  8 23:50 667714f0dcae23ee8a78c84fe1ebdb205e778f
+-r--------   1 mmore019 csmajs 1045 Jan 23 23:34 86014e9f33c2efb984e57c87204a3411c17040
+
+./.git/objects/5d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  169 Jan 23 21:44 e898df2a4076660460efcce493be0d1731418e
+
+./.git/objects/62/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Jan 23 23:57 266c3b1ae46899726c3cd64c8162115d0faa01
+-r--------   1 mmore019 csmajs  344 Feb  8 14:05 858c60b079fa3159a95ea976a808f69a227ada
+-r--------   1 mmore019 csmajs   85 Jan 18 20:17 be0fa762547b9889a6f4f0c66acbe78e1335ee
+
+./.git/objects/64/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:14 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1051 Feb  3 11:14 ada82513b2a2b09036562dd1f0080ab64ae672
+
+./.git/objects/65/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:34 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 4198 Jan 23 23:34 e8cfb48fb13a47bc22da3216f92e747f27133a
+
+./.git/objects/67/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  2 23:19 14dd2032ac585942f7c4f47c5105b4df33bf00
+
+./.git/objects/68/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 16:51 8999693c26078635b6d2de3e780561463e4d82
+
+./.git/objects/6d/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 00:21 324dc28f423b3bd388411ed2b2dc5609a0ed88
+-r--------   1 mmore019 csmajs  148 Jan 23 21:04 fb705c27d01886d7d1beaae9a42124ebc9e14d
+
+./.git/objects/70/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 18:15 efe01cc15be0b1775bffc889ee008778d920b4
+
+./.git/objects/72/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  251 Feb  3 01:13 d3387b8b4ad12e706a765f57ec675ca885e966
+
+./.git/objects/76/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:20 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 2495 Feb  9 00:20 6d0d146903a98d864e4db9761b5ba7c904eec1
+-r--------   1 mmore019 csmajs   53 Jan 23 18:26 c61dbf3cf63616a8c5a62119f0edbdded7ac0b
+
+./.git/objects/78/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 18 20:44 df1a853e03ae87c1dc056bcb0315a775a034e3
+
+./.git/objects/7a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 02:10 47b3b0242152fe9ee65ebd6e1f92bce5c1da80
+
+./.git/objects/7b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 14:05 39f8c1afc2ae15aa36b3c8107bd1e5003f5167
+
+./.git/objects/7d/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  184 Feb  9 07:56 9fcd7af43387b5eb3e62dfaeedf08e962df069
+
+./.git/objects/7e/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  192 Feb  8 13:16 c65a13f8c114bc9c1e5ca63309f9dc6ee84413
+
+./.git/objects/7f/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   56 Jan 23 23:57 4c727aec803eefa8a376f122d79309986b546e
+
+./.git/objects/83/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 01:13 20281b30862f5c9c637945c0c3a4bb6abd8d78
+-r--------   1 mmore019 csmajs  148 Jan 23 15:56 3b63b9e9e36cb31e284b49fb5bfcbe1c430fac
+
+./.git/objects/84/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  207 Feb  3 00:21 83387018b1f590b2a06115527fd85bc1daf1ff
+
+./.git/objects/85/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:58 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 19:55 487186f8876133deb46db11c33f846393f769b
+-r--------   1 mmore019 csmajs  580 Feb  8 23:58 57cad14402f92f10fd08f7230b249c7cd4a381
+
+./.git/objects/88/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:04 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 21:04 cb8e138a724ad4578062ddf6dce115d4a9cbfa
+
+./.git/objects/8a/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  225 Jan 23 21:04 05fac22b250a088195c3dda18c8d1ca2f884ba
+-r--------   1 mmore019 csmajs  175 Jan 23 22:00 971606569f4f830830bb53f5bd3a1c9facdd59
+
+./.git/objects/90/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1623 Feb  8 23:09 0d711266ce5be3b7d0f3d0a47c20639c8e34ce
+
+./.git/objects/91/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 22:00 365d053a18b73d9fe9fa027c82bcf669aecd12
+
+./.git/objects/92/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 16:51 193c5592059330a82d5974b9a7a833efcb4ad7
+
+./.git/objects/95/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1064 Feb  3 02:09 33d25b7a3cbf17dabf07942b72a9842d1e8ca2
+
+./.git/objects/98/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  8 13:16 27ebc0838789dfc528be7036f514ecc5c98866
+-r--------   1 mmore019 csmajs  177 Jan 18 20:44 8b1afbb86fcd7e25af9b4e81397c62d65b2ee5
+-r--------   1 mmore019 csmajs 1082 Feb  8 13:15 96e137073e583507ef12a4eb23c2be501d78db
+-r--------   1 mmore019 csmajs   80 Feb  8 17:11 eca58243bbd94d6a4bc7b62ffa9961015093ac
+
+./.git/objects/9b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  200 Feb  8 14:05 14d4aefe7822dd0a6e23feb7af53313d726a8a
+
+./.git/objects/9c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  216 Jan 23 23:57 a690a5af3390683f68d70180b5badf803db702
+
+./.git/objects/9d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:23 7e32cbc772e91217d43591e46aa70e244278aa
+-r--------   1 mmore019 csmajs  601 Jan 23 18:26 f283ee9ad21359cd56b467fab17557f7978c14
+
+./.git/objects/a1/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 01:49 3c82c3862cff8b0f8c09e38e1da4894d809476
+
+./.git/objects/a2/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  185 Feb  8 17:11 6dbc7e0c2623de30e55e4f57113e9a96a3cd62
+-r--------   1 mmore019 csmajs  958 Feb  8 18:09 b90d508dcb4389cf4ef2399c1b12c54081d966
+
+./.git/objects/a4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  595 Jan 23 18:13 4e5c505b38ffe1fc665f668cf6e93e38bb758e
+-r--------   1 mmore019 csmajs  242 Jan 23 12:03 c3a4c4fa5169c65cff768cebad1480f69a6852
+-r--------   1 mmore019 csmajs  849 Feb  8 17:45 edd1a593e0dd58ee262a97415d9c0ec324625e
+
+./.git/objects/a5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  171 Feb  8 14:48 7c7c3c181013122bc81e721eb2d8ef7be3e8d5
+
+./.git/objects/a8/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   84 Jan 18 20:44 cf9eb5bf04819a47bec08460de7d65f6fed0c8
+
+./.git/objects/ab/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 11:17 305d814444d9b395f8edcba4ffebd6ba8dc850
+-r--------   1 mmore019 csmajs  177 Feb  8 17:11 bf2e5e45dd68b8fef62ac92807d197d3c6c916
+
+./.git/objects/ad/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  122 Jan 23 12:03 47435ecec5070422a3d1f3940aa5bc322c8f7e
+-r--------   1 mmore019 csmajs  268 Feb  8 19:55 ecb2c0be240ccfd29f01b4d4e1d9bf8cca10e7
+
+./.git/objects/af/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  191 Feb  3 01:49 67d79b95f6e3240995da8444eef03fe4ffa06f
+
+./.git/objects/b2/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 17:22 992d3b48bd4de1cec0072412ac2c08c92dd1de
+
+./.git/objects/b3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  2 23:19 0c6eb997289085d4d99ac0dfdb68493b752730
+
+./.git/objects/b4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:38 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1041 Feb  3 02:38 441329dd28b272e9aa475724aaa6bcd95d3d6c
+
+./.git/objects/b5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  722 Feb  8 16:49 34e6500699c413766805fab1c7e47804b67332
+
+./.git/objects/b9/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   52 Jan 23 23:57 8da6c3aa6704b6b673022edde60553fae66c0e
+
+./.git/objects/bf/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  183 Jan 18 20:23 091f0218472d43c424824cb01f3a4cd7f8042e
+
+./.git/objects/c3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 02:41 7948117b64cd68d00bde5a9bcf7aad3bcda5a2
+
+./.git/objects/c9/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  284 Feb  3 02:41 42b7129946a9e6728ea9eaf0e9b15e86d707e6
+
+./.git/objects/cf/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1402 Feb  8 21:51 c6c427c8df49a2237e08adfdab6f944154d6df
+
+./.git/objects/d0/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 18:26 b2b0708a850c571a91949448792c0b7489d27b
+
+./.git/objects/d1/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 19:55 2f88a177c033fbce76fe779581cb7ffda9a909
+
+./.git/objects/d4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 01:13 980a386ad0f6f7c0082530b5285cdaa1453e1f
+-r--------   1 mmore019 csmajs  177 Feb  9 07:56 a0b64a485e10c85301a71f776f66c9c6b68da9
+
+./.git/objects/d5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  242 Feb  9 05:48 9f1600760515f615e78d51d814e682d97b299b
+
+./.git/objects/d6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 02:10 0a652bc635449712d79bbade1720a9e164f1b1
+-r--------   1 mmore019 csmajs 7710 Jan 18 20:17 a93266f748d606b884f9434ff662fe80b9dc21
+
+./.git/objects/dc/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1127 Feb  2 00:45 3b53acebbf23745f30d37fb0feb82d253cf5b4
+
+./.git/objects/dd/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 17:45 a6e4d966b2900346663a56aecf072010d0340a
+
+./.git/objects/de/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 18:11 0795b62e33bb52745eab141f545604b78d69be
+-r--------   1 mmore019 csmajs  170 Feb  2 00:45 b66e33366ebc123388a181825db5004efb0590
+
+./.git/objects/e0/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  193 Feb  3 11:17 ced24b2d2f38d9edef7d0440ecb982e1e1fd07
+
+./.git/objects/e6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  410 Feb  8 14:48 0bad25e37262d19d59f341d88ddc031b16955c
+-r--------   1 mmore019 csmajs   15 Jan 18 20:22 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+./.git/objects/e7/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  244 Feb  2 23:19 68462e2e26430383bc8bae1e19ce1ca4e7b051
+
+./.git/objects/e8/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  181 Feb  9 00:21 98b831ff2f688c6236ebdf4d5869d047c6a39d
+
+./.git/objects/e9/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1208 Feb  2 23:16 967ffd9047b82fb6be2e260e6d47fc07a554be
+
+./.git/objects/eb/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 14:48 d29d8d5273da52f94dce73c2991e6f05e29c56
+
+./.git/objects/ec/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 00:21 928fe7de4e7c49fb4b739e75097fe2d534444f
+
+./.git/objects/ee/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  764 Feb  8 17:10 90046d5781d78066dce739bb0a9b055479123f
+
+./.git/objects/f3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  192 Feb  8 16:51 0c8558ee7956846d0b5509859840e51fb2188d
+-r--------   1 mmore019 csmajs  177 Feb  9 05:48 467a1b09b2571a2b4aa021b2cbfdf4e095ad42
+
+./.git/objects/f4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 11:17 c25d7a69849106bd686ccced8b154e7c5a3bad
+
+./.git/objects/f6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  167 Feb  8 23:59 d4f5266dbccbe9ed15cbc9d4c0917563f81ab2
+
+./.git/objects/f7/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:17 e5c2a255d09c65554637871b69c55c28ebb77f
+
+./.git/objects/fa/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 2183 Feb  9 09:43 f91c5a55db3e6be215214a222fc25298920de2
+
+./.git/objects/fc/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  189 Jan 23 18:15 79237f672dd7d845338043ce9c2d17444e24a5
+
+./.git/objects/fe/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  206 Feb  8 18:11 7179aad43ee91e625342db12fa2d925aaad827
+-r--------   1 mmore019 csmajs  910 Jan 23 21:59 92c556df527354595372f8d9384512b0b9491b
+
+./.git/objects/info/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/objects/pack/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/refs/: 
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:56 heads
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 remotes
+drwx------ 2 mmore019 csmajs 4096 Feb  9 00:23 tags
+
+./.git/refs/heads/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:16 exec
+-rw------- 1 mmore019 csmajs   41 Feb  9 07:56 ls
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:22 master
+
+./.git/refs/remotes/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:57 origin
+
+./.git/refs/remotes/origin/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:57 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:17 exec
+-rw------- 1 mmore019 csmajs   41 Feb  9 07:57 ls
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:23 master
+
+./.git/refs/tags/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 00:23 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Jan 23 23:59 hw0
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:20 hw0-2
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:23 hw1
+
+./bin/: 
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:56 .
+drwx------ 6 mmore019 csmajs  4096 Feb  9 09:56 ..
+-rwx------ 1 mmore019 csmajs 36845 Feb  9 09:56 ls
+-rwx------ 1 mmore019 csmajs 43866 Feb  9 09:56 rshell
+
+./src/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------ 6 mmore019 csmajs 4096 Feb  9 09:56 ..
+-rw------- 1 mmore019 csmajs 6616 Feb  9 09:43 ls.cpp
+-rw------- 1 mmore019 csmajs 2540 Feb  8 13:18 main.cpp
+
+./tests/: 
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:55 .
+drwx------ 6 mmore019 csmajs  4096 Feb  9 09:56 ..
+-rw------- 1 mmore019 csmajs 12162 Feb  1 18:54 exec.script
+-rw------- 1 mmore019 csmajs 10093 Feb  9 00:22 ls-old.script
+-rw------- 1 mmore019 csmajs 65536 Feb  9 10:02 ls.script
+
+mmore019@hammer.cs.ucr.edu$ bin/ls --all --all --long--   --long --long --all #omiting recurc sive to keep this short
+drwx------  6 mmore019 csmajs  4096 Feb  9 09:56 .
+drwxrwxrwx 11 mmore019 csmajs  4096 Feb  2 11:16 ..
+drwx------  8 mmore019 csmajs  4096 Feb  9 09:43 .git
+-rw-------  1 mmore019 csmajs 18027 Jan 18 20:17 LICENSE
+-rw-------  1 mmore019 csmajs   397 Feb  9 00:22 Makefile
+-rw-------  1 mmore019 csmajs  1183 Feb  9 09:52 README.md
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:56 bin
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:43 src
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:55 tests
+mmore019@hammer.cs.ucr.edu$ #now to test complex flags
+mmore019@hammer.cs.ucr.edu$ gg  g-  g++   ls  bin/ls -- alR
+./: 
+drwx------  6 mmore019 csmajs  4096 Feb  9 09:56 .
+drwxrwxrwx 11 mmore019 csmajs  4096 Feb  2 11:16 ..
+drwx------  8 mmore019 csmajs  4096 Feb  9 09:43 .git
+-rw-------  1 mmore019 csmajs 18027 Jan 18 20:17 LICENSE
+-rw-------  1 mmore019 csmajs   397 Feb  9 00:22 Makefile
+-rw-------  1 mmore019 csmajs  1183 Feb  9 09:52 README.md
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:56 bin
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:43 src
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:55 tests
+
+./.git/: 
+drwx------   8 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------   6 mmore019 csmajs 4096 Feb  9 09:56 ..
+-rw-------   1 mmore019 csmajs   34 Feb  9 07:56 COMMIT_EDITMSG
+-rw-------   1 mmore019 csmajs  210 Jan 18 21:15 FETCH_HEAD
+-rw-------   1 mmore019 csmajs   19 Feb  9 05:18 HEAD
+-rw-------   1 mmore019 csmajs   41 Feb  9 00:22 ORIG_HEAD
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 branches
+-rw-------   1 mmore019 csmajs  224 Jan 23 11:32 config
+-rw-------   1 mmore019 csmajs   73 Jan 18 20:17 description
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 hooks
+-rw-------   1 mmore019 csmajs  568 Feb  9 09:43 index
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 info
+drwx------   3 mmore019 csmajs 4096 Jan 18 20:17 logs
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 objects
+-rw-------   1 mmore019 csmajs    0 Jan 18 20:37 packed-refs
+drwx------   5 mmore019 csmajs 4096 Jan 18 20:17 refs
+
+./.git/branches/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/hooks/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rwx------ 1 mmore019 csmajs  452 Jan 18 20:17 applypatch-msg.sample
+-rwx------ 1 mmore019 csmajs  896 Jan 18 20:17 commit-msg.sample
+-rwx------ 1 mmore019 csmajs  160 Jan 18 20:17 post-commit.sample
+-rwx------ 1 mmore019 csmajs  548 Jan 18 20:17 post-receive.sample
+-rwx------ 1 mmore019 csmajs  189 Jan 18 20:17 post-update.sample
+-rwx------ 1 mmore019 csmajs  398 Jan 18 20:17 pre-applypatch.sample
+-rwx------ 1 mmore019 csmajs 1578 Jan 18 20:17 pre-commit.sample
+-rwx------ 1 mmore019 csmajs 4951 Jan 18 20:17 pre-rebase.sample
+-rwx------ 1 mmore019 csmajs 1239 Jan 18 20:17 prepare-commit-msg.sample
+-rwx------ 1 mmore019 csmajs 3611 Jan 18 20:17 update.sample
+
+./.git/info/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rw------- 1 mmore019 csmajs  240 Jan 18 20:17 exclude
+
+./.git/logs/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rw------- 1 mmore019 csmajs 9976 Feb  9 07:56 HEAD
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 refs
+
+./.git/logs/refs/: 
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  8 13:23 heads
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 remotes
+
+./.git/logs/refs/heads/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  8 13:23 .
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 ..
+-rw------- 1 mmore019 csmajs 3820 Feb  8 13:16 exec
+-rw------- 1 mmore019 csmajs 2900 Feb  9 07:56 ls
+-rw------- 1 mmore019 csmajs 1332 Feb  9 00:22 master
+
+./.git/logs/refs/remotes/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 .
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  8 17:53 origin
+
+./.git/logs/refs/remotes/origin/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  8 17:53 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 ..
+-rw------- 1 mmore019 csmajs 1889 Feb  8 13:17 exec
+-rw------- 1 mmore019 csmajs  628 Feb  9 07:57 ls
+-rw------- 1 mmore019 csmajs  790 Feb  9 00:23 master
+
+./.git/objects/: 
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------   8 mmore019 csmajs 4096 Feb  9 09:43 ..
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 00
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 01
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 03
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:47 05
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 06
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:12 08
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 0b
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:02 11
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:52 14
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 1a
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 1b
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 1c
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 1e
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 21
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 22
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 24
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 25
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 2a
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 2c
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 2d
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:56 2f
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 31
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:55 32
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 33
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:20 35
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 36
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 37
+drwx------   2 mmore019 csmajs 4096 Jan 23 15:56 39
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 3a
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 41
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 42
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 46
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 49
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 4c
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 4d
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 4f
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 53
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 55
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 58
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 59
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:50 5c
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 5d
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 62
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:14 64
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:34 65
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 67
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 68
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 6d
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 70
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 72
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:20 76
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 78
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 7a
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 7b
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 7d
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 7e
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 7f
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 83
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 84
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:58 85
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:04 88
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 8a
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:09 90
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 91
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 92
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:09 95
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 98
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 9b
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 9c
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 9d
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 a1
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:09 a2
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 a4
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 a5
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 a8
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 ab
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 ad
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 af
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 b2
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 b3
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:38 b4
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:49 b5
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 b9
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 bf
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 c3
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 c9
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:51 cf
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 d0
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 d1
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 d4
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 d5
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 d6
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 dc
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 dd
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 de
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 e0
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 e6
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 e7
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 e8
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:16 e9
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 eb
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 ec
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:10 ee
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 f3
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 f4
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 f6
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 f7
+drwx------   2 mmore019 csmajs 4096 Feb  9 09:43 fa
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 fc
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 fe
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 info
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 pack
+
+./.git/objects/00/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  2 00:45 e2acd848de3d1bba6248d986c475f67ec7491b
+
+./.git/objects/01/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 17:45 18c2e1ddf1df4072ba105f5859d0c4736ad3e4
+-r--------   1 mmore019 csmajs   53 Feb  3 02:41 8197637acfec4e973fce06399ca1bfa389f23c
+
+./.git/objects/03/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1009 Feb  3 01:49 cdb9432df3a9841c6c6b6b134d175425bb066b
+
+./.git/objects/05/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:47 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1810 Feb  9 05:47 92296158c5b54f88a52e01d8494b110d243ac9
+
+./.git/objects/06/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 14:48 4c314cf5daca6966b2695bbc71cf808f36eb28
+
+./.git/objects/08/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:12 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  243 Jan 23 12:03 682bf826cef10041896140f7a54e5aedecaf99
+-r--------   1 mmore019 csmajs  968 Feb  3 01:12 bcf4efa3d907f5a3f1a24fc06e6d3804e04cf6
+
+./.git/objects/0b/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  190 Jan 23 17:22 186af795e7d96311bedfa4591f4ba50852bea4
+
+./.git/objects/11/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:02 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  890 Jan 23 21:02 9fa63196d52fdb9c6d22c01182b0677ec5d007
+
+./.git/objects/14/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1174 Feb  8 19:52 4d74a0fbc94ffb2dfce9ad9c3bf46c44539693
+
+./.git/objects/1a/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 21:44 b4672f8caa13ca6e44bef06583a822b20a4ea7
+
+./.git/objects/1b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 23:51 6dc0c0b9d034c518f181586a3e8fba392895eb
+
+./.git/objects/1c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 12:03 d1533fddcc32396ed3d5a100a91b729bc7016a
+
+./.git/objects/1e/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  170 Feb  8 23:51 63df9f1b4cdc6b6419362c5ee720ffd5fd1cd9
+
+./.git/objects/21/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  9 05:48 a1a447ec2be60fbec4530f7f51bd5eca68f400
+
+./.git/objects/22/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 15:56 08ffb70139be35a24f948afb8dba20a6842d68
+-r--------   1 mmore019 csmajs  516 Jan 23 17:21 659af5908886be84bd0aca291f9d05366b521b
+-r--------   1 mmore019 csmajs  176 Feb  8 23:59 9b199e892b6f1858268f9b8db5f64ae2ee38b9
+
+./.git/objects/24/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  178 Feb  3 02:10 d27f06e19ec81eaaddb14d7b519bc221ecbcf7
+
+./.git/objects/25/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  206 Feb  8 14:05 3791d9d2426a38b2c569a8ed34b11e4b6d9e64
+
+./.git/objects/2a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 23:51 c2f9fb2565c396312b870f3d6e99b4b156bb59
+
+./.git/objects/2c/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 14:05 80f9a59e4bc9c96da55b6695f098385afc4ee3
+
+./.git/objects/2d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 12:03 479d8c0102e46370746562cf60a8c5ab74109d
+
+./.git/objects/2f/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  495 Jan 23 23:56 092f26e27d6e158ba296d08dfe8ce3f66e5da8
+
+./.git/objects/31/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:44 265fb3da9d339a0a318f523e182b8869d4e9ed
+
+./.git/objects/32/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1946 Feb  9 07:55 a18e4d11794a282204973ccaedd77fb3a4a2ad
+
+./.git/objects/33/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  183 Feb  8 21:52 a0098be6d96ebc63fb757c215a055bbe60624e
+-r--------   1 mmore019 csmajs  609 Jan 23 15:52 d4753030e6fc661fa8bbb02adbd66a731eae5d
+
+./.git/objects/35/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:20 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1000 Feb  3 00:20 67f2bbcea2f1675c7d146bc6b980682c6219ee
+
+./.git/objects/36/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  9 00:21 93d4d967dcf903ec0bb2e4e0a8c515c1af29fa
+
+./.git/objects/37/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 22:00 934625aa4276bbfa31798b7039f744c9522ea3
+-r--------   1 mmore019 csmajs   80 Feb  9 07:56 b82c62ebed7600ae81d57e9860f276196fcd56
+
+./.git/objects/39/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 15:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  166 Jan 23 15:56 76540bd3f5ddff46f69b50582576d977721b71
+
+./.git/objects/3a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   52 Feb  3 01:49 733b3299928e6ad5c1fc8a89a1542015c7b16a
+
+./.git/objects/41/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 13:16 f26ae7e35fa31c2d08275a3544ad16897586f2
+
+./.git/objects/42/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   82 Feb  9 00:21 26e2ff9abce9faad78a57f9e60f318e4d72c47
+
+./.git/objects/46/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 17:45 0eeab3b30bcf2790cf522319dec35c145db40d
+
+./.git/objects/49/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 21:52 9e1ae9b4172419815c6e083559937271ea99ed
+-r--------   1 mmore019 csmajs  123 Jan 18 20:17 de7bf0bfa8d61ae4fb0649c77deebfe277e85b
+
+./.git/objects/4c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 17:22 e48a991051fc8ae038a6e28c2d2ca6b41f4bac
+
+./.git/objects/4d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 18 20:23 b969f4822d744036205bf6a80105847b49f000
+
+./.git/objects/4f/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 18:11 b23204a031f4835360e01c6d99b0bb9b9d63b7
+
+./.git/objects/53/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  173 Jan 23 18:26 d42dce1ba2e4ad915a0c935eebe12c591d853a
+-r--------   1 mmore019 csmajs  176 Feb  8 21:52 eafb11598ebf2031b27140da9da575b5b7c10b
+
+./.git/objects/55/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  2 00:45 d89e076009ddb21731e753711cdfa313f2542e
+
+./.git/objects/58/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 18:15 ffa5630a982e91201abc54c77b743f40bbcfce
+
+./.git/objects/59/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  164 Jan 23 21:44 1bcae1df9dd4814f54899bc95d4b8d435d02f3
+
+./.git/objects/5c/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:50 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1700 Feb  8 23:50 667714f0dcae23ee8a78c84fe1ebdb205e778f
+-r--------   1 mmore019 csmajs 1045 Jan 23 23:34 86014e9f33c2efb984e57c87204a3411c17040
+
+./.git/objects/5d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  169 Jan 23 21:44 e898df2a4076660460efcce493be0d1731418e
+
+./.git/objects/62/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Jan 23 23:57 266c3b1ae46899726c3cd64c8162115d0faa01
+-r--------   1 mmore019 csmajs  344 Feb  8 14:05 858c60b079fa3159a95ea976a808f69a227ada
+-r--------   1 mmore019 csmajs   85 Jan 18 20:17 be0fa762547b9889a6f4f0c66acbe78e1335ee
+
+./.git/objects/64/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:14 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1051 Feb  3 11:14 ada82513b2a2b09036562dd1f0080ab64ae672
+
+./.git/objects/65/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:34 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 4198 Jan 23 23:34 e8cfb48fb13a47bc22da3216f92e747f27133a
+
+./.git/objects/67/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  2 23:19 14dd2032ac585942f7c4f47c5105b4df33bf00
+
+./.git/objects/68/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 16:51 8999693c26078635b6d2de3e780561463e4d82
+
+./.git/objects/6d/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 00:21 324dc28f423b3bd388411ed2b2dc5609a0ed88
+-r--------   1 mmore019 csmajs  148 Jan 23 21:04 fb705c27d01886d7d1beaae9a42124ebc9e14d
+
+./.git/objects/70/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 18:15 efe01cc15be0b1775bffc889ee008778d920b4
+
+./.git/objects/72/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  251 Feb  3 01:13 d3387b8b4ad12e706a765f57ec675ca885e966
+
+./.git/objects/76/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:20 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 2495 Feb  9 00:20 6d0d146903a98d864e4db9761b5ba7c904eec1
+-r--------   1 mmore019 csmajs   53 Jan 23 18:26 c61dbf3cf63616a8c5a62119f0edbdded7ac0b
+
+./.git/objects/78/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 18 20:44 df1a853e03ae87c1dc056bcb0315a775a034e3
+
+./.git/objects/7a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 02:10 47b3b0242152fe9ee65ebd6e1f92bce5c1da80
+
+./.git/objects/7b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 14:05 39f8c1afc2ae15aa36b3c8107bd1e5003f5167
+
+./.git/objects/7d/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  184 Feb  9 07:56 9fcd7af43387b5eb3e62dfaeedf08e962df069
+
+./.git/objects/7e/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  192 Feb  8 13:16 c65a13f8c114bc9c1e5ca63309f9dc6ee84413
+
+./.git/objects/7f/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   56 Jan 23 23:57 4c727aec803eefa8a376f122d79309986b546e
+
+./.git/objects/83/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 01:13 20281b30862f5c9c637945c0c3a4bb6abd8d78
+-r--------   1 mmore019 csmajs  148 Jan 23 15:56 3b63b9e9e36cb31e284b49fb5bfcbe1c430fac
+
+./.git/objects/84/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  207 Feb  3 00:21 83387018b1f590b2a06115527fd85bc1daf1ff
+
+./.git/objects/85/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:58 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 19:55 487186f8876133deb46db11c33f846393f769b
+-r--------   1 mmore019 csmajs  580 Feb  8 23:58 57cad14402f92f10fd08f7230b249c7cd4a381
+
+./.git/objects/88/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:04 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 21:04 cb8e138a724ad4578062ddf6dce115d4a9cbfa
+
+./.git/objects/8a/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  225 Jan 23 21:04 05fac22b250a088195c3dda18c8d1ca2f884ba
+-r--------   1 mmore019 csmajs  175 Jan 23 22:00 971606569f4f830830bb53f5bd3a1c9facdd59
+
+./.git/objects/90/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1623 Feb  8 23:09 0d711266ce5be3b7d0f3d0a47c20639c8e34ce
+
+./.git/objects/91/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 22:00 365d053a18b73d9fe9fa027c82bcf669aecd12
+
+./.git/objects/92/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 16:51 193c5592059330a82d5974b9a7a833efcb4ad7
+
+./.git/objects/95/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1064 Feb  3 02:09 33d25b7a3cbf17dabf07942b72a9842d1e8ca2
+
+./.git/objects/98/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  8 13:16 27ebc0838789dfc528be7036f514ecc5c98866
+-r--------   1 mmore019 csmajs  177 Jan 18 20:44 8b1afbb86fcd7e25af9b4e81397c62d65b2ee5
+-r--------   1 mmore019 csmajs 1082 Feb  8 13:15 96e137073e583507ef12a4eb23c2be501d78db
+-r--------   1 mmore019 csmajs   80 Feb  8 17:11 eca58243bbd94d6a4bc7b62ffa9961015093ac
+
+./.git/objects/9b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  200 Feb  8 14:05 14d4aefe7822dd0a6e23feb7af53313d726a8a
+
+./.git/objects/9c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  216 Jan 23 23:57 a690a5af3390683f68d70180b5badf803db702
+
+./.git/objects/9d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:23 7e32cbc772e91217d43591e46aa70e244278aa
+-r--------   1 mmore019 csmajs  601 Jan 23 18:26 f283ee9ad21359cd56b467fab17557f7978c14
+
+./.git/objects/a1/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 01:49 3c82c3862cff8b0f8c09e38e1da4894d809476
+
+./.git/objects/a2/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  185 Feb  8 17:11 6dbc7e0c2623de30e55e4f57113e9a96a3cd62
+-r--------   1 mmore019 csmajs  958 Feb  8 18:09 b90d508dcb4389cf4ef2399c1b12c54081d966
+
+./.git/objects/a4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  595 Jan 23 18:13 4e5c505b38ffe1fc665f668cf6e93e38bb758e
+-r--------   1 mmore019 csmajs  242 Jan 23 12:03 c3a4c4fa5169c65cff768cebad1480f69a6852
+-r--------   1 mmore019 csmajs  849 Feb  8 17:45 edd1a593e0dd58ee262a97415d9c0ec324625e
+
+./.git/objects/a5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  171 Feb  8 14:48 7c7c3c181013122bc81e721eb2d8ef7be3e8d5
+
+./.git/objects/a8/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   84 Jan 18 20:44 cf9eb5bf04819a47bec08460de7d65f6fed0c8
+
+./.git/objects/ab/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 11:17 305d814444d9b395f8edcba4ffebd6ba8dc850
+-r--------   1 mmore019 csmajs  177 Feb  8 17:11 bf2e5e45dd68b8fef62ac92807d197d3c6c916
+
+./.git/objects/ad/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  122 Jan 23 12:03 47435ecec5070422a3d1f3940aa5bc322c8f7e
+-r--------   1 mmore019 csmajs  268 Feb  8 19:55 ecb2c0be240ccfd29f01b4d4e1d9bf8cca10e7
+
+./.git/objects/af/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  191 Feb  3 01:49 67d79b95f6e3240995da8444eef03fe4ffa06f
+
+./.git/objects/b2/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 17:22 992d3b48bd4de1cec0072412ac2c08c92dd1de
+
+./.git/objects/b3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  2 23:19 0c6eb997289085d4d99ac0dfdb68493b752730
+
+./.git/objects/b4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:38 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1041 Feb  3 02:38 441329dd28b272e9aa475724aaa6bcd95d3d6c
+
+./.git/objects/b5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  722 Feb  8 16:49 34e6500699c413766805fab1c7e47804b67332
+
+./.git/objects/b9/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   52 Jan 23 23:57 8da6c3aa6704b6b673022edde60553fae66c0e
+
+./.git/objects/bf/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  183 Jan 18 20:23 091f0218472d43c424824cb01f3a4cd7f8042e
+
+./.git/objects/c3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 02:41 7948117b64cd68d00bde5a9bcf7aad3bcda5a2
+
+./.git/objects/c9/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  284 Feb  3 02:41 42b7129946a9e6728ea9eaf0e9b15e86d707e6
+
+./.git/objects/cf/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1402 Feb  8 21:51 c6c427c8df49a2237e08adfdab6f944154d6df
+
+./.git/objects/d0/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 18:26 b2b0708a850c571a91949448792c0b7489d27b
+
+./.git/objects/d1/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 19:55 2f88a177c033fbce76fe779581cb7ffda9a909
+
+./.git/objects/d4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 01:13 980a386ad0f6f7c0082530b5285cdaa1453e1f
+-r--------   1 mmore019 csmajs  177 Feb  9 07:56 a0b64a485e10c85301a71f776f66c9c6b68da9
+
+./.git/objects/d5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  242 Feb  9 05:48 9f1600760515f615e78d51d814e682d97b299b
+
+./.git/objects/d6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 02:10 0a652bc635449712d79bbade1720a9e164f1b1
+-r--------   1 mmore019 csmajs 7710 Jan 18 20:17 a93266f748d606b884f9434ff662fe80b9dc21
+
+./.git/objects/dc/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1127 Feb  2 00:45 3b53acebbf23745f30d37fb0feb82d253cf5b4
+
+./.git/objects/dd/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 17:45 a6e4d966b2900346663a56aecf072010d0340a
+
+./.git/objects/de/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 18:11 0795b62e33bb52745eab141f545604b78d69be
+-r--------   1 mmore019 csmajs  170 Feb  2 00:45 b66e33366ebc123388a181825db5004efb0590
+
+./.git/objects/e0/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  193 Feb  3 11:17 ced24b2d2f38d9edef7d0440ecb982e1e1fd07
+
+./.git/objects/e6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  410 Feb  8 14:48 0bad25e37262d19d59f341d88ddc031b16955c
+-r--------   1 mmore019 csmajs   15 Jan 18 20:22 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+./.git/objects/e7/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  244 Feb  2 23:19 68462e2e26430383bc8bae1e19ce1ca4e7b051
+
+./.git/objects/e8/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  181 Feb  9 00:21 98b831ff2f688c6236ebdf4d5869d047c6a39d
+
+./.git/objects/e9/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1208 Feb  2 23:16 967ffd9047b82fb6be2e260e6d47fc07a554be
+
+./.git/objects/eb/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 14:48 d29d8d5273da52f94dce73c2991e6f05e29c56
+
+./.git/objects/ec/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 00:21 928fe7de4e7c49fb4b739e75097fe2d534444f
+
+./.git/objects/ee/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  764 Feb  8 17:10 90046d5781d78066dce739bb0a9b055479123f
+
+./.git/objects/f3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  192 Feb  8 16:51 0c8558ee7956846d0b5509859840e51fb2188d
+-r--------   1 mmore019 csmajs  177 Feb  9 05:48 467a1b09b2571a2b4aa021b2cbfdf4e095ad42
+
+./.git/objects/f4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 11:17 c25d7a69849106bd686ccced8b154e7c5a3bad
+
+./.git/objects/f6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  167 Feb  8 23:59 d4f5266dbccbe9ed15cbc9d4c0917563f81ab2
+
+./.git/objects/f7/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:17 e5c2a255d09c65554637871b69c55c28ebb77f
+
+./.git/objects/fa/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 2183 Feb  9 09:43 f91c5a55db3e6be215214a222fc25298920de2
+
+./.git/objects/fc/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  189 Jan 23 18:15 79237f672dd7d845338043ce9c2d17444e24a5
+
+./.git/objects/fe/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  206 Feb  8 18:11 7179aad43ee91e625342db12fa2d925aaad827
+-r--------   1 mmore019 csmajs  910 Jan 23 21:59 92c556df527354595372f8d9384512b0b9491b
+
+./.git/objects/info/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/objects/pack/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/refs/: 
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:56 heads
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 remotes
+drwx------ 2 mmore019 csmajs 4096 Feb  9 00:23 tags
+
+./.git/refs/heads/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:16 exec
+-rw------- 1 mmore019 csmajs   41 Feb  9 07:56 ls
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:22 master
+
+./.git/refs/remotes/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:57 origin
+
+./.git/refs/remotes/origin/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:57 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:17 exec
+-rw------- 1 mmore019 csmajs   41 Feb  9 07:57 ls
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:23 master
+
+./.git/refs/tags/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 00:23 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Jan 23 23:59 hw0
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:20 hw0-2
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:23 hw1
+
+./bin/: 
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:56 .
+drwx------ 6 mmore019 csmajs  4096 Feb  9 09:56 ..
+-rwx------ 1 mmore019 csmajs 36845 Feb  9 09:56 ls
+-rwx------ 1 mmore019 csmajs 43866 Feb  9 09:56 rshell
+
+./src/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------ 6 mmore019 csmajs 4096 Feb  9 09:56 ..
+-rw------- 1 mmore019 csmajs 6616 Feb  9 09:43 ls.cpp
+-rw------- 1 mmore019 csmajs 2540 Feb  8 13:18 main.cpp
+
+./tests/: 
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:55 .
+drwx------ 6 mmore019 csmajs  4096 Feb  9 09:56 ..
+-rw------- 1 mmore019 csmajs 12162 Feb  1 18:54 exec.script
+-rw------- 1 mmore019 csmajs 10093 Feb  9 00:22 ls-old.script
+-rw------- 1 mmore019 csmajs 98304 Feb  9 10:04 ls.script
+
+mmore019@hammer.cs.ucr.edu$ bin/ls -alalalalaallalalalala
+drwx------  6 mmore019 csmajs  4096 Feb  9 09:56 .
+drwxrwxrwx 11 mmore019 csmajs  4096 Feb  2 11:16 ..
+drwx------  8 mmore019 csmajs  4096 Feb  9 09:43 .git
+-rw-------  1 mmore019 csmajs 18027 Jan 18 20:17 LICENSE
+-rw-------  1 mmore019 csmajs   397 Feb  9 00:22 Makefile
+-rw-------  1 mmore019 csmajs  1183 Feb  9 09:52 README.md
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:56 bin
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:43 src
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:55 tests
+mmore019@hammer.cs.ucr.edu$ bin/ls -lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+-rw------- 1 mmore019 csmajs 18027 Jan 18 20:17 LICENSE
+-rw------- 1 mmore019 csmajs   397 Feb  9 00:22 Makefile
+-rw------- 1 mmore019 csmajs  1183 Feb  9 09:52 README.md
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:56 bin
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:43 src
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:55 tests
+mmore019@hammer.cs.ucr.edu$ #there can be only so                     bin/ls -aR
+./: 
+. .. .git LICENSE Makefile README.md bin src tests 
+
+./.git/: 
+. .. COMMIT_EDITMSG FETCH_HEAD HEAD ORIG_HEAD branches config description hooks index info logs objects packed-refs refs 
+
+./.git/branches/: 
+. .. 
+
+./.git/hooks/: 
+. .. applypatch-msg.sample commit-msg.sample post-commit.sample post-receive.sample post-update.sample pre-applypatch.sample pre-commit.sample pre-rebase.sample prepare-commit-msg.sample update.sample 
+
+./.git/info/: 
+. .. exclude 
+
+./.git/logs/: 
+. .. HEAD refs 
+
+./.git/logs/refs/: 
+. .. heads remotes 
+
+./.git/logs/refs/heads/: 
+. .. exec ls master 
+
+./.git/logs/refs/remotes/: 
+. .. origin 
+
+./.git/logs/refs/remotes/origin/: 
+. .. exec ls master 
+
+./.git/objects/: 
+. .. 00 01 03 05 06 08 0b 11 14 1a 1b 1c 1e 21 22 24 25 2a 2c 2d 2f 31 32 33 35 36 37 39 3a 41 42 46 49 4c 4d 4f 53 55 58 59 5c 5d 62 64 65 67 68 6d 70 72 76 78 7a 7b 7d 7e 7f 83 84 85 88 8a 90 91 92 95 98 9b 9c 9d a1 a2 a4 a5 a8 ab ad af b2 b3 b4 b5 b9 bf c3 c9 cf d0 d1 d4 d5 d6 dc dd de e0 e6 e7 e8 e9 eb ec ee f3 f4 f6 f7 fa fc fe info pack 
+
+./.git/objects/00/: 
+. .. e2acd848de3d1bba6248d986c475f67ec7491b 
+
+./.git/objects/01/: 
+. .. 18c2e1ddf1df4072ba105f5859d0c4736ad3e4 8197637acfec4e973fce06399ca1bfa389f23c 
+
+./.git/objects/03/: 
+. .. cdb9432df3a9841c6c6b6b134d175425bb066b 
+
+./.git/objects/05/: 
+. .. 92296158c5b54f88a52e01d8494b110d243ac9 
+
+./.git/objects/06/: 
+. .. 4c314cf5daca6966b2695bbc71cf808f36eb28 
+
+./.git/objects/08/: 
+. .. 682bf826cef10041896140f7a54e5aedecaf99 bcf4efa3d907f5a3f1a24fc06e6d3804e04cf6 
+
+./.git/objects/0b/: 
+. .. 186af795e7d96311bedfa4591f4ba50852bea4 
+
+./.git/objects/11/: 
+. .. 9fa63196d52fdb9c6d22c01182b0677ec5d007 
+
+./.git/objects/14/: 
+. .. 4d74a0fbc94ffb2dfce9ad9c3bf46c44539693 
+
+./.git/objects/1a/: 
+. .. b4672f8caa13ca6e44bef06583a822b20a4ea7 
+
+./.git/objects/1b/: 
+. .. 6dc0c0b9d034c518f181586a3e8fba392895eb 
+
+./.git/objects/1c/: 
+. .. d1533fddcc32396ed3d5a100a91b729bc7016a 
+
+./.git/objects/1e/: 
+. .. 63df9f1b4cdc6b6419362c5ee720ffd5fd1cd9 
+
+./.git/objects/21/: 
+. .. a1a447ec2be60fbec4530f7f51bd5eca68f400 
+
+./.git/objects/22/: 
+. .. 08ffb70139be35a24f948afb8dba20a6842d68 659af5908886be84bd0aca291f9d05366b521b 9b199e892b6f1858268f9b8db5f64ae2ee38b9 
+
+./.git/objects/24/: 
+. .. d27f06e19ec81eaaddb14d7b519bc221ecbcf7 
+
+./.git/objects/25/: 
+. .. 3791d9d2426a38b2c569a8ed34b11e4b6d9e64 
+
+./.git/objects/2a/: 
+. .. c2f9fb2565c396312b870f3d6e99b4b156bb59 
+
+./.git/objects/2c/: 
+. .. 80f9a59e4bc9c96da55b6695f098385afc4ee3 
+
+./.git/objects/2d/: 
+. .. 479d8c0102e46370746562cf60a8c5ab74109d 
+
+./.git/objects/2f/: 
+. .. 092f26e27d6e158ba296d08dfe8ce3f66e5da8 
+
+./.git/objects/31/: 
+. .. 265fb3da9d339a0a318f523e182b8869d4e9ed 
+
+./.git/objects/32/: 
+. .. a18e4d11794a282204973ccaedd77fb3a4a2ad 
+
+./.git/objects/33/: 
+. .. a0098be6d96ebc63fb757c215a055bbe60624e d4753030e6fc661fa8bbb02adbd66a731eae5d 
+
+./.git/objects/35/: 
+. .. 67f2bbcea2f1675c7d146bc6b980682c6219ee 
+
+./.git/objects/36/: 
+. .. 93d4d967dcf903ec0bb2e4e0a8c515c1af29fa 
+
+./.git/objects/37/: 
+. .. 934625aa4276bbfa31798b7039f744c9522ea3 b82c62ebed7600ae81d57e9860f276196fcd56 
+
+./.git/objects/39/: 
+. .. 76540bd3f5ddff46f69b50582576d977721b71 
+
+./.git/objects/3a/: 
+. .. 733b3299928e6ad5c1fc8a89a1542015c7b16a 
+
+./.git/objects/41/: 
+. .. f26ae7e35fa31c2d08275a3544ad16897586f2 
+
+./.git/objects/42/: 
+. .. 26e2ff9abce9faad78a57f9e60f318e4d72c47 
+
+./.git/objects/46/: 
+. .. 0eeab3b30bcf2790cf522319dec35c145db40d 
+
+./.git/objects/49/: 
+. .. 9e1ae9b4172419815c6e083559937271ea99ed de7bf0bfa8d61ae4fb0649c77deebfe277e85b 
+
+./.git/objects/4c/: 
+. .. e48a991051fc8ae038a6e28c2d2ca6b41f4bac 
+
+./.git/objects/4d/: 
+. .. b969f4822d744036205bf6a80105847b49f000 
+
+./.git/objects/4f/: 
+. .. b23204a031f4835360e01c6d99b0bb9b9d63b7 
+
+./.git/objects/53/: 
+. .. d42dce1ba2e4ad915a0c935eebe12c591d853a eafb11598ebf2031b27140da9da575b5b7c10b 
+
+./.git/objects/55/: 
+. .. d89e076009ddb21731e753711cdfa313f2542e 
+
+./.git/objects/58/: 
+. .. ffa5630a982e91201abc54c77b743f40bbcfce 
+
+./.git/objects/59/: 
+. .. 1bcae1df9dd4814f54899bc95d4b8d435d02f3 
+
+./.git/objects/5c/: 
+. .. 667714f0dcae23ee8a78c84fe1ebdb205e778f 86014e9f33c2efb984e57c87204a3411c17040 
+
+./.git/objects/5d/: 
+. .. e898df2a4076660460efcce493be0d1731418e 
+
+./.git/objects/62/: 
+. .. 266c3b1ae46899726c3cd64c8162115d0faa01 858c60b079fa3159a95ea976a808f69a227ada be0fa762547b9889a6f4f0c66acbe78e1335ee 
+
+./.git/objects/64/: 
+. .. ada82513b2a2b09036562dd1f0080ab64ae672 
+
+./.git/objects/65/: 
+. .. e8cfb48fb13a47bc22da3216f92e747f27133a 
+
+./.git/objects/67/: 
+. .. 14dd2032ac585942f7c4f47c5105b4df33bf00 
+
+./.git/objects/68/: 
+. .. 8999693c26078635b6d2de3e780561463e4d82 
+
+./.git/objects/6d/: 
+. .. 324dc28f423b3bd388411ed2b2dc5609a0ed88 fb705c27d01886d7d1beaae9a42124ebc9e14d 
+
+./.git/objects/70/: 
+. .. efe01cc15be0b1775bffc889ee008778d920b4 
+
+./.git/objects/72/: 
+. .. d3387b8b4ad12e706a765f57ec675ca885e966 
+
+./.git/objects/76/: 
+. .. 6d0d146903a98d864e4db9761b5ba7c904eec1 c61dbf3cf63616a8c5a62119f0edbdded7ac0b 
+
+./.git/objects/78/: 
+. .. df1a853e03ae87c1dc056bcb0315a775a034e3 
+
+./.git/objects/7a/: 
+. .. 47b3b0242152fe9ee65ebd6e1f92bce5c1da80 
+
+./.git/objects/7b/: 
+. .. 39f8c1afc2ae15aa36b3c8107bd1e5003f5167 
+
+./.git/objects/7d/: 
+. .. 9fcd7af43387b5eb3e62dfaeedf08e962df069 
+
+./.git/objects/7e/: 
+. .. c65a13f8c114bc9c1e5ca63309f9dc6ee84413 
+
+./.git/objects/7f/: 
+. .. 4c727aec803eefa8a376f122d79309986b546e 
+
+./.git/objects/83/: 
+. .. 20281b30862f5c9c637945c0c3a4bb6abd8d78 3b63b9e9e36cb31e284b49fb5bfcbe1c430fac 
+
+./.git/objects/84/: 
+. .. 83387018b1f590b2a06115527fd85bc1daf1ff 
+
+./.git/objects/85/: 
+. .. 487186f8876133deb46db11c33f846393f769b 57cad14402f92f10fd08f7230b249c7cd4a381 
+
+./.git/objects/88/: 
+. .. cb8e138a724ad4578062ddf6dce115d4a9cbfa 
+
+./.git/objects/8a/: 
+. .. 05fac22b250a088195c3dda18c8d1ca2f884ba 971606569f4f830830bb53f5bd3a1c9facdd59 
+
+./.git/objects/90/: 
+. .. 0d711266ce5be3b7d0f3d0a47c20639c8e34ce 
+
+./.git/objects/91/: 
+. .. 365d053a18b73d9fe9fa027c82bcf669aecd12 
+
+./.git/objects/92/: 
+. .. 193c5592059330a82d5974b9a7a833efcb4ad7 
+
+./.git/objects/95/: 
+. .. 33d25b7a3cbf17dabf07942b72a9842d1e8ca2 
+
+./.git/objects/98/: 
+. .. 27ebc0838789dfc528be7036f514ecc5c98866 8b1afbb86fcd7e25af9b4e81397c62d65b2ee5 96e137073e583507ef12a4eb23c2be501d78db eca58243bbd94d6a4bc7b62ffa9961015093ac 
+
+./.git/objects/9b/: 
+. .. 14d4aefe7822dd0a6e23feb7af53313d726a8a 
+
+./.git/objects/9c/: 
+. .. a690a5af3390683f68d70180b5badf803db702 
+
+./.git/objects/9d/: 
+. .. 7e32cbc772e91217d43591e46aa70e244278aa f283ee9ad21359cd56b467fab17557f7978c14 
+
+./.git/objects/a1/: 
+. .. 3c82c3862cff8b0f8c09e38e1da4894d809476 
+
+./.git/objects/a2/: 
+. .. 6dbc7e0c2623de30e55e4f57113e9a96a3cd62 b90d508dcb4389cf4ef2399c1b12c54081d966 
+
+./.git/objects/a4/: 
+. .. 4e5c505b38ffe1fc665f668cf6e93e38bb758e c3a4c4fa5169c65cff768cebad1480f69a6852 edd1a593e0dd58ee262a97415d9c0ec324625e 
+
+./.git/objects/a5/: 
+. .. 7c7c3c181013122bc81e721eb2d8ef7be3e8d5 
+
+./.git/objects/a8/: 
+. .. cf9eb5bf04819a47bec08460de7d65f6fed0c8 
+
+./.git/objects/ab/: 
+. .. 305d814444d9b395f8edcba4ffebd6ba8dc850 bf2e5e45dd68b8fef62ac92807d197d3c6c916 
+
+./.git/objects/ad/: 
+. .. 47435ecec5070422a3d1f3940aa5bc322c8f7e ecb2c0be240ccfd29f01b4d4e1d9bf8cca10e7 
+
+./.git/objects/af/: 
+. .. 67d79b95f6e3240995da8444eef03fe4ffa06f 
+
+./.git/objects/b2/: 
+. .. 992d3b48bd4de1cec0072412ac2c08c92dd1de 
+
+./.git/objects/b3/: 
+. .. 0c6eb997289085d4d99ac0dfdb68493b752730 
+
+./.git/objects/b4/: 
+. .. 441329dd28b272e9aa475724aaa6bcd95d3d6c 
+
+./.git/objects/b5/: 
+. .. 34e6500699c413766805fab1c7e47804b67332 
+
+./.git/objects/b9/: 
+. .. 8da6c3aa6704b6b673022edde60553fae66c0e 
+
+./.git/objects/bf/: 
+. .. 091f0218472d43c424824cb01f3a4cd7f8042e 
+
+./.git/objects/c3/: 
+. .. 7948117b64cd68d00bde5a9bcf7aad3bcda5a2 
+
+./.git/objects/c9/: 
+. .. 42b7129946a9e6728ea9eaf0e9b15e86d707e6 
+
+./.git/objects/cf/: 
+. .. c6c427c8df49a2237e08adfdab6f944154d6df 
+
+./.git/objects/d0/: 
+. .. b2b0708a850c571a91949448792c0b7489d27b 
+
+./.git/objects/d1/: 
+. .. 2f88a177c033fbce76fe779581cb7ffda9a909 
+
+./.git/objects/d4/: 
+. .. 980a386ad0f6f7c0082530b5285cdaa1453e1f a0b64a485e10c85301a71f776f66c9c6b68da9 
+
+./.git/objects/d5/: 
+. .. 9f1600760515f615e78d51d814e682d97b299b 
+
+./.git/objects/d6/: 
+. .. 0a652bc635449712d79bbade1720a9e164f1b1 a93266f748d606b884f9434ff662fe80b9dc21 
+
+./.git/objects/dc/: 
+. .. 3b53acebbf23745f30d37fb0feb82d253cf5b4 
+
+./.git/objects/dd/: 
+. .. a6e4d966b2900346663a56aecf072010d0340a 
+
+./.git/objects/de/: 
+. .. 0795b62e33bb52745eab141f545604b78d69be b66e33366ebc123388a181825db5004efb0590 
+
+./.git/objects/e0/: 
+. .. ced24b2d2f38d9edef7d0440ecb982e1e1fd07 
+
+./.git/objects/e6/: 
+. .. 0bad25e37262d19d59f341d88ddc031b16955c 9de29bb2d1d6434b8b29ae775ad8c2e48c5391 
+
+./.git/objects/e7/: 
+. .. 68462e2e26430383bc8bae1e19ce1ca4e7b051 
+
+./.git/objects/e8/: 
+. .. 98b831ff2f688c6236ebdf4d5869d047c6a39d 
+
+./.git/objects/e9/: 
+. .. 967ffd9047b82fb6be2e260e6d47fc07a554be 
+
+./.git/objects/eb/: 
+. .. d29d8d5273da52f94dce73c2991e6f05e29c56 
+
+./.git/objects/ec/: 
+. .. 928fe7de4e7c49fb4b739e75097fe2d534444f 
+
+./.git/objects/ee/: 
+. .. 90046d5781d78066dce739bb0a9b055479123f 
+
+./.git/objects/f3/: 
+. .. 0c8558ee7956846d0b5509859840e51fb2188d 467a1b09b2571a2b4aa021b2cbfdf4e095ad42 
+
+./.git/objects/f4/: 
+. .. c25d7a69849106bd686ccced8b154e7c5a3bad 
+
+./.git/objects/f6/: 
+. .. d4f5266dbccbe9ed15cbc9d4c0917563f81ab2 
+
+./.git/objects/f7/: 
+. .. e5c2a255d09c65554637871b69c55c28ebb77f 
+
+./.git/objects/fa/: 
+. .. f91c5a55db3e6be215214a222fc25298920de2 
+
+./.git/objects/fc/: 
+. .. 79237f672dd7d845338043ce9c2d17444e24a5 
+
+./.git/objects/fe/: 
+. .. 7179aad43ee91e625342db12fa2d925aaad827 92c556df527354595372f8d9384512b0b9491b 
+
+./.git/objects/info/: 
+. .. 
+
+./.git/objects/pack/: 
+. .. 
+
+./.git/refs/: 
+. .. heads remotes tags 
+
+./.git/refs/heads/: 
+. .. exec ls master 
+
+./.git/refs/remotes/: 
+. .. origin 
+
+./.git/refs/remotes/origin/: 
+. .. exec ls master 
+
+./.git/refs/tags/: 
+. .. hw0 hw0-2 hw1 
+
+./bin/: 
+. .. ls rshell 
+
+./src/: 
+. .. ls.cpp main.cpp 
+
+./tests/: 
+. .. exec.script ls-old.script ls.script 
+
+mmore019@hammer.cs.ucr.edu$ bin/ls -Rl
+./: 
+-rw------- 1 mmore019 csmajs 18027 Jan 18 20:17 LICENSE
+-rw------- 1 mmore019 csmajs   397 Feb  9 00:22 Makefile
+-rw------- 1 mmore019 csmajs  1183 Feb  9 09:52 README.md
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:56 bin
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:43 src
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:55 tests
+
+./bin/: 
+-rwx------ 1 mmore019 csmajs 36845 Feb  9 09:56 ls
+-rwx------ 1 mmore019 csmajs 43866 Feb  9 09:56 rshell
+
+./src/: 
+-rw------- 1 mmore019 csmajs 6616 Feb  9 09:43 ls.cpp
+-rw------- 1 mmore019 csmajs 2540 Feb  8 13:18 main.cpp
+
+./tests/: 
+-rw------- 1 mmore019 csmajs  12162 Feb  1 18:54 exec.script
+-rw------- 1 mmore019 csmajs  10093 Feb  9 00:22 ls-old.script
+-rw------- 1 mmore019 csmajs 131072 Feb  9 10:05 ls.script
+
+mmore019@hammer.cs.ucr.edu$ #now i will test multiple comp[lex flags          plex    lex^[[D     x flags
+mmore019@hammer.cs.ucr.edu$ bin/ls -l -l   a -alR   R -LLLL    lllRRRRa --all --long--   -- Re   Re  recursive -all
+./: 
+drwx------  6 mmore019 csmajs  4096 Feb  9 09:56 .
+drwxrwxrwx 11 mmore019 csmajs  4096 Feb  2 11:16 ..
+drwx------  8 mmore019 csmajs  4096 Feb  9 09:43 .git
+-rw-------  1 mmore019 csmajs 18027 Jan 18 20:17 LICENSE
+-rw-------  1 mmore019 csmajs   397 Feb  9 00:22 Makefile
+-rw-------  1 mmore019 csmajs  1183 Feb  9 09:52 README.md
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:56 bin
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:43 src
+drwx------  2 mmore019 csmajs  4096 Feb  9 09:55 tests
+
+./.git/: 
+drwx------   8 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------   6 mmore019 csmajs 4096 Feb  9 09:56 ..
+-rw-------   1 mmore019 csmajs   34 Feb  9 07:56 COMMIT_EDITMSG
+-rw-------   1 mmore019 csmajs  210 Jan 18 21:15 FETCH_HEAD
+-rw-------   1 mmore019 csmajs   19 Feb  9 05:18 HEAD
+-rw-------   1 mmore019 csmajs   41 Feb  9 00:22 ORIG_HEAD
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 branches
+-rw-------   1 mmore019 csmajs  224 Jan 23 11:32 config
+-rw-------   1 mmore019 csmajs   73 Jan 18 20:17 description
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 hooks
+-rw-------   1 mmore019 csmajs  568 Feb  9 09:43 index
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 info
+drwx------   3 mmore019 csmajs 4096 Jan 18 20:17 logs
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 objects
+-rw-------   1 mmore019 csmajs    0 Jan 18 20:37 packed-refs
+drwx------   5 mmore019 csmajs 4096 Jan 18 20:17 refs
+
+./.git/branches/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/hooks/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rwx------ 1 mmore019 csmajs  452 Jan 18 20:17 applypatch-msg.sample
+-rwx------ 1 mmore019 csmajs  896 Jan 18 20:17 commit-msg.sample
+-rwx------ 1 mmore019 csmajs  160 Jan 18 20:17 post-commit.sample
+-rwx------ 1 mmore019 csmajs  548 Jan 18 20:17 post-receive.sample
+-rwx------ 1 mmore019 csmajs  189 Jan 18 20:17 post-update.sample
+-rwx------ 1 mmore019 csmajs  398 Jan 18 20:17 pre-applypatch.sample
+-rwx------ 1 mmore019 csmajs 1578 Jan 18 20:17 pre-commit.sample
+-rwx------ 1 mmore019 csmajs 4951 Jan 18 20:17 pre-rebase.sample
+-rwx------ 1 mmore019 csmajs 1239 Jan 18 20:17 prepare-commit-msg.sample
+-rwx------ 1 mmore019 csmajs 3611 Jan 18 20:17 update.sample
+
+./.git/info/: 
+drwx------ 2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rw------- 1 mmore019 csmajs  240 Jan 18 20:17 exclude
+
+./.git/logs/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+-rw------- 1 mmore019 csmajs 9976 Feb  9 07:56 HEAD
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 refs
+
+./.git/logs/refs/: 
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  8 13:23 heads
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 remotes
+
+./.git/logs/refs/heads/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  8 13:23 .
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 ..
+-rw------- 1 mmore019 csmajs 3820 Feb  8 13:16 exec
+-rw------- 1 mmore019 csmajs 2900 Feb  9 07:56 ls
+-rw------- 1 mmore019 csmajs 1332 Feb  9 00:22 master
+
+./.git/logs/refs/remotes/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 .
+drwx------ 4 mmore019 csmajs 4096 Jan 18 21:13 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  8 17:53 origin
+
+./.git/logs/refs/remotes/origin/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  8 17:53 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 21:13 ..
+-rw------- 1 mmore019 csmajs 1889 Feb  8 13:17 exec
+-rw------- 1 mmore019 csmajs  628 Feb  9 07:57 ls
+-rw------- 1 mmore019 csmajs  790 Feb  9 00:23 master
+
+./.git/objects/: 
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------   8 mmore019 csmajs 4096 Feb  9 09:43 ..
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 00
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 01
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 03
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:47 05
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 06
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:12 08
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 0b
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:02 11
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:52 14
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 1a
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 1b
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 1c
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 1e
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 21
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 22
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 24
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 25
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 2a
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 2c
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 2d
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:56 2f
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 31
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:55 32
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 33
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:20 35
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 36
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 37
+drwx------   2 mmore019 csmajs 4096 Jan 23 15:56 39
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 3a
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 41
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 42
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 46
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 49
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 4c
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 4d
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 4f
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 53
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 55
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 58
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 59
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:50 5c
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 5d
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 62
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:14 64
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:34 65
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 67
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 68
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 6d
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 70
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 72
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:20 76
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 78
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 7a
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 7b
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 7d
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 7e
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 7f
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 83
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 84
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:58 85
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:04 88
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 8a
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:09 90
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 91
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 92
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:09 95
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 98
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 9b
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 9c
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 9d
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 a1
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:09 a2
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 a4
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 a5
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 a8
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 ab
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 ad
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 af
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 b2
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 b3
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:38 b4
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:49 b5
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 b9
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 bf
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 c3
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 c9
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:51 cf
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 d0
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 d1
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 d4
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 d5
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 d6
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 dc
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 dd
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 de
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 e0
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 e6
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 e7
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 e8
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:16 e9
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 eb
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 ec
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:10 ee
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 f3
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 f4
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 f6
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 f7
+drwx------   2 mmore019 csmajs 4096 Feb  9 09:43 fa
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 fc
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 fe
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 info
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 pack
+
+./.git/objects/00/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  2 00:45 e2acd848de3d1bba6248d986c475f67ec7491b
+
+./.git/objects/01/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 17:45 18c2e1ddf1df4072ba105f5859d0c4736ad3e4
+-r--------   1 mmore019 csmajs   53 Feb  3 02:41 8197637acfec4e973fce06399ca1bfa389f23c
+
+./.git/objects/03/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1009 Feb  3 01:49 cdb9432df3a9841c6c6b6b134d175425bb066b
+
+./.git/objects/05/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:47 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1810 Feb  9 05:47 92296158c5b54f88a52e01d8494b110d243ac9
+
+./.git/objects/06/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 14:48 4c314cf5daca6966b2695bbc71cf808f36eb28
+
+./.git/objects/08/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:12 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  243 Jan 23 12:03 682bf826cef10041896140f7a54e5aedecaf99
+-r--------   1 mmore019 csmajs  968 Feb  3 01:12 bcf4efa3d907f5a3f1a24fc06e6d3804e04cf6
+
+./.git/objects/0b/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  190 Jan 23 17:22 186af795e7d96311bedfa4591f4ba50852bea4
+
+./.git/objects/11/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:02 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  890 Jan 23 21:02 9fa63196d52fdb9c6d22c01182b0677ec5d007
+
+./.git/objects/14/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1174 Feb  8 19:52 4d74a0fbc94ffb2dfce9ad9c3bf46c44539693
+
+./.git/objects/1a/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 21:44 b4672f8caa13ca6e44bef06583a822b20a4ea7
+
+./.git/objects/1b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 23:51 6dc0c0b9d034c518f181586a3e8fba392895eb
+
+./.git/objects/1c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 12:03 d1533fddcc32396ed3d5a100a91b729bc7016a
+
+./.git/objects/1e/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  170 Feb  8 23:51 63df9f1b4cdc6b6419362c5ee720ffd5fd1cd9
+
+./.git/objects/21/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  9 05:48 a1a447ec2be60fbec4530f7f51bd5eca68f400
+
+./.git/objects/22/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 15:56 08ffb70139be35a24f948afb8dba20a6842d68
+-r--------   1 mmore019 csmajs  516 Jan 23 17:21 659af5908886be84bd0aca291f9d05366b521b
+-r--------   1 mmore019 csmajs  176 Feb  8 23:59 9b199e892b6f1858268f9b8db5f64ae2ee38b9
+
+./.git/objects/24/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  178 Feb  3 02:10 d27f06e19ec81eaaddb14d7b519bc221ecbcf7
+
+./.git/objects/25/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  206 Feb  8 14:05 3791d9d2426a38b2c569a8ed34b11e4b6d9e64
+
+./.git/objects/2a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 23:51 c2f9fb2565c396312b870f3d6e99b4b156bb59
+
+./.git/objects/2c/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 14:05 80f9a59e4bc9c96da55b6695f098385afc4ee3
+
+./.git/objects/2d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 12:03 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 12:03 479d8c0102e46370746562cf60a8c5ab74109d
+
+./.git/objects/2f/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  495 Jan 23 23:56 092f26e27d6e158ba296d08dfe8ce3f66e5da8
+
+./.git/objects/31/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:44 265fb3da9d339a0a318f523e182b8869d4e9ed
+
+./.git/objects/32/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1946 Feb  9 07:55 a18e4d11794a282204973ccaedd77fb3a4a2ad
+
+./.git/objects/33/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  183 Feb  8 21:52 a0098be6d96ebc63fb757c215a055bbe60624e
+-r--------   1 mmore019 csmajs  609 Jan 23 15:52 d4753030e6fc661fa8bbb02adbd66a731eae5d
+
+./.git/objects/35/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:20 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1000 Feb  3 00:20 67f2bbcea2f1675c7d146bc6b980682c6219ee
+
+./.git/objects/36/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  9 00:21 93d4d967dcf903ec0bb2e4e0a8c515c1af29fa
+
+./.git/objects/37/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 22:00 934625aa4276bbfa31798b7039f744c9522ea3
+-r--------   1 mmore019 csmajs   80 Feb  9 07:56 b82c62ebed7600ae81d57e9860f276196fcd56
+
+./.git/objects/39/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 15:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  166 Jan 23 15:56 76540bd3f5ddff46f69b50582576d977721b71
+
+./.git/objects/3a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   52 Feb  3 01:49 733b3299928e6ad5c1fc8a89a1542015c7b16a
+
+./.git/objects/41/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 13:16 f26ae7e35fa31c2d08275a3544ad16897586f2
+
+./.git/objects/42/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   82 Feb  9 00:21 26e2ff9abce9faad78a57f9e60f318e4d72c47
+
+./.git/objects/46/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 17:45 0eeab3b30bcf2790cf522319dec35c145db40d
+
+./.git/objects/49/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 21:52 9e1ae9b4172419815c6e083559937271ea99ed
+-r--------   1 mmore019 csmajs  123 Jan 18 20:17 de7bf0bfa8d61ae4fb0649c77deebfe277e85b
+
+./.git/objects/4c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 17:22 e48a991051fc8ae038a6e28c2d2ca6b41f4bac
+
+./.git/objects/4d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 18 20:23 b969f4822d744036205bf6a80105847b49f000
+
+./.git/objects/4f/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 18:11 b23204a031f4835360e01c6d99b0bb9b9d63b7
+
+./.git/objects/53/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:52 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  173 Jan 23 18:26 d42dce1ba2e4ad915a0c935eebe12c591d853a
+-r--------   1 mmore019 csmajs  176 Feb  8 21:52 eafb11598ebf2031b27140da9da575b5b7c10b
+
+./.git/objects/55/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  2 00:45 d89e076009ddb21731e753711cdfa313f2542e
+
+./.git/objects/58/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 18:15 ffa5630a982e91201abc54c77b743f40bbcfce
+
+./.git/objects/59/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  164 Jan 23 21:44 1bcae1df9dd4814f54899bc95d4b8d435d02f3
+
+./.git/objects/5c/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:50 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1700 Feb  8 23:50 667714f0dcae23ee8a78c84fe1ebdb205e778f
+-r--------   1 mmore019 csmajs 1045 Jan 23 23:34 86014e9f33c2efb984e57c87204a3411c17040
+
+./.git/objects/5d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  169 Jan 23 21:44 e898df2a4076660460efcce493be0d1731418e
+
+./.git/objects/62/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Jan 23 23:57 266c3b1ae46899726c3cd64c8162115d0faa01
+-r--------   1 mmore019 csmajs  344 Feb  8 14:05 858c60b079fa3159a95ea976a808f69a227ada
+-r--------   1 mmore019 csmajs   85 Jan 18 20:17 be0fa762547b9889a6f4f0c66acbe78e1335ee
+
+./.git/objects/64/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:14 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1051 Feb  3 11:14 ada82513b2a2b09036562dd1f0080ab64ae672
+
+./.git/objects/65/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:34 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 4198 Jan 23 23:34 e8cfb48fb13a47bc22da3216f92e747f27133a
+
+./.git/objects/67/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  2 23:19 14dd2032ac585942f7c4f47c5105b4df33bf00
+
+./.git/objects/68/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 16:51 8999693c26078635b6d2de3e780561463e4d82
+
+./.git/objects/6d/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 00:21 324dc28f423b3bd388411ed2b2dc5609a0ed88
+-r--------   1 mmore019 csmajs  148 Jan 23 21:04 fb705c27d01886d7d1beaae9a42124ebc9e14d
+
+./.git/objects/70/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 18:15 efe01cc15be0b1775bffc889ee008778d920b4
+
+./.git/objects/72/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  251 Feb  3 01:13 d3387b8b4ad12e706a765f57ec675ca885e966
+
+./.git/objects/76/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:20 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 2495 Feb  9 00:20 6d0d146903a98d864e4db9761b5ba7c904eec1
+-r--------   1 mmore019 csmajs   53 Jan 23 18:26 c61dbf3cf63616a8c5a62119f0edbdded7ac0b
+
+./.git/objects/78/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 18 20:44 df1a853e03ae87c1dc056bcb0315a775a034e3
+
+./.git/objects/7a/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 02:10 47b3b0242152fe9ee65ebd6e1f92bce5c1da80
+
+./.git/objects/7b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 14:05 39f8c1afc2ae15aa36b3c8107bd1e5003f5167
+
+./.git/objects/7d/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  184 Feb  9 07:56 9fcd7af43387b5eb3e62dfaeedf08e962df069
+
+./.git/objects/7e/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 13:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  192 Feb  8 13:16 c65a13f8c114bc9c1e5ca63309f9dc6ee84413
+
+./.git/objects/7f/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   56 Jan 23 23:57 4c727aec803eefa8a376f122d79309986b546e
+
+./.git/objects/83/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:13 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 01:13 20281b30862f5c9c637945c0c3a4bb6abd8d78
+-r--------   1 mmore019 csmajs  148 Jan 23 15:56 3b63b9e9e36cb31e284b49fb5bfcbe1c430fac
+
+./.git/objects/84/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  207 Feb  3 00:21 83387018b1f590b2a06115527fd85bc1daf1ff
+
+./.git/objects/85/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:58 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 19:55 487186f8876133deb46db11c33f846393f769b
+-r--------   1 mmore019 csmajs  580 Feb  8 23:58 57cad14402f92f10fd08f7230b249c7cd4a381
+
+./.git/objects/88/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 21:04 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 21:04 cb8e138a724ad4578062ddf6dce115d4a9cbfa
+
+./.git/objects/8a/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  225 Jan 23 21:04 05fac22b250a088195c3dda18c8d1ca2f884ba
+-r--------   1 mmore019 csmajs  175 Jan 23 22:00 971606569f4f830830bb53f5bd3a1c9facdd59
+
+./.git/objects/90/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1623 Feb  8 23:09 0d711266ce5be3b7d0f3d0a47c20639c8e34ce
+
+./.git/objects/91/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 22:00 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 23 22:00 365d053a18b73d9fe9fa027c82bcf669aecd12
+
+./.git/objects/92/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 16:51 193c5592059330a82d5974b9a7a833efcb4ad7
+
+./.git/objects/95/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1064 Feb  3 02:09 33d25b7a3cbf17dabf07942b72a9842d1e8ca2
+
+./.git/objects/98/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  8 13:16 27ebc0838789dfc528be7036f514ecc5c98866
+-r--------   1 mmore019 csmajs  177 Jan 18 20:44 8b1afbb86fcd7e25af9b4e81397c62d65b2ee5
+-r--------   1 mmore019 csmajs 1082 Feb  8 13:15 96e137073e583507ef12a4eb23c2be501d78db
+-r--------   1 mmore019 csmajs   80 Feb  8 17:11 eca58243bbd94d6a4bc7b62ffa9961015093ac
+
+./.git/objects/9b/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:05 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  200 Feb  8 14:05 14d4aefe7822dd0a6e23feb7af53313d726a8a
+
+./.git/objects/9c/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  216 Jan 23 23:57 a690a5af3390683f68d70180b5badf803db702
+
+./.git/objects/9d/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:23 7e32cbc772e91217d43591e46aa70e244278aa
+-r--------   1 mmore019 csmajs  601 Jan 23 18:26 f283ee9ad21359cd56b467fab17557f7978c14
+
+./.git/objects/a1/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 01:49 3c82c3862cff8b0f8c09e38e1da4894d809476
+
+./.git/objects/a2/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:09 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  185 Feb  8 17:11 6dbc7e0c2623de30e55e4f57113e9a96a3cd62
+-r--------   1 mmore019 csmajs  958 Feb  8 18:09 b90d508dcb4389cf4ef2399c1b12c54081d966
+
+./.git/objects/a4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  595 Jan 23 18:13 4e5c505b38ffe1fc665f668cf6e93e38bb758e
+-r--------   1 mmore019 csmajs  242 Jan 23 12:03 c3a4c4fa5169c65cff768cebad1480f69a6852
+-r--------   1 mmore019 csmajs  849 Feb  8 17:45 edd1a593e0dd58ee262a97415d9c0ec324625e
+
+./.git/objects/a5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  171 Feb  8 14:48 7c7c3c181013122bc81e721eb2d8ef7be3e8d5
+
+./.git/objects/a8/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:44 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   84 Jan 18 20:44 cf9eb5bf04819a47bec08460de7d65f6fed0c8
+
+./.git/objects/ab/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 11:17 305d814444d9b395f8edcba4ffebd6ba8dc850
+-r--------   1 mmore019 csmajs  177 Feb  8 17:11 bf2e5e45dd68b8fef62ac92807d197d3c6c916
+
+./.git/objects/ad/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  122 Jan 23 12:03 47435ecec5070422a3d1f3940aa5bc322c8f7e
+-r--------   1 mmore019 csmajs  268 Feb  8 19:55 ecb2c0be240ccfd29f01b4d4e1d9bf8cca10e7
+
+./.git/objects/af/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 01:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  191 Feb  3 01:49 67d79b95f6e3240995da8444eef03fe4ffa06f
+
+./.git/objects/b2/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 17:22 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 17:22 992d3b48bd4de1cec0072412ac2c08c92dd1de
+
+./.git/objects/b3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  2 23:19 0c6eb997289085d4d99ac0dfdb68493b752730
+
+./.git/objects/b4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:38 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1041 Feb  3 02:38 441329dd28b272e9aa475724aaa6bcd95d3d6c
+
+./.git/objects/b5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 16:49 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  722 Feb  8 16:49 34e6500699c413766805fab1c7e47804b67332
+
+./.git/objects/b9/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 23:57 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   52 Jan 23 23:57 8da6c3aa6704b6b673022edde60553fae66c0e
+
+./.git/objects/bf/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:23 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  183 Jan 18 20:23 091f0218472d43c424824cb01f3a4cd7f8042e
+
+./.git/objects/c3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 02:41 7948117b64cd68d00bde5a9bcf7aad3bcda5a2
+
+./.git/objects/c9/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:41 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  284 Feb  3 02:41 42b7129946a9e6728ea9eaf0e9b15e86d707e6
+
+./.git/objects/cf/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 21:51 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1402 Feb  8 21:51 c6c427c8df49a2237e08adfdab6f944154d6df
+
+./.git/objects/d0/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:26 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  148 Jan 23 18:26 b2b0708a850c571a91949448792c0b7489d27b
+
+./.git/objects/d1/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 19:55 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 19:55 2f88a177c033fbce76fe779581cb7ffda9a909
+
+./.git/objects/d4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Feb  3 01:13 980a386ad0f6f7c0082530b5285cdaa1453e1f
+-r--------   1 mmore019 csmajs  177 Feb  9 07:56 a0b64a485e10c85301a71f776f66c9c6b68da9
+
+./.git/objects/d5/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  242 Feb  9 05:48 9f1600760515f615e78d51d814e682d97b299b
+
+./.git/objects/d6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 02:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 02:10 0a652bc635449712d79bbade1720a9e164f1b1
+-r--------   1 mmore019 csmajs 7710 Jan 18 20:17 a93266f748d606b884f9434ff662fe80b9dc21
+
+./.git/objects/dc/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 00:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1127 Feb  2 00:45 3b53acebbf23745f30d37fb0feb82d253cf5b4
+
+./.git/objects/dd/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:45 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  8 17:45 a6e4d966b2900346663a56aecf072010d0340a
+
+./.git/objects/de/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   80 Feb  8 18:11 0795b62e33bb52745eab141f545604b78d69be
+-r--------   1 mmore019 csmajs  170 Feb  2 00:45 b66e33366ebc123388a181825db5004efb0590
+
+./.git/objects/e0/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  193 Feb  3 11:17 ced24b2d2f38d9edef7d0440ecb982e1e1fd07
+
+./.git/objects/e6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  410 Feb  8 14:48 0bad25e37262d19d59f341d88ddc031b16955c
+-r--------   1 mmore019 csmajs   15 Jan 18 20:22 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+./.git/objects/e7/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:19 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  244 Feb  2 23:19 68462e2e26430383bc8bae1e19ce1ca4e7b051
+
+./.git/objects/e8/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  181 Feb  9 00:21 98b831ff2f688c6236ebdf4d5869d047c6a39d
+
+./.git/objects/e9/: 
+drwx------   2 mmore019 csmajs 4096 Feb  2 23:16 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 1208 Feb  2 23:16 967ffd9047b82fb6be2e260e6d47fc07a554be
+
+./.git/objects/eb/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 14:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  8 14:48 d29d8d5273da52f94dce73c2991e6f05e29c56
+
+./.git/objects/ec/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 00:21 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  176 Feb  3 00:21 928fe7de4e7c49fb4b739e75097fe2d534444f
+
+./.git/objects/ee/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 17:10 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  764 Feb  8 17:10 90046d5781d78066dce739bb0a9b055479123f
+
+./.git/objects/f3/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 05:48 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  192 Feb  8 16:51 0c8558ee7956846d0b5509859840e51fb2188d
+-r--------   1 mmore019 csmajs  177 Feb  9 05:48 467a1b09b2571a2b4aa021b2cbfdf4e095ad42
+
+./.git/objects/f4/: 
+drwx------   2 mmore019 csmajs 4096 Feb  3 11:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  177 Feb  3 11:17 c25d7a69849106bd686ccced8b154e7c5a3bad
+
+./.git/objects/f6/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 23:59 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  167 Feb  8 23:59 d4f5266dbccbe9ed15cbc9d4c0917563f81ab2
+
+./.git/objects/f7/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs   53 Jan 18 20:17 e5c2a255d09c65554637871b69c55c28ebb77f
+
+./.git/objects/fa/: 
+drwx------   2 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs 2183 Feb  9 09:43 f91c5a55db3e6be215214a222fc25298920de2
+
+./.git/objects/fc/: 
+drwx------   2 mmore019 csmajs 4096 Jan 23 18:15 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  189 Jan 23 18:15 79237f672dd7d845338043ce9c2d17444e24a5
+
+./.git/objects/fe/: 
+drwx------   2 mmore019 csmajs 4096 Feb  8 18:11 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+-r--------   1 mmore019 csmajs  206 Feb  8 18:11 7179aad43ee91e625342db12fa2d925aaad827
+-r--------   1 mmore019 csmajs  910 Jan 23 21:59 92c556df527354595372f8d9384512b0b9491b
+
+./.git/objects/info/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/objects/pack/: 
+drwx------   2 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 114 mmore019 csmajs 4096 Feb  9 09:43 ..
+
+./.git/refs/: 
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 8 mmore019 csmajs 4096 Feb  9 09:43 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:56 heads
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 remotes
+drwx------ 2 mmore019 csmajs 4096 Feb  9 00:23 tags
+
+./.git/refs/heads/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:56 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:16 exec
+-rw------- 1 mmore019 csmajs   41 Feb  9 07:56 ls
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:22 master
+
+./.git/refs/remotes/: 
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:57 origin
+
+./.git/refs/remotes/origin/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 07:57 .
+drwx------ 3 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:17 exec
+-rw------- 1 mmore019 csmajs   41 Feb  9 07:57 ls
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:23 master
+
+./.git/refs/tags/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 00:23 .
+drwx------ 5 mmore019 csmajs 4096 Jan 18 20:17 ..
+-rw------- 1 mmore019 csmajs   41 Jan 23 23:59 hw0
+-rw------- 1 mmore019 csmajs   41 Feb  8 13:20 hw0-2
+-rw------- 1 mmore019 csmajs   41 Feb  9 00:23 hw1
+
+./bin/: 
+drwx------ 2 mmore019 csmajs  4096 Feb  9 09:56 .
+drwx------ 6 mmore019 csmajs  4096 Feb  9 09:56 ..
+-rwx------ 1 mmore019 csmajs 36845 Feb  9 09:56 ls
+-rwx------ 1 mmore019 csmajs 43866 Feb  9 09:56 rshell
+
+./src/: 
+drwx------ 2 mmore019 csmajs 4096 Feb  9 09:43 .
+drwx------ 6 mmore019 csmajs 4096 Feb  9 09:56 ..
+-rw------- 1 mmore019 csmajs 6616 Feb  9 09:43 ls.cpp
+-rw------- 1 mmore019 csmajs 2540 Feb  8 13:18 main.cpp
+
+./tests/: 
+drwx------ 2 mmore019 csmajs   4096 Feb  9 09:55 .
+drwx------ 6 mmore019 csmajs   4096 Feb  9 09:56 ..
+-rw------- 1 mmore019 csmajs  12162 Feb  1 18:54 exec.script
+-rw------- 1 mmore019 csmajs  10093 Feb  9 00:22 ls-old.script
+-rw------- 1 mmore019 csmajs 163840 Feb  9 10:06 ls.script
+
+mmore019@hammer.cs.ucr.edu$ #now i will show the cases that shou    show the error handling of ls
+mmore019@hammer.cs.ucr.edu$ # bin/ls -
+error: '-' has no parameters
+mmore019@hammer.cs.ucr.edu$ bin/ls --------
+error: Unreconized flag: --------
+mmore019@hammer.cs.ucr.edu$ bin/ls -aljsdnljkq
+error: Unreconized flag: -aljsdnljkq
+mmore019@hammer.cs.ucr.edu$ #notice that it fi                  bin/ls -l -a -R -R -alR -apRl -aaaa -llll
+error: Unreconized flag: -apRl
+mmore019@hammer.cs.ucr.edu$ #notice that it points out the flag that caused the error
+mmore019@hammer.cs.ucr.edu$ #LS can also handle paths
+mmore019@hammer.cs.ucr.edu$ ls  bin/ls bin/ -l
+-rwx------ 1 mmore019 csmajs 36845 Feb  9 09:56 ls
+-rwx------ 1 mmore019 csmajs 43866 Feb  9 09:56 rshell
+mmore019@hammer.cs.ucr.edu$ bin.ls bin -l
+exec: No such file or directory
+mmore019@hammer.cs.ucr.edu$ #notice that the '/' is needed. I will            thisd        TH his is true for all paths
+mmore019@hammer.cs.ucr.edu$ $ #if a path is specified  , it must ned     end in '/'
+mmore019@hammer.cs.ucr.edu$ bin/ls ../
 bin coreutils-8.23 firstrepo hbhairy-utils hbhairy-utils.tar.xz labs libexec rshell share ucr-cs100 
-mmore019@hammer.cs.ucr.edu$ #notice that since there are no uppercase letters, weaksorting produced a  n alphabetized              perfect alphabetized list. While the alphabetizing is not perfect, it is consistint
-mmore019@hammer.cs.ucr.edu$ ls  bin/ls -R
-LICENSE Makefile README.md bin ls.script src tests 
-mmore019@hammer.cs.ucr.edu$ #notice that passing in -R doesn  not crash the program. This is because it is meant to be implemented later
-mmore019@hammer.cs.ucr.edu$ bin/ls -RE ecursive #as you can see the re^[[D                                    recursive #recursion hasd not      not been implemented
-error: Unreconized flag: -recursive
-mmore019@hammer.cs.ucr.edu$ #i did not uncomment the                          bin/ls --recursive
-LICENSE Makefile README.md bin ls.script src tests 
-mmore019@hammer.cs.ucr.edu$ #once agin  ain, it doesn  nothing because it hasnt been implemented
-mmore019@hammer.cs.ucr.edu$ exit    exit #now   exiting the rshell. last time, it was                                         
-~/Documents/CS100/rshell
-mmore019@hammer $ uit[K[K[Kquit
-bash: quit: command not found
+mmore019@hammer.cs.ucr.edu$ bin/ls ./
+LICENSE Makefile README.md bin src tests 
+mmore019@hammer.cs.ucr.edu$ bin/ls fakepath/sadnsajkdn/ -ls-ls-ls       aR
+fakepath/sadnsajkdn/: 
+opendir: No such file or directory
+mmore019@hammer.cs.ucr.edu$ #it prints           That is a buf g in recursion. it should not print out the path
+mmore019@hammer.cs.ucr.edu$ # it should only prin  t the perror
+mmore019@hammer.cs.ucr.edu$ #if I input multiple paths, it has a specific error
+mmore019@hammer.cs.ucr.edu$ bin/ls src/ bin/
+error: too many path parameters
+mmore019@hammer.cs.ucr.edu$ # h  the error applied   s to even non  -folders
+mmore019@hammer.cs.ucr.edu$ # i need to come up with a better error message
+mmore019@hammer.cs.ucr.edu$ bin.ls     /ls file whatever
+error: too many path parameters
+mmore019@hammer.cs.ucr.edu$ #i can recurse the             pass in a recursion           path and a recursion but I wont        I wont to                               and recurs                                I wi    #i will not    ow pass in                   #another thing to notice is that the aplha    lphabetical order is not perfect
+mmore019@hammer.cs.ucr.edu$ ^[[B    bin/ls  
+LICENSE Makefile README.md bin src tests 
+mmore019@hammer.cs.ucr.edu$ #this is because the files are sorted        weakly      strictly e weakly sorted. This means that Capital letters take precedence over lower case la etters
+mmore019@hammer.cs.ucr.edu$ ls -exit        #i will not   w test for undefined behavior by using th  rshell's v connectors and exit
+mmore019@hammer.cs.ucr.edu$ bin/sl  ls ; bin/ls ; bin/ls exit
+LICENSE Makefile README.md bin src tests 
+LICENSE Makefile README.md bin src tests 
+opendir: No such file or directory
+mmore019@hammer.cs.ucr.edu$ bin/ls -als           exit    #that is all i can think of
+mmore019@hammer.cs.ucr.edu$ exit
 ~/Documents/CS100/rshell
 mmore019@hammer $ exit
 exit
 
-Script done on Mon 09 Feb 2015 12:21:52 AM PST
+Script done on Mon 09 Feb 2015 10:25:23 AM PST
