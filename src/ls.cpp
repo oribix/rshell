@@ -4,10 +4,12 @@
 #include <list>
 #include <cstdlib>
 #include <sys/types.h>
+#include <sys/stat.h>
 #include <dirent.h>
 #include <errno.h>
 #include <stdio.h>
 #include <iostream>
+#include <unistd.h>
 
 using namespace std;
 
@@ -102,12 +104,35 @@ int main(int argc, char *argv[])
 		
 	}
 	
-	filenames.sort();
-	//sort(filenames.begin(), filenames.end());
+	filenames.sort();//strict weak sort of the filenames
+	
+	//queue<int> longdetails;
+	//for (list<string> iterator it = filenames.begin() ; it != filenames.end() ; it++) {
+		//struct stat s;
+		//stat(*it, &s);
+		//longdetails.push_back(s);
+	//}
 	
 	while (filenames.size() != 0) {
 		if(flagl) {
-			//print extra info
+			struct stat s;
+			if( -1 == stat((filenames.front()).c_str(), &s)) {
+				perror("stat");
+				exit(EXIT_FAILURE);
+			}
+			
+			if(s.st_mode & S_IFDIR) cout << "d";
+			else cout << "-";
+			cout << ((s.st_mode&S_IRUSR)?"r":"-");
+			cout << ((s.st_mode&S_IWUSR)?"w":"-");
+			cout << ((s.st_mode&S_IXUSR)?"x":"-");
+			cout << ((s.st_mode&S_IXGRP)?"r":"-");
+			cout << ((s.st_mode&S_IXGRP)?"w":"-");
+			cout << ((s.st_mode&S_IXGRP)?"x":"-");
+			cout << ((s.st_mode&S_IXOTH)?"r":"-");
+			cout << ((s.st_mode&S_IXOTH)?"w":"-");
+			cout << ((s.st_mode&S_IXOTH)?"x":"-") << " ";
+			
 		}
 		
 		cout << filenames.front() << flush;
@@ -116,7 +141,8 @@ int main(int argc, char *argv[])
 		else cout << " " << flush;
 		
 		filenames.pop_front();
-	} cout << endl;
+	} 
+	if (!flagl) cout << endl;
 	
 	if (closedir(dirp) == -1) {
 		perror("closedir");
