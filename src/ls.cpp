@@ -1,3 +1,7 @@
+#include <grp.h>
+#include <pwd.h>
+#include <iomanip>
+#include <ctime>
 #include <cstring>
 #include <algorithm>
 #include <queue>
@@ -121,6 +125,7 @@ int main(int argc, char *argv[])
 				exit(EXIT_FAILURE);
 			}
 			
+			//takes up 10 spaces
 			if(s.st_mode & S_IFDIR) cout << "d";
 			else cout << "-";
 			cout << ((s.st_mode&S_IRUSR)?"r":"-");
@@ -131,7 +136,34 @@ int main(int argc, char *argv[])
 			cout << ((s.st_mode&S_IXGRP)?"x":"-");
 			cout << ((s.st_mode&S_IXOTH)?"r":"-");
 			cout << ((s.st_mode&S_IXOTH)?"w":"-");
-			cout << ((s.st_mode&S_IXOTH)?"x":"-") << " ";
+			cout << ((s.st_mode&S_IXOTH)?"x":"-") << " " << flush;
+			
+			int inodewidth = 10;
+			int userwidth = 10;
+			int groupwidth = 10;
+			int bytewidth = 7;
+			char *timestring = ctime(&s.st_mtime);
+			//time_t *currenttime = time(NULL);
+			
+			struct passwd *username = getpwuid(s.st_uid);
+			if(username == NULL) {
+				perror("getpwuid");
+				exit(EXIT_FAILURE);
+			}
+			
+			struct group *groupname = getgrgid(s.st_gid);
+			if(groupname == NULL) {
+				perror("getpwgid");
+				exit(EXIT_FAILURE);
+			}
+			
+			cout << setw(inodewidth) << right << s.st_ino << " ";
+			cout << setw(userwidth) << left << username->pw_name << " ";
+			cout << setw(groupwidth) << left << groupname->gr_name << " ";
+			cout << setw(bytewidth) << right << s.st_size << " ";
+			//output month day hour:minute
+			for(int i = 4 ; i < 16 ; i++) cout << timestring[i];
+			cout << " " << flush;
 			
 		}
 		
