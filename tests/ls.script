@@ -1,0 +1,136 @@
+Script started on Mon 09 Feb 2015 12:03:50 AM PST
+~
+mmore019@hammer $ CS100
+bash: CS100: command not found
+~
+mmore019@hammer $ pwd
+/home/csmajs/mmore019
+~
+mmore019@hammer $ cd [K[K[Kls
+[0m[01;32maddons.sqlite[0m*           [01;32mcookies.sqlite-shm[0m*     [01;34mhealthreport[0m/             [01;34mMusic[0m/               [01;32msecmod.db[0m*              [01;34mVideos[0m/
+[01;32mblocklist.xml[0m*           [01;34mDesktop[0m/                [01;32mhealthreport.sqlite[0m*      [01;32mpermissions.sqlite[0m*  [01;32msessionstore.bak[0m*       [01;34mwebapps[0m/
+[01;34mbookmarkbackups[0m/         [01;34mDocuments[0m/              [01;32mhealthreport.sqlite-shm[0m*  [01;34mPictures[0m/            [01;32msessionstore.js[0m*        [01;32mwebappsstore.sqlite[0m*
+[01;34mCache[0m/                   [01;34mDownloads[0m/              [01;34mindexedDB[0m/                [01;32mplaces.sqlite[0m*       [01;32msignons.sqlite[0m*         [01;32mwebappsstore.sqlite-shm[0m*
+[01;32m_CACHE_CLEAN_[0m*           [01;32mdownloads.sqlite[0m*       [01;34mjetpack[0m/                  [01;32mplaces.sqlite-shm[0m*   [01;34mstartupCache[0m/           [01;34mWINDOWS[0m/
+[01;32mcert8.db[0m*                [01;34mextensions[0m/             [01;32mkey3.db[0m*                  [01;32mpluginreg.dat[0m*       [01;34mTemplates[0m/
+[01;32mchromeappsstore.sqlite[0m*  [01;32mextensions.ini[0m*         [01;32mlocalstore.rdf[0m*           [01;32mprefs.js[0m*            [01;32mtextadventure.cpp[0m*
+[01;32mcompatibility.ini[0m*       [01;32mextensions.sqlite[0m*      main.cpp                  [01;34mPublic[0m/              [01;34mthumbnails[0m/
+[01;32mcontent-prefs.sqlite[0m*    [01;32mFirefox_wallpaper.png[0m*  [01;32mmarionette.log[0m*           [01;34msafebrowsing[0m/        [01;32mtimes.json[0m*
+[01;32mcookies.sqlite[0m*          [01;32mformhistory.sqlite[0m*     [01;32mmimeTypes.rdf[0m*            [01;32msearch.json[0m*         [01;32murlclassifierkey3.txt[0m*
+[m~
+mmore019@hammer $ cd DOc[K[Kocuments/CS100/R[Krshell/
+~/Documents/CS100/rshell
+mmore019@hammer $ git [K[K[K[Kmake
+mkdir -p ./bin
+g++ -ansi -Wall -Werror -pedantic ./src/main.cpp -o ./bin/rshell
+g++ -ansi -Wall -Werror -pedantic ./src/ls.cpp -o ./bin/ls 
+~/Documents/CS100/rshell
+mmore019@hammer $ r[Kbin/rshell
+mmore019@hammer.cs.ucr.edu$ bin/ls
+LICENSE Makefile README.md bin ls.script src tests 
+mmore019@hammer.cs.ucr.edu$ ^[[A    bin/ls -a
+. .. .git LICENSE Makefile README.md bin ls.script src tests 
+mmore019@hammer.cs.ucr.edu$ bin/ls -all
+drwx------    5886533 mmore019   csmajs        4096 Feb  9 00:00 .
+drwxrwxrwx   24177722 mmore019   csmajs        4096 Feb  2 11:16 ..
+drwx------    5886534 mmore019   csmajs        4096 Feb  8 23:59 .git
+-rw-------    3189095 mmore019   csmajs       18027 Jan 18 20:17 LICENSE
+-rw-------   10120033 mmore019   csmajs         397 Feb  8 13:56 Makefile
+-rw-------   13681248 mmore019   csmajs        1097 Feb  8 23:58 README.md
+drwx------    4185700 mmore019   csmajs        4096 Feb  9 00:01 bin
+-rw-------   13681249 mmore019   csmajs           0 Feb  9 00:00 ls.script
+drwx------    3189097 mmore019   csmajs        4096 Feb  8 23:41 src
+drwx------    6314032 mmore019   csmajs        4096 Feb  1 18:54 tests
+mmore019@hammer.cs.ucr.edu$ bin/ls --all #note: this is not the same as -all
+. .. .git LICENSE Makefile README.md bin ls.script src tests 
+mmore019@hammer.cs.ucr.edu$ bin/ls -lllalalalalalalllalallallla
+drwx------    5886533 mmore019   csmajs        4096 Feb  9 00:00 .
+drwxrwxrwx   24177722 mmore019   csmajs        4096 Feb  2 11:16 ..
+drwx------    5886534 mmore019   csmajs        4096 Feb  8 23:59 .git
+-rw-------    3189095 mmore019   csmajs       18027 Jan 18 20:17 LICENSE
+-rw-------   10120033 mmore019   csmajs         397 Feb  8 13:56 Makefile
+-rw-------   13681248 mmore019   csmajs        1097 Feb  8 23:58 README.md
+drwx------    4185700 mmore019   csmajs        4096 Feb  9 00:01 bin
+-rw-------   13681249 mmore019   csmajs           0 Feb  9 00:00 ls.script
+drwx------    3189097 mmore019   csmajs        4096 Feb  8 23:41 src
+drwx------    6314032 mmore019   csmajs        4096 Feb  1 18:54 tests
+mmore019@hammer.cs.ucr.edu$ bin/ls -l -l -l -l -l -l 
+-rw-------    3189095 mmore019   csmajs       18027 Jan 18 20:17 LICENSE
+-rw-------   10120033 mmore019   csmajs         397 Feb  8 13:56 Makefile
+-rw-------   13681248 mmore019   csmajs        1097 Feb  8 23:58 README.md
+drwx------    4185700 mmore019   csmajs        4096 Feb  9 00:01 bin
+-rw-------   13681249 mmore019   csmajs           0 Feb  9 00:00 ls.script
+drwx------    3189097 mmore019   csmajs        4096 Feb  8 23:41 src
+drwx------    6314032 mmore019   csmajs        4096 Feb  1 18:54 tests
+mmore019@hammer.cs.ucr.edu$ bin/ls -   - - - -
+error: '-' has no parameters
+mmore019@hammer.cs.ucr.edu$ bin/ls --long
+-rw-------    3189095 mmore019   csmajs       18027 Jan 18 20:17 LICENSE
+-rw-------   10120033 mmore019   csmajs         397 Feb  8 13:56 Makefile
+-rw-------   13681248 mmore019   csmajs        1097 Feb  8 23:58 README.md
+drwx------    4185700 mmore019   csmajs        4096 Feb  9 00:01 bin
+-rw-------   13681249 mmore019   csmajs           0 Feb  9 00:00 ls.script
+drwx------    3189097 mmore019   csmajs        4096 Feb  8 23:41 src
+drwx------    6314032 mmore019   csmajs        4096 Feb  1 18:54 tests
+mmore019@hammer.cs.ucr.edu$ bon  in/ls -l -a
+drwx------    5886533 mmore019   csmajs        4096 Feb  9 00:00 .
+drwxrwxrwx   24177722 mmore019   csmajs        4096 Feb  2 11:16 ..
+drwx------    5886534 mmore019   csmajs        4096 Feb  8 23:59 .git
+-rw-------    3189095 mmore019   csmajs       18027 Jan 18 20:17 LICENSE
+-rw-------   10120033 mmore019   csmajs         397 Feb  8 13:56 Makefile
+-rw-------   13681248 mmore019   csmajs        1097 Feb  8 23:58 README.md
+drwx------    4185700 mmore019   csmajs        4096 Feb  9 00:01 bin
+-rw-------   13681249 mmore019   csmajs           0 Feb  9 00:00 ls.script
+drwx------    3189097 mmore019   csmajs        4096 Feb  8 23:41 src
+drwx------    6314032 mmore019   csmajs        4096 Feb  1 18:54 tests
+mmore019@hammer.cs.ucr.edu$ bin/ls -------------
+error: Unreconized flag: -------------
+mmore019@hammer.cs.ucr.edu$ bin/ls bin/ls   ## testing wh         i     #ia  can specify a folder to ls in
+opendir: Not a directory
+mmore019@hammer.cs.ucr.edu$ ^[[A    bin/ls src/
+ls.cpp main.cpp 
+mmore019@hammer.cs.ucr.edu$ bin   # #the bin/ls bin/ls command tests the error checking by passing a fake folder
+mmore019@hammer.cs.ucr.edu$ bin/ls bin bin bin -a
+error: too many path parameters
+mmore019@hammer.cs.ucr.edu$ #that tests what happens if many paths are inputted
+mmore019@hammer.cs.ucr.edu$ bin/ls ../.. #going up folders
+CS100 CS61 Thumbs.db assignment 6 honors.odt honors assignment 2.odt motivation of cs student.odt x or i.odt 
+mmore019@hammer.cs.ucr.edu$ $ #notice that is t is only partially in apl  lpha order. This s is because the names are sorted strictly and weakly
+mmore019@hammer.cs.ucr.edu$ #the folders and files that have a   start with capital letters go first, then lower case
+mmore019@hammer.cs.ucr.edu$ ls -    bin/ls -id
+error: Unreconized flag: -id
+mmore019@hammer.cs.ucr.edu$ #that tests if it will take unrecognized fp kags     flags
+mmore019@hammer.cs.ucr.edu$ # bin/ls -a -l -R u
+error: Unreconized flag: -u
+mmore019@hammer.cs.ucr.edu$ #notice that it points out the unrecognized flag
+mmore019@hammer.cs.ucr.edu$ bin/ls -alu
+error: Unreconized flag: -alu
+mmore019@hammer.cs.ucr.edu$ #it will print out the entire unrecognized flag
+mmore019@hammer.cs.ucr.edu$ # bin/ls -l -l -a -djskdfjskhf
+error: Unreconized flag: -djskdfjskhf
+mmore019@hammer.cs.ucr.edu$ bin/ls exit
+opendir: No such file or directory
+mmore019@hammer.cs.ucr.edu$ bin/ls ; bin/ls
+LICENSE Makefile README.md bin ls.script src tests 
+LICENSE Makefile README.md bin ls.script src tests 
+mmore019@hammer.cs.ucr.edu$ #tesing some functions with the ls                         rshell functions with the ls command to see if it creates conflict
+mmore019@hammer.cs.ucr.edu$ bin.ls   /ls ./.. #tesing a strange directory
+bin coreutils-8.23 firstrepo hbhairy-utils hbhairy-utils.tar.xz labs libexec rshell share ucr-cs100 
+mmore019@hammer.cs.ucr.edu$ #notice that since there are no uppercase letters, weaksorting produced a  n alphabetized              perfect alphabetized list. While the alphabetizing is not perfect, it is consistint
+mmore019@hammer.cs.ucr.edu$ ls  bin/ls -R
+LICENSE Makefile README.md bin ls.script src tests 
+mmore019@hammer.cs.ucr.edu$ #notice that passing in -R doesn  not crash the program. This is because it is meant to be implemented later
+mmore019@hammer.cs.ucr.edu$ bin/ls -RE ecursive #as you can see the re^[[D                                    recursive #recursion hasd not      not been implemented
+error: Unreconized flag: -recursive
+mmore019@hammer.cs.ucr.edu$ #i did not uncomment the                          bin/ls --recursive
+LICENSE Makefile README.md bin ls.script src tests 
+mmore019@hammer.cs.ucr.edu$ #once agin  ain, it doesn  nothing because it hasnt been implemented
+mmore019@hammer.cs.ucr.edu$ exit    exit #now   exiting the rshell. last time, it was                                         
+~/Documents/CS100/rshell
+mmore019@hammer $ uit[K[K[Kquit
+bash: quit: command not found
+~/Documents/CS100/rshell
+mmore019@hammer $ exit
+exit
+
+Script done on Mon 09 Feb 2015 12:21:52 AM PST
