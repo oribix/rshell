@@ -33,7 +33,10 @@ int main(int argc, char *argv[])
 			}
 			else if(argv[i][1] == '-') {
 				//check -all -long -recursive
-				
+				if (string(argv[i]) == "--all") flaga = true;
+				//if (string(argv[i]) == "--long") flagl = true;
+				//if (string(argv[i]) == "--recursive") flagR = true;
+
 			}
 			else {
 				//check -a -l -R
