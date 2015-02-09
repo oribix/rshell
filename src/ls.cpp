@@ -1,4 +1,7 @@
+#include <cstring>
+#include <algorithm>
 #include <queue>
+#include <list>
 #include <cstdlib>
 #include <sys/types.h>
 #include <dirent.h>
@@ -11,10 +14,10 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 	char defdir[] = ".";//default directory
-	char *dirName = defdir;
+	char *dirName = defdir;//lets me change the directory
 	
 	bool flaga = false;
-	//bool flagl = false;
+	bool flagl = false;
 	//bool flagR = false;
 	bool pathfound = false;
 
@@ -37,16 +40,30 @@ int main(int argc, char *argv[])
 			else if(argv[i][1] == '-') {
 				//check -all -long -recursive
 				if (string(argv[i]) == "--all") flaga = true;
-				//if (string(argv[i]) == "--long") flagl = true;
+				if (string(argv[i]) == "--long") flagl = true;
 				//if (string(argv[i]) == "--recursive") flagR = true;
-
+				if(string(argv[i]) != "--all"
+					&& string(argv[i]) != "--long"
+					&& string(argv[i]) != "--recursive")
+				{
+					cout << "error: Unreconized flag: " << argv[i] << endl;
+					exit(EXIT_FAILURE);
+				}
+				
 			}
 			else {
 				//check -a -l -R
-				for(int j = 0 ; argv[i][j] != '\0' ; j++) {
+				for(int j = 1 ; argv[i][j] != '\0' ; j++) {
 					if (argv[i][j] == 'a') flaga = true;
-					//if (argv[i][j] == 'l') flagl = true;
+					if (argv[i][j] == 'l') flagl = true;
 					//if (argv[i][j] == 'R') flagR = true;
+					if(argv[i][j] != 'a'
+						&& argv[i][j] != 'l'
+						&& argv[i][j] != 'R')
+					{
+						cout << "error: Unreconized flag: " << argv[i] << endl;
+						exit(EXIT_FAILURE);
+					}
 				}
 			}
 		}
@@ -71,7 +88,7 @@ int main(int argc, char *argv[])
 
 	dirent *direntp;
 	
-	queue<char*> filenames;//queue of filenames so that we can sort alphabetically 
+	list<string> filenames;//queue of filenames so that we can sort alphabetically 
 	
 	while ((direntp = readdir(dirp))) {
 		if(direntp == NULL) {
@@ -79,15 +96,26 @@ int main(int argc, char *argv[])
 			exit(EXIT_FAILURE);
 		}
 		if(flaga || (direntp->d_name)[0] != '.') {//checks for -a
-			filenames.push(direntp->d_name);
+			filenames.push_back(string(direntp->d_name));
 			//cout << direntp->d_name << endl;  // use stat here
 		}
 		
 	}
 	
-	while (filenames.front() != NULL) {
-		cout << filenames.front() << " ";
-		filenames.pop();
+	filenames.sort();
+	//sort(filenames.begin(), filenames.end());
+	
+	while (filenames.size() != 0) {
+		if(flagl) {
+			//print extra info
+		}
+		
+		cout << filenames.front() << flush;
+		
+		if(flagl) cout << endl;
+		else cout << " " << flush;
+		
+		filenames.pop_front();
 	} cout << endl;
 	
 	if (closedir(dirp) == -1) {
