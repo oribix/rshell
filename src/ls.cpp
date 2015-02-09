@@ -1,3 +1,5 @@
+#include <sstream>
+#include <math.h>
 #include <grp.h>
 #include <pwd.h>
 #include <iomanip>
@@ -31,10 +33,6 @@ int main(int argc, char *argv[])
 
 	//parsing parameters
 	for (int i = 0 ; i < argc ; i++) {
-		//I might need this. I dont know yet
-		//int arglen;
-		//for (arglen = 0 ; argv[i][arglen] != '\0' ; arglen++)
-
 		if(argv[i][0] == '\0') { //should never trigger. It's here for protection
 			cerr << "error: empty argument found" << endl;
 		}
@@ -90,94 +88,6 @@ int main(int argc, char *argv[])
 	
 	printcontents(dirName, flaga, flagl);
 	
-	/*
-	DIR *dirp = opendir(dirName);
-	if(dirp == NULL) {
-		perror("opendir");
-		exit(EXIT_FAILURE);
-	}
-
-	dirent *direntp;
-	
-	list<string> filenames;//queue of filenames so that we can sort alphabetically 
-	
-	while ((direntp = readdir(dirp))) {
-		if(direntp == NULL) {
-			perror("readdir");
-			exit(EXIT_FAILURE);
-		}
-		if(flaga || (direntp->d_name)[0] != '.') {//checks for -a
-			filenames.push_back(string(direntp->d_name));
-			//cout << direntp->d_name << endl;  // use stat here
-		}
-	}
-	
-	filenames.sort();//strict weak sort of the filenames
-	
-	
-	while (filenames.size() != 0) {
-		if(flagl) {
-			struct stat s;
-			if( -1 == stat((filenames.front()).c_str(), &s)) {
-				perror("stat");
-				exit(EXIT_FAILURE);
-			}
-			
-			//takes up 10 spaces
-			if(s.st_mode & S_IFDIR) cout << "d";
-			else cout << "-";
-			cout << ((s.st_mode&S_IRUSR)?"r":"-");
-			cout << ((s.st_mode&S_IWUSR)?"w":"-");
-			cout << ((s.st_mode&S_IXUSR)?"x":"-");
-			cout << ((s.st_mode&S_IXGRP)?"r":"-");
-			cout << ((s.st_mode&S_IXGRP)?"w":"-");
-			cout << ((s.st_mode&S_IXGRP)?"x":"-");
-			cout << ((s.st_mode&S_IXOTH)?"r":"-");
-			cout << ((s.st_mode&S_IXOTH)?"w":"-");
-			cout << ((s.st_mode&S_IXOTH)?"x":"-") << " " << flush;
-			
-			int inodewidth = 10;
-			int userwidth = 10;
-			int groupwidth = 10;
-			int bytewidth = 7;
-			char *timestring = ctime(&s.st_mtime);
-			//time_t *currenttime = time(NULL);
-			
-			struct passwd *username = getpwuid(s.st_uid);
-			if(username == NULL) {
-				perror("getpwuid");
-				exit(EXIT_FAILURE);
-			}
-			
-			struct group *groupname = getgrgid(s.st_gid);
-			if(groupname == NULL) {
-				perror("getpwgid");
-				exit(EXIT_FAILURE);
-			}
-			
-			cout << setw(inodewidth) << right << s.st_ino << " ";
-			cout << setw(userwidth) << left << username->pw_name << " ";
-			cout << setw(groupwidth) << left << groupname->gr_name << " ";
-			cout << setw(bytewidth) << right << s.st_size << " ";
-			//output month day hour:minute
-			for(int i = 4 ; i < 16 ; i++) cout << timestring[i];
-			cout << " " << flush;
-			
-		}
-		
-		cout << filenames.front() << flush;
-		
-		if(flagl) cout << endl;
-		else cout << " " << flush;
-		
-		filenames.pop_front();
-	} 
-	if (!flagl) cout << endl;
-	
-	if (closedir(dirp) == -1) {
-		perror("closedir");
-		exit(EXIT_FAILURE);
-	}*/
 }
 
 void printcontents(char* dirName, bool flaga, bool flagl) {
@@ -204,7 +114,45 @@ void printcontents(char* dirName, bool flaga, bool flagl) {
 	
 	filenames.sort();//strict weak sort of the filenames
 	
+	int nlinkwidth = 0;
+	unsigned userwidth = 0;
+	unsigned groupwidth = 0;
+	int bytewidth = 0;
 	
+	//initialize the width of the columns
+	for(list<string>::iterator it = filenames.begin() ; it != filenames.end() ; it++) {
+		struct stat filestats;
+		string file = string(dirName) + *it;
+		if( -1 == stat(file.c_str(), &filestats)) {
+			perror("stat");
+			exit(EXIT_FAILURE);
+		}
+		long nlinktemp = filestats.st_nlink;
+		int nlinklength = floor(log10(abs(nlinktemp))) + 1;
+		
+		struct passwd *username = getpwuid(filestats.st_uid);
+		if(username == NULL) {
+			perror("getpwuid");
+			exit(EXIT_FAILURE);
+		}
+		
+		struct group *groupname = getgrgid(filestats.st_gid);
+		if(groupname == NULL) {
+			perror("getpwgid");
+			exit(EXIT_FAILURE);
+		}
+		
+		int bytelength = floor(log10(abs(filestats.st_size))) + 1;
+		
+		if(nlinklength > nlinkwidth) nlinkwidth = nlinklength;
+		if(string(username->pw_name).size() > userwidth)
+			userwidth = string(username->pw_name).size();
+		if(string(groupname->gr_name).size() > groupwidth)
+			groupwidth = string(groupname->gr_name).size();
+		if (bytelength > bytewidth) bytewidth = bytelength;
+	}
+	
+	//print the columns
 	while (filenames.size() != 0) {
 		if(flagl) {
 			//cerr << "files: " << filenames.front() << endl;
@@ -228,10 +176,6 @@ void printcontents(char* dirName, bool flaga, bool flagl) {
 			cout << ((s.st_mode&S_IXOTH)?"w":"-");
 			cout << ((s.st_mode&S_IXOTH)?"x":"-") << " " << flush;
 			
-			int inodewidth = 10;
-			int userwidth = 10;
-			int groupwidth = 10;
-			int bytewidth = 9;
 			char *timestring = ctime(&s.st_mtime);
 			//time_t *currenttime = time(NULL);
 			
@@ -247,7 +191,7 @@ void printcontents(char* dirName, bool flaga, bool flagl) {
 				exit(EXIT_FAILURE);
 			}
 			
-			cout << setw(inodewidth) << right << s.st_nlink << " ";
+			cout << setw(nlinkwidth) << right << s.st_nlink << " ";
 			cout << setw(userwidth) << left << username->pw_name << " ";
 			cout << setw(groupwidth) << left << groupname->gr_name << " ";
 			cout << setw(bytewidth) << right << s.st_size << " ";
