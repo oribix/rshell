@@ -1,3 +1,4 @@
+#include <queue>
 #include <cstdlib>
 #include <sys/types.h>
 #include <dirent.h>
@@ -69,15 +70,26 @@ int main(int argc, char *argv[])
 	}
 
 	dirent *direntp;
+	
+	queue<char*> filenames;//queue of filenames so that we can sort alphabetically 
+	
 	while ((direntp = readdir(dirp))) {
 		if(direntp == NULL) {
 			perror("readdir");
 			exit(EXIT_FAILURE);
 		}
-		if(flaga || (direntp->d_name)[0] != '.') {
-			cout << direntp->d_name << endl;  // use stat here
+		if(flaga || (direntp->d_name)[0] != '.') {//checks for -a
+			filenames.push(direntp->d_name);
+			//cout << direntp->d_name << endl;  // use stat here
 		}
+		
 	}
+	
+	while (filenames.front() != NULL) {
+		cout << filenames.front() << " ";
+		filenames.pop();
+	} cout << endl;
+	
 	if (closedir(dirp) == -1) {
 		perror("closedir");
 		exit(EXIT_FAILURE);
