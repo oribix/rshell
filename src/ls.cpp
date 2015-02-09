@@ -9,11 +9,13 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-	char dirName[] = ".";//default directory
+	char defdir[] = ".";//default directory
+	char *dirName = defdir;
 	
 	bool flaga = false;
 	//bool flagl = false;
 	//bool flagR = false;
+	bool pathfound = false;
 
 	//parsing parameters
 	for (int i = 0 ; i < argc ; i++) {
@@ -47,8 +49,16 @@ int main(int argc, char *argv[])
 				}
 			}
 		}
-		else {
+		else if (i != 0){ //skip the first argument
 			//take path
+			if(!pathfound) {
+				dirName = argv[i];
+				pathfound = true;
+			}
+			else {
+				cerr << "error: too many path parameters" << endl;
+				exit(EXIT_FAILURE);
+			}
 		}
 	}
 	
