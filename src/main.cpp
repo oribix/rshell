@@ -1,3 +1,4 @@
+#include <fcntl.h>
 #include <map>
 #include <queue>
 #include <iostream>
@@ -20,6 +21,7 @@ void printPrompt(char* login, char* hostname);
 void printPrompt(char* login);
 void truncate_comment(char* input);
 int execute(vector<char*> argv);
+int output_redirect(vector<char*> argv);
 
 int main()
 {
@@ -63,6 +65,7 @@ int main()
 		operator_map["<"] = 1;
 		operator_map[">"] = 2;
 		operator_map[">>"] = 3;
+		operator_map["|"] = 4;
 		
 		
 		//executing commands
@@ -74,21 +77,36 @@ int main()
 				; argv.back() != NULL
 				; argv.push_back(strtok(NULL, " ")))
 			{
-				/*
+				
+				
+				
+				
 				switch(operator_map[string(argv.back())])
 				{
-					case 1://<
+					case 1:// <
 						
 						break;
-					case 2://>
+					case 2:// >
+						{
+						//we assume that argv only has lhs and rhs
+						argv.push_back(strtok(NULL, " "));
+						output_redirect(argv);
+						argv.clear();
+						break;
+						}
+					case 3:// >>
 						
 						break;
-					case 3://>>
+					case 4:// |
 						
 						break;
-					default: break;
+					default:
+						{
+						operator_map.erase(string(argv.back()));
+						break;
+						}
 				}
-				*/
+				
 			}
 			
 			
@@ -167,5 +185,36 @@ int execute(vector<char*> argv)
 	return status;
 }
 
-
+int output_redirect(vector<char*> argv)
+{
+	string filename = string(argv.back());
+	argv.pop_back();
+	argv.pop_back();
+	
+	int savestdout = dup(1);
+	if(-1 == savestdout)
+	{
+		perror("dup");
+		exit(-1);
+	}
+	
+	int fd = open(filename.c_str(), O_CREAT | O_WRONLY, 0777); //fixme: filename conversion to c string is redundant
+	
+	if (-1 == dup2(fd, 1))
+	{
+		perror("dup2");
+	}
+	
+	execute(argv);
+	
+	//restore stdout
+	if(-1 == dup2(savestdout, 1))
+	{
+		perror("restore stdout");
+		exit(EXIT_FAILURE);
+	}
+	
+	
+	return 0;
+}
 
