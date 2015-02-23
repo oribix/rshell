@@ -23,6 +23,7 @@ void truncate_comment(char* input);
 int execute(vector<char*> argv);
 int output_redirect(vector<char*> argv);
 int output_append(vector<char*> argv);
+int input_redirect(vector<char*> argv);
 
 int main()
 {
@@ -85,8 +86,12 @@ int main()
 				switch(operator_map[string(argv.back())])
 				{
 					case 1:// <
-						
+						{
+						argv.push_back(strtok(NULL, " "));
+						input_redirect(argv);
+						argv.clear();
 						break;
+						}
 					case 2:// >
 						{
 						//we assume that argv only has lhs and rhs
@@ -203,7 +208,7 @@ int output_redirect(vector<char*> argv)
 		exit(-1);
 	}
 	
-	int fd = open(filename.c_str(), O_CREAT | O_WRONLY, 0777); //fixme: filename conversion to c string is redundant
+	int fd = open(filename.c_str(), O_CREAT | O_WRONLY | O_TRUNC, 0777); //fixme: filename conversion to c string is redundant
 	
 	if (-1 == dup2(fd, 1))
 	{
@@ -219,6 +224,11 @@ int output_redirect(vector<char*> argv)
 		exit(EXIT_FAILURE);
 	}
 	
+	if (-1 == close(fd))
+	{
+		perror("close");
+		exit(EXIT_FAILURE);
+	}
 	
 	return 0;
 }
@@ -227,9 +237,7 @@ int output_append(vector<char*> argv)
 {
 	string filename = string(argv.back());
 	argv.pop_back();
-	//cout << argv.back() << flush;
 	argv.pop_back();
-	//cout << argv.back() << flush;
 	
 	int savestdout = dup(1);
 	if(-1 == savestdout)
@@ -240,10 +248,7 @@ int output_append(vector<char*> argv)
 	
 	int fd = open(filename.c_str(), O_CREAT | O_APPEND | O_WRONLY, 0777); //fixme: filename conversion to c string is redundant
 	
-	if (-1 == dup2(fd, 1))
-	{
-		perror("dup2");
-	}
+	if (-1 == dup2(fd, 1)) perror("dup2");
 	
 	execute(argv);
 	
@@ -254,6 +259,44 @@ int output_append(vector<char*> argv)
 		exit(EXIT_FAILURE);
 	}
 	
+	if (-1 == close(fd))
+	{
+		perror("close");
+		exit(EXIT_FAILURE);
+	}
+	
+	return 0;
+}
+
+int input_redirect(vector<char*> argv)
+{
+	string filename = string(argv.back());
+	int fd = open(argv.back(), O_RDONLY);
+	int savestdin = dup(0);//duplicating stdin
+	
+	if (-1 == savestdin)
+	{
+		perror("dup");
+	}
+	
+	argv.pop_back();
+	argv.pop_back();
+	
+	if(-1 == dup2(fd, 0)) perror("dup2");
+	
+	execute(argv);
+	
+	if(-1 == dup2(savestdin, 0))
+	{
+		perror("restore stdin");
+		exit (EXIT_FAILURE);
+	}
+	
+	if (-1 == close(fd))
+	{
+		perror("close");
+		exit(EXIT_FAILURE);
+	}
 	
 	return 0;
 }
