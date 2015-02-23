@@ -1,3 +1,4 @@
+#include <map>
 #include <queue>
 #include <iostream>
 #include <cstdio>
@@ -18,7 +19,7 @@ using namespace std;
 void printPrompt(char* login, char* hostname);
 void printPrompt(char* login);
 void truncate_comment(char* input);
-int execute(char* input);
+int execute(vector<char*> argv);
 
 int main()
 {
@@ -52,17 +53,47 @@ int main()
 
 		truncate_comment(input);
 		
-		//splices the string into pieces at the semicolons(;)
+		//splices commands at the semicolons 
 		queue<char*> semic_splice;
 		for(semic_splice.push(strtok(input, ";"))
 			; semic_splice.back() != NULL
 			; semic_splice.push(strtok(NULL, ";")));
 		
+		map<string, int> operator_map;
+		operator_map["<"] = 1;
+		operator_map[">"] = 2;
+		operator_map[">>"] = 3;
 		
-		//exectuting commands
+		
+		//executing commands
 		while (semic_splice.front() != NULL)
 		{
-			execute(semic_splice.front());
+			//initializing argv
+			vector<char*> argv;
+			for (argv.push_back(strtok (semic_splice.front(), " 	"))
+				; argv.back() != NULL
+				; argv.push_back(strtok(NULL, " ")))
+			{
+				/*
+				switch(operator_map[string(argv.back())])
+				{
+					case 1://<
+						
+						break;
+					case 2://>
+						
+						break;
+					case 3://>>
+						
+						break;
+					default: break;
+				}
+				*/
+			}
+			
+			
+			execute(argv);
+			
 			semic_splice.pop();
 		}
 	}
@@ -105,17 +136,11 @@ void truncate_comment(char* input)
 }
 
 //executes the commands
-int execute(char* input)
+int execute(vector<char*> argv)
 {
-	//initializing argv
-	vector<char*> argv;
-	for (argv.push_back(strtok (input, " 	"))
-		; argv.back() != NULL
-		; argv.push_back(strtok(NULL, " ")));
-	
 	//allows the shell to exit
 	if(argv.size() == 2 && string(argv[0]) == "exit") exit(0);
-
+	
 	int status;
 	int pid = fork();
 	
