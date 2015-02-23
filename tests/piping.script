@@ -1,0 +1,102 @@
+Script started on Mon 23 Feb 2015 03:25:50 AM PST
+~
+mmore019@hammer $ cs100
+[0;91m
+===============================================================================
+|                                                                             |
+| You have enabled settings specific for cs100.  Everything you do is being   |
+| recorded to measure your progress in the class.                             |
+|                                                                             |
+| Important commands for the class:                                           |
+|   * calcgrade.sh          displays a detailed breakdown of your grade       |
+|   * typespeed             practice typing unix commands                     |
+|                                                                             |
+| Important commands for general C++ programming:                             |
+|   * make                  don't call g++ manually; let make do the work!    |
+|   * gdb                   the GNU debugger                                  |
+|   * valgrind              get rid of your memory leaks                      |
+|   * cppcheck              static analysis tool                              |
+|   * man                   find help about any syscall / terminal command    |
+|                                                                             |
+===============================================================================
+[0m
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~[0;95m [0;36m$[0m cd Documents/CS100/R[Krshell
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (redirect) [0;36m$[0m make
+mkdir -p ./bin
+g++ -ansi -Wall -Werror -pedantic ./src/main.cpp -o ./bin/rshell
+g++ -ansi -Wall -Werror -pedantic ./src/ls.cpp -o ./bin/ls 
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (redirect) [0;36m$[0m bin/rshell
+mmore019@hammer.cs.ucr.edu$ ls
+bin  LICENSE  Makefile	README.md  src	tests
+mmore019@hammer.cs.ucr.edu$ echo hello world > outptu      outputfile    
+mmore019@hammer.cs.ucr.edu$ ls # notice t             ls
+bin  LICENSE  Makefile	output	README.md  src	tests
+mmore019@hammer.cs.ucr.edu$ #notice that output has appeared        been created
+mmore019@hammer.cs.ucr.edu$ cat output
+hello world
+mmore019@hammer.cs.ucr.edu$ $ #contains the   e message
+mmore019@hammer.cs.ucr.edu$ cat     echo golly gee! > output
+mmore019@hammer.cs.ucr.edu$ ls
+bin  LICENSE  Makefile	output	README.md  src	tests
+mmore019@hammer.cs.ucr.edu$ #no new files
+mmore019@hammer.cs.ucr.edu$ cat output
+golly gee!
+mmore019@hammer.cs.ucr.edu$ #truncates the file and replaces the contents
+mmore019@hammer.cs.ucr.edu$ echo A bear! >> output
+mmore019@hammer.cs.ucr.edu$ ls
+bin  LICENSE  Makefile	output	README.md  src	tests
+mmore019@hammer.cs.ucr.edu$ output      #output is s            cat out[pu   put
+golly gee!
+A bear!
+mmore019@hammer.cs.ucr.edu$ #appends
+mmore019@hammer.cs.ucr.edu$ # sort < output             act   cat outptu  ut > input
+mmore019@hammer.cs.ucr.edu$ ls
+bin  input  LICENSE  Makefile  output  README.md  src  tests
+mmore019@hammer.cs.ucr.edu$ cat input
+golly gee!
+A bear!
+mmore019@hammer.cs.ucr.edu$ sort < input
+A bear!
+golly gee!
+mmore019@hammer.cs.ucr.edu$ #input redirection works
+mmore019@hammer.cs.ucr.edu$ #thatv  is all I have,.                     # i do  nt      havn't implemented piping |
+mmore019@hammer.cs.ucr.edu$ #now I will show the bugs of my pr          () it isn't pretty)
+mmore019@hammer.cs.ucr.edu$ echo ho  wow that bug is stupid > output ls
+bin  input  LICENSE  Makefile  output  README.md  src  tests
+mmore019@hammer.cs.ucr.edu$ #the way that its code, inputting commands immerdiately after will run the commands
+mmore019@hammer.cs.ucr.edu$ # that is the only bug I can think of off the top of my head
+mmore019@hammer.cs.ucr.edu$ # the other 'bugs" are simply because I havn't implemented the d features yet
+mmore019@hammer.cs.ucr.edu$ sort output    tput        < output        input > output #chaining hasd    not been implemented
+A bear!
+golly gee!
+mmore019@hammer.cs.ucr.edu$ #it will just print to the screen
+mmore019@hammer.cs.ucr.edu$ ls
+bin  input  LICENSE  Makefile  output  README.md  src  tests
+mmore019@hammer.cs.ucr.edu$ cat outptu   put
+mmore019@hammer.cs.ucr.edu$ #output is not empty. It didnt even consider the previous terms
+mmore019@hammer.cs.ucr.edu$ <><><><><><><><>
+exec: No such file or directory
+mmore019@hammer.cs.ucr.edu$ cat < outptu   put
+mmore019@hammer.cs.ucr.edu$ cat < input
+golly gee!
+A bear!
+mmore019@hammer.cs.ucr.edu$ cat < < < input
+dup2: Bad file descriptor
+
+
+exit
+exit
+exit
+exit
+^C
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (redirect) [0;36m$[0m ps
+  PID TTY          TIME CMD
+39146 pts/1    00:00:00 bash
+41011 pts/1    00:00:00 ps
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (redirect) [0;36m$[0m exit
+exit
+~
+mmore019@hammer $ e[Kexit
+exit
+
+Script done on Mon 23 Feb 2015 03:39:55 AM PST

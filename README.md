@@ -14,3 +14,5 @@ LS has now been added to the shell. LS supports the -a --all -l --long -R and --
 LS can also handle multiple flags such as "-l -l -l -l -a -a -a -all --all --long -R --recursive". It can also handle combined flags such as "-llallaRaaRalRRaRllRl".
 
 LS can also have a path parameter passed in. Passing in a path will print the contents of that path. You can combine a path parameter with flags as well (ex. ls bin/ -alR). This does not limit its ability to take in multiple flags and/or complex flags.
+
+I have also implemented some input and output redirection. Currently, the shell is able to handle '<', '>', and '>>' redirection operators. The code for i/o redirection is still very fragile and is very easy to break. Inputting multple parameters past the i/o operators will probably break the program. Entering a command after the filename portion of the operators will likely run the command. I have plans to add pipe '|' to the shell.
