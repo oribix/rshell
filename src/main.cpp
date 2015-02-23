@@ -22,6 +22,7 @@ void printPrompt(char* login);
 void truncate_comment(char* input);
 int execute(vector<char*> argv);
 int output_redirect(vector<char*> argv);
+int output_append(vector<char*> argv);
 
 int main()
 {
@@ -95,7 +96,11 @@ int main()
 						break;
 						}
 					case 3:// >>
-						
+						{
+						argv.push_back(strtok(NULL, " "));
+						output_append(argv);
+						argv.clear();
+						}
 						break;
 					case 4:// |
 						
@@ -218,3 +223,37 @@ int output_redirect(vector<char*> argv)
 	return 0;
 }
 
+int output_append(vector<char*> argv)
+{
+	string filename = string(argv.back());
+	argv.pop_back();
+	//cout << argv.back() << flush;
+	argv.pop_back();
+	//cout << argv.back() << flush;
+	
+	int savestdout = dup(1);
+	if(-1 == savestdout)
+	{
+		perror("dup");
+		exit(-1);
+	}
+	
+	int fd = open(filename.c_str(), O_CREAT | O_APPEND | O_WRONLY, 0777); //fixme: filename conversion to c string is redundant
+	
+	if (-1 == dup2(fd, 1))
+	{
+		perror("dup2");
+	}
+	
+	execute(argv);
+	
+	//restore stdout
+	if(-1 == dup2(savestdout, 1))
+	{
+		perror("restore stdout");
+		exit(EXIT_FAILURE);
+	}
+	
+	
+	return 0;
+}
