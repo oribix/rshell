@@ -118,8 +118,6 @@ int main()
 				}
 				
 			}
-			
-			
 			execute(argv);
 			
 			semic_splice.pop();
@@ -165,9 +163,10 @@ void truncate_comment(char* input)
 
 //executes the commands
 int execute(vector<char*> argv)
-{
+{	
 	//allows the shell to exit
 	if(argv.size() == 2 && string(argv[0]) == "exit") exit(0);
+	if(argv.front() == NULL) return 0;
 	
 	int status;
 	int pid = fork();
@@ -200,6 +199,7 @@ int output_redirect(vector<char*> argv)
 	string filename = string(argv.back());
 	argv.pop_back();
 	argv.pop_back();
+	argv.push_back(NULL);
 	
 	int savestdout = dup(1);
 	if(-1 == savestdout)
@@ -209,6 +209,7 @@ int output_redirect(vector<char*> argv)
 	}
 	
 	int fd = open(filename.c_str(), O_CREAT | O_WRONLY | O_TRUNC, 0777); //fixme: filename conversion to c string is redundant
+	if (-1 == fd) perror("open");
 	
 	if (-1 == dup2(fd, 1))
 	{
@@ -238,7 +239,8 @@ int output_append(vector<char*> argv)
 	string filename = string(argv.back());
 	argv.pop_back();
 	argv.pop_back();
-	
+	argv.push_back(NULL);
+
 	int savestdout = dup(1);
 	if(-1 == savestdout)
 	{
@@ -247,6 +249,7 @@ int output_append(vector<char*> argv)
 	}
 	
 	int fd = open(filename.c_str(), O_CREAT | O_APPEND | O_WRONLY, 0777); //fixme: filename conversion to c string is redundant
+	if (-1 == fd) perror("open");
 	
 	if (-1 == dup2(fd, 1)) perror("dup2");
 	
@@ -281,6 +284,7 @@ int input_redirect(vector<char*> argv)
 	
 	argv.pop_back();
 	argv.pop_back();
+	argv.push_back(NULL);
 	
 	if(-1 == dup2(fd, 0)) perror("dup2");
 	
