@@ -8,8 +8,8 @@ CXXFLAGS = -ansi -Wall -Werror -pedantic
 
 OUTPUTPATH = ./bin/rshell
 
-all: 
-	mkdir -p ./bin
+all: rshell ls
+	mkdir -p ./bin		//mv all bin
 	g++ $(CXXFLAGS) $(VPATH) -o $(OUTPUTPATH)
 	g++ $(CXXFLAGS) $(LSPATH) -o $(LSOUTPUT) 
 
