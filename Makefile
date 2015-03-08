@@ -1,25 +1,22 @@
-
-VPATH = ./src/main.cpp
-
-LSPATH = ./src/ls.cpp
-LSOUTPUT = ./bin/ls
+SRC = ./src/
+OUT = ./bin/
 
 CXXFLAGS = -ansi -Wall -Werror -pedantic
 
-OUTPUTPATH = ./bin/rshell
 
-all: rshell ls
-	mkdir -p ./bin		//mv all bin
-	g++ $(CXXFLAGS) $(VPATH) -o $(OUTPUTPATH)
-	g++ $(CXXFLAGS) $(LSPATH) -o $(LSOUTPUT) 
+all: rshell ls cp
 
-rshell: 
+rshell: bin 
+	g++ $(CXXFLAGS) $(SRC)main.cpp -o $(OUT)rshell
+
+ls: bin
+	g++ $(CXXFLAGS) $(SRC)ls.cpp -o $(OUT)ls
+
+cp: bin
+	g++ $(CXXFLAGS) $(SRC)cp.cpp -o $(OUT)cp
+
+bin:
 	mkdir -p ./bin
-	g++ $(CXXFLAGS) $(VPATH) -o $(OUTPUTPATH)
-
-ls:
-	mkdir -p ./bin
-	g++ $(CXXFLAGS) $(LSPATH) -o $(LSOUTPUT)
 
 clean:
 	rm -rf bin
