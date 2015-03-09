@@ -10,6 +10,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <linux/limits.h>
 
 #define  BUFFER_SIZE 1000
 
@@ -166,6 +167,15 @@ int execute(vector<char*> argv)
 {	
 	//allows the shell to exit
 	if(argv.size() == 2 && string(argv[0]) == "exit") exit(0);
+	if(argv.size() == 3 && string(argv[0]) == "cd")
+	{
+		if(-1 == chdir(argv[1]))
+		{
+			perror("cd");
+			return 1;
+		}
+		return 0;
+	}
 	if(argv.front() == NULL) return 0;
 	
 	int status;
@@ -178,6 +188,33 @@ int execute(vector<char*> argv)
 	}
 	else if(pid == 0) //child process
 	{		
+		//getting list of paths
+		char* pathlist = getenv("PATH");
+		if (pathlist == NULL)
+		{
+			perror("getenv");
+			exit(EXIT_FAILURE);
+		}
+		
+		char pathtemp[PATH_MAX];
+		strcpy(pathtemp, pathlist);
+		
+		//intializing queue of pathnames
+		queue<char*> pathnames;
+		for (pathnames.push(strtok(pathtemp, ":"))
+			;pathnames.back() != NULL
+			;pathnames.push(strtok(NULL, ":")));
+		
+		//look at all the paths
+		/*
+		cerr << "pathnames:" << endl;
+		while(!pathnames.empty())
+		{
+			cerr << pathnames.front() << endl;
+			pathnames.pop();
+		}
+		*/
+		
 		if(-1 == execvp(argv[0], argv.data())) perror("exec");
 		
 		exit(-1);
