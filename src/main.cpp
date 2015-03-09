@@ -36,7 +36,10 @@ void process_handler(int i);
 
 int main()
 {
-	signal(SIGINT, shell_handler);
+	if (SIG_ERR == signal(SIGINT, shell_handler)) perror("SIGINT");
+	//signal(SIGTSTP, shell_handler);
+	//signal(SIGCONT, NULL);
+	
 	//getting login
 	char* login = getlogin();
 	if(NULL == login) perror("getlogin");
@@ -182,6 +185,8 @@ void truncate_comment(char* input)
 //executes the commands
 int execute(vector<char*> argv)
 {	
+	//FIXME: Make this into switch statements
+
 	//allows the shell to exit
 	if(argv.size() == 2 && string(argv[0]) == "exit") exit(0);
 	if(argv.size() == 3 && string(argv[0]) == "cd")
@@ -190,6 +195,15 @@ int execute(vector<char*> argv)
 		{
 			perror("cd");
 			return 1;
+		}
+		return 0;
+	}
+	if(argv.size() == 2 && string(argv[0]) == "fg")
+	{
+		if (0 != raise(SIGCONT))
+		{
+			perror("SIGCONT");
+			exit(EXIT_FAILURE);
 		}
 		return 0;
 	}
@@ -205,7 +219,9 @@ int execute(vector<char*> argv)
 	}
 	else if(pid == 0) //child process
 	{		
-		signal(SIGINT, process_handler);
+		if (SIG_ERR == signal(SIGINT, NULL)) perror("SIGINT");
+		//signal(SIGTSTP, NULL);
+		//signal(SIGCONT, NULL);
 		
 		//getting list of paths
 		char* pathlist = getenv("PATH");
@@ -378,6 +394,10 @@ void process_handler(int i)
 			exit(EXIT_SUCCESS);
 		}
 		
+		//case SIGTSTP:
+		//{
+		//	break;
+		//}
 	}
 	return;
 }
@@ -391,6 +411,10 @@ void shell_handler(int i)
 			break;
 		}
 		
+		//case SIGTSTP:
+		//{
+		//	break;
+		//}
 	}
 	return;
 }
