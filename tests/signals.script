@@ -1,0 +1,110 @@
+Script started on Sun 08 Mar 2015 10:45:02 PM PDT
+~
+mmore019@hammer $ cs100
+[0;91m
+===============================================================================
+|                                                                             |
+| You have enabled settings specific for cs100.  Everything you do is being   |
+| recorded to measure your progress in the class.                             |
+|                                                                             |
+| Important commands for the class:                                           |
+|   * calcgrade.sh          displays a detailed breakdown of your grade       |
+|   * typespeed             practice typing unix commands                     |
+|                                                                             |
+| Important commands for general C++ programming:                             |
+|   * make                  don't call g++ manually; let make do the work!    |
+|   * gdb                   the GNU debugger                                  |
+|   * valgrind              get rid of your memory leaks                      |
+|   * cppcheck              static analysis tool                              |
+|   * man                   find help about any syscall / terminal command    |
+|                                                                             |
+===============================================================================
+[0m
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~[0;95m [0;36m$[0m cd Documents/CS100/rshell
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (cd) [0;36m$[0m mske clean
+bash: mske: command not found
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (cd) [0;36m$[0m make clean
+rm -rf bin
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (cd) [0;36m$[0m make
+mkdir -p ./bin
+g++ -ansi -Wall -Werror -pedantic ./src/main.cpp -o ./bin/rshell
+g++ -ansi -Wall -Werror -pedantic ./src/ls.cpp -o ./bin/ls
+g++ -ansi -Wall -Werror -pedantic ./src/cp.cpp -o ./bin/cp
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (cd) [0;36m$[0m bin[K[K[K[25P(reverse-i-search)`':[Cc': make cleans[C[C[C[1P[C[C[C[C[C[C[C[C[4hc[4l[C[C[C[C[C[C[C[Cs': cs100-runtests bin/rshell tests/hw3_tests 1000000[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (cd) [0;36m$[0m cs100-runtests bin/rshell tests/hw3_tests 1000000[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+*******************
+* tests/hw3_tests *
+*******************
+================================================================================
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ # NOTE: i/o redirection will NOT be in these tests
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ # The features are too buggy and WILL crash my shell
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ # they will be fixed before I do my reshow
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ # I cannot test the ^C signal in cs100-runtests
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ # It works when used manually, but not through cs100-runtests
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ #testing that execv works
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ ls         #regular ls
+bin  LICENSE  Makefile	README.md  src	tests
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ bin/ls     #my ls
+LICENSE Makefile README.md bin src tests 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ pwd
+/home/csmajs/mmore019/Documents/CS100/rshell
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ echo hello world
+hello world
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ #testing strange directory
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ ../rshell/bin/ls
+LICENSE Makefile README.md bin src tests 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ #testing cd
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ #note that the current path can be seen in the prompt
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ cd ..
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100 $ cd rshell
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ cd bin/
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell/bin $ cd ..
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ cd .. ; cd rshell
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ #cd into folder I don't have access to
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ cd ../../../../../../root
+cd: Permission denied
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ 
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ #cd into a file
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ cd /bin
+mmore019@hammer.cs.ucr.edu:/bin $ cd touch
+cd: Not a directory
+mmore019@hammer.cs.ucr.edu:/bin $ 
+mmore019@hammer.cs.ucr.edu:/bin $ #Those are all the tests that prove that everything works
+mmore019@hammer.cs.ucr.edu:/bin $ #under ideal conditions
+mmore019@hammer.cs.ucr.edu:/bin $ 
+mmore019@hammer.cs.ucr.edu:/bin $ #some strange tests
+mmore019@hammer.cs.ucr.edu:/bin $ cd
+exec: No such file or directory
+mmore019@hammer.cs.ucr.edu:/bin $ cd nonexistant/
+cd: No such file or directory
+mmore019@hammer.cs.ucr.edu:/bin $ cd ls
+cd: Not a directory
+mmore019@hammer.cs.ucr.edu:/bin $ cd exit
+cd: No such file or directory
+mmore019@hammer.cs.ucr.edu:/bin $ 
+mmore019@hammer.cs.ucr.edu:/bin $ exit
+
+================================================================================
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (cd) [0;36m$[0m #now i wi[K[K[K[KI will show the sigint signal
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (cd) [0;36m$[0m bin/rshell
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ cat #infinite   program
+^Cmmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ #tesign  ng that ^C does not exit my shell
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ ^C^C^C^C^C^C^C^C^C^C^C^C
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ #still in my shell
+mmore019@hammer.cs.ucr.edu:/home/csmajs/mmore019/Documents/CS100/rshell $ echo Thats          exit
+[s%%%%%%%%%%[u[0;32mmmore019[0;36m@[0;32mcs100[0;36m:[0;32m~/Documents/CS100/rshell[0;95m (cd) [0;36m$[0m exit
+exit
+~
+mmore019@hammer $ exit
+exit
+
+Script done on Sun 08 Mar 2015 10:48:47 PM PDT
