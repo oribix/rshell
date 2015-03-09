@@ -12,24 +12,34 @@
 #include <sys/wait.h>
 #include <linux/limits.h>
 
-#define  BUFFER_SIZE 1000
-
 using namespace std;
 
 
-
+//prints prompt
 void printPrompt(char* login, char* hostname);
 void printPrompt(char* login);
+
+//allows comments
 void truncate_comment(char* input);
+
+//executes commands
 int execute(vector<char*> argv);
+
+// i/o redirection
 int output_redirect(vector<char*> argv);
 int output_append(vector<char*> argv);
 int input_redirect(vector<char*> argv);
 
+//signal handler
+void shell_handler(int i);
+void process_handler(int i);
+
 int main()
 {
+	signal(SIGINT, shell_handler);
 	//getting login
 	char* login = getlogin();
+	if(NULL == login) perror("getlogin");
 	
 	//getting hostname
 	char hostname[100];
@@ -49,8 +59,8 @@ int main()
 		else printPrompt(login);
 		
 		//getting input
-		char input[BUFFER_SIZE];
-		cin.getline(input, BUFFER_SIZE);
+		char input[BUFSIZ];
+		cin.getline(input, BUFSIZ);
 		
 		//enable just in case we need original input
 		//char inputbackup[BUFFERSIZE];
@@ -131,18 +141,25 @@ int main()
 //prints the prompt
 void printPrompt(char* login, char* hostname)
 {	
+	char cwdir[PATH_MAX];
+	if(NULL == getcwd(cwdir, PATH_MAX)) perror("getwd");
+	
 	if(login != NULL) cout << login << flush;
 
-	cout << "@" << hostname << "$ " << flush;
+	cout << "@" << hostname << ":"
+		<< cwdir << " $ " << flush;
 	
 	return;
 }
 
 void printPrompt(char* login)
 {
+	char cwdir[PATH_MAX];
+	if(NULL == getcwd(cwdir, PATH_MAX)) perror("getwd");
+	
 	if(login != NULL) cout << login << flush;
 	
-	cout << "$ " << flush;
+	cout << ":" << cwdir << " $ " << flush;
 	
 	return;
 }
@@ -188,6 +205,8 @@ int execute(vector<char*> argv)
 	}
 	else if(pid == 0) //child process
 	{		
+		signal(SIGINT, process_handler);
+		
 		//getting list of paths
 		char* pathlist = getenv("PATH");
 		if (pathlist == NULL)
@@ -196,7 +215,9 @@ int execute(vector<char*> argv)
 			exit(EXIT_FAILURE);
 		}
 		
-		char pathtemp[PATH_MAX];
+		//DONT DELETE THIS. strtok skrews up the pathlist
+		//if passed directly
+		char pathtemp[BUFSIZ];
 		strcpy(pathtemp, pathlist);
 		
 		//intializing queue of pathnames
@@ -205,18 +226,24 @@ int execute(vector<char*> argv)
 			;pathnames.back() != NULL
 			;pathnames.push(strtok(NULL, ":")));
 		
-		//look at all the paths
-		/*
-		cerr << "pathnames:" << endl;
-		while(!pathnames.empty())
+		//go through every possible path
+		while(pathnames.front() != NULL)
 		{
-			cerr << pathnames.front() << endl;
+			//creating path for function call
+			char path[BUFSIZ];
+			strcpy(path, pathnames.front());
+			if(argv[0][0] == '/') strcat(path, argv[0]);
+			else
+			{
+				strcat(path, "/");
+				strcat(path, argv[0]);
+			}
+			
+			//executing function
+			if(-1 == execv(path, argv.data()))
 			pathnames.pop();
 		}
-		*/
-		
-		if(-1 == execvp(argv[0], argv.data())) perror("exec");
-		
+		perror("exec");
 		exit(-1);
 	}
 	else //parent
@@ -340,4 +367,30 @@ int input_redirect(vector<char*> argv)
 	}
 	
 	return 0;
+}
+
+void process_handler(int i)
+{
+	switch(i)
+	{
+		case SIGINT:
+		{
+			exit(EXIT_SUCCESS);
+		}
+		
+	}
+	return;
+}
+
+void shell_handler(int i)
+{
+	switch(i)
+	{
+		case SIGINT:
+		{
+			break;
+		}
+		
+	}
+	return;
 }
